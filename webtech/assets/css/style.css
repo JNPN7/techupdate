@@ -8,6 +8,10 @@ body {
 	overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 .row{
 	display: flex;
@@ -29,7 +33,7 @@ body {
 }
 
 .trending{
-	padding: 0 20px 20px 20px;
+	padding: 30px 20px 20px 20px;
 }
 
 .right-section{
@@ -39,10 +43,10 @@ body {
 }
 
 /*post*/
-.h-50{
+.ht-50{
 	height: 50vh;
 }
-.h-100{
+.ht-100{
 	height: 100vh;
 }
 
@@ -151,168 +155,6 @@ body {
 		height: 50vh !important;
 	}
 }
-
-/*******************abhi**********************/
-.nname{
-    font-family: Bahianita;
-    color: var(--text-inverse);
-    font-size: 30px;
-}
-
-.navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;..");
-}
-
-
-.bg{
-    background: white;
-    transition: 0.2s ease;
-
-}
-.bg .scrolled{
-    box-shadow: 0 1px 5px gray;
-}
-
-.navbar-nav li a{
-    color:black!important;
-    position: relative;
-}
-
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link{
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.nav-link:hover{
-    color: var(--default)!important;
-    transition: 0.3s ease;
-}
-
-.nav-link:hover::after {
-    content: '';
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    bottom: 0;
-    border: 1px solid var(--default)!important;
-}
-
-@media screen and (max-width: 1000px) {
-    .nav-link:hover::after {
-        content: "";
-        position: absolute;
-        left: 0%;
-        right: 93%;
-        bottom: 0;
-        border: 1px solid var(--default)!important;
-    }
-}
-
-.dropdown:hover>.dropdown-menu{
-    display: block;
-    transition: 1s ease-out!important;
-  }
-  
-.dropdown-menu{
-    background-image: white!important;
-    border: none;
-}
-.dropdown-item:hover{
-    background: white!important;
-    color: black!important;
-}
-
-.dropdown-item:hover::after {
-    content: '';
-    position: absolute;
-    left: 16%;
-    right: 50%;
-    bottom: 0;
-    border: 1px solid var(--default)!important;
-}
-
-#banner{
-    background: white;
-    padding-top:0;
-    color:black;
-}
-
-.promo-title{
-    font-size: 100px;
-    font-weight: 800;
-    margin-top: 80px;
-    text-align: center;
-    font-family:"montserrat",sans-serif;
-}
-
-.batn{
-    text-align: center;
-    font-family:"montserrat",sans-serif!important;
-}
-
-.btn3{
-    background: var(--default)!important;
-    color:black;
-    border-top-left-radius: 20px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    box-shadow: 0 1px 10px var(--default);
-    font-weight: 500!important;
-    margin-right: 10px;
-}
-
-.btn3:hover{
-    background: var(--default)!important;
-    color:rgb(255, 255, 255)!important;
-}
-
-
-.batn .btn2{
-    background: white;
-    color:black;
-    border-bottom-right-radius: 20px;
-    border: 1px var(--default) solid;
-    font-size: 16px;
-}
-
-.batn .btn2:hover{
-    background: var(--default);
-    transform: scale(1.1);
-    color:white;
-    transition: 0.5s ease;
-}
-
-
-.batn .btn1{
-    background:var(--default);
-    color:rgb(255, 255, 255);
-    border-top-left-radius: 20px;
-    margin-right: 10px;
-    font-size: 16px;
-}
-
-.batn .btn1:hover{
-    transform: scale(1.1);
-    color: black;
-    transition: 0.5s ease;
-}
-
-.phota{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.phota img{
-    height:70%;
-    width: 70%;
-}
-
-
-
-
-
-
-
 
 
 /*----------Foooter------------------*/
