@@ -1,11 +1,12 @@
 <?php
 	include 'includes/header.php';
 ?>
+		<div id="divider"></div>
 		<section class="hot-news">
 			<div class="row">
 				<div class="hot-news-left">
 					<div class="post ht-50 post-rel">
-						<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" ></a>
+						<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" ></a>
 						<div class="post-meta">
 							<div class="post-date">Jan 2, 2020</div>
 							<div class="post-topic">Thats what she said, Micheal scott scott tots nowhere going on and on and on we are good and thanks for asking</div>
@@ -14,7 +15,7 @@
 				</div>
 				<div class="hot-news-right">
 					<div class="post ht-50 post-rel">
-						<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+						<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 						<div class="post-meta">
 							<div class="post-date">May 13, 2020</div>
 							<div class="post-topic">Identity theft is not a joke</div>
@@ -24,6 +25,7 @@
 				
 			</div>
 		</section>
+		<div id="divider"></div>
 		<main role="main" class="main">
 			<div class="row">
 				<section class="main-section">
@@ -34,7 +36,7 @@
 						<div class="grid-container">
 							<div class="grid-item1">
 								<div class="post ht-50 post-rel">
-									<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="post-meta">
 										<div class="post-date">May 13, 2020</div>
 										<div class="post-topic">Identity theft is not a joke, thats not good at all you cunt</div>
@@ -43,7 +45,7 @@
 							</div>
 							<div class="grid-item2">
 								<div class="post ht-50 post-rel">
-									<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="post-meta">
 										<div class="post-date">May 13, 2020</div>
 										<div class="post-topic">Nowhere to go that all I have to say, Identity theft is not a joke</div>
@@ -52,7 +54,7 @@
 							</div>
 							<div class="grid-item3">
 								<div class="post ht-100 post-rel test">
-									<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="post-meta">
 										<div class="post-date">May 13, 2020</div>
 										<div class="post-topic">Haha thats a joke for godsakeIdentity theft is not a joke</div>
@@ -61,7 +63,7 @@
 							</div>
 							<div class="grid-item4">
 								<div class="post ht-50 post-rel">
-									<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="post-meta">
 										<div class="post-date">May 13, 2020</div>
 										<div class="post-topic">Dont be afraid I not a moster Identity theft is not a joke</div>
@@ -70,7 +72,7 @@
 							</div>
 							<div class="grid-item5">
 								<div class="post ht-50 post-rel">
-									<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="post-meta">
 										<div class="post-date">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
@@ -85,7 +87,7 @@
 						<h1>Don't Miss</h1>
 						<div class="row dontmissup" style="justify-content: space-between;">
 							<div class="post dontmissup-content"  >
-								<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
+								<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
 								<div class="post-meta meta-outside">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">Dont be afraid I not a moster Identity theft is not a joke!!!</div>
@@ -94,7 +96,7 @@
 						
 						
 							<div class="post dontmissup-content">
-								<a class="post-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
+								<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
 								<div class="post-meta meta-outside">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">Dont be afraid I not a moster Identity theft is not a joke</div>
@@ -103,28 +105,28 @@
 						</div>
 						<div class="grid-dontmiss">
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
 								</div>
 							</div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
 								</div>
 							</div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
 								</div>
 							</div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the monster you think of</div>
@@ -138,7 +140,7 @@
 						<h1>Stories</h1>
 						<div class="col">
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
@@ -147,7 +149,7 @@
 							</div>
 							<div style="height: 10px"></div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
@@ -156,7 +158,7 @@
 							</div>
 							<div style="height: 10px"></div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
@@ -165,7 +167,7 @@
 							</div>
 							<div style="height: 10px"></div>
 							<div class="post post-col">
-								<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey">May 13, 2020</div>
 									<div class="post-topic">I wish I was the monster you think of</div>
@@ -184,7 +186,7 @@
 							<h2>Latest News</h2>
 							<div class="col">
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
@@ -192,7 +194,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
@@ -200,7 +202,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
@@ -208,7 +210,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the monster you think of</div>
@@ -225,7 +227,7 @@
 							<h2>Featured News</h2>
 							<div class="col">
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
@@ -233,7 +235,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
@@ -241,7 +243,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
@@ -249,7 +251,7 @@
 								</div>
 								<div style="height: 10px"></div>
 								<div class="post post-col">
-									<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
+									<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
 									<div class="meta-col">
 										<div class="post-date color-grey">May 13, 2020</div>
 										<div class="post-topic">I wish I was the monster you think of</div>
@@ -272,6 +274,7 @@
 			</div>
 			
 		</main>
+		<div id="divider"></div>
 
 <?php
 	include 'includes/footer.php';

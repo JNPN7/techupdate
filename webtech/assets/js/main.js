@@ -48,3 +48,50 @@ function showMenu()
         }
     }
 }
+
+window.addEventListener("click", reverseSearchBackground);
+temp = 0;
+var items = document.getElementsByClassName("search");
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener("mouseover", changeSearchBackground);
+    items[i].addEventListener("mouseout", reverseSearchBackground);
+}
+
+function changeSearchBackground(x = 0) {
+    if (x == 3) {
+        temp = x;
+        items[0].value = "";
+    }
+    else {
+        temp++;
+    }
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.backgroundColor = "rgb(22, 183, 15)";
+    }
+}
+
+function reverseSearchBackground() {
+    if (temp == 1) {
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.backgroundColor = "rgb(134, 132, 39)";
+        }
+        temp--;
+        items[0].value = "Search";
+    }
+    else if (temp == 3 || temp == 2) {
+        temp--;
+    }
+}
+
+items[1].addEventListener("click", focusSearch);
+function focusSearch() {
+    if (temp == 2) {
+        //search operation here...
+    }
+    else {
+        temp = 2;
+        changeSearchBackground();
+        items[0].focus();
+        items[0].value = "";
+    }
+}

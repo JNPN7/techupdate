@@ -116,8 +116,8 @@
             </div>
 
             <div class="navChild">
-                <input id="search" type="text" name="search" value="Search" />
-                <button id="search" onclick="">
+                <input class="search" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" />
+                <button class="search searchButton">
                     <i class="fa fa-search"></i>
                 </button>
             </div>

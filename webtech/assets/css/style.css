@@ -158,15 +158,27 @@ h2{
 	display: none;
 }
 
-#navbar #search {
-	background-color: rgb(134, 132, 39);
+#navbar .search {
+	background-color: rgb(134, 132, 69);
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid green;
 	font-size: 20px;
 }
 
+#navbar .searchButton {
+	cursor:pointer;
+}
+
 /*--Navbar Properties end--*/
+
+/*Divider properties start*/
+#divider {
+	height: 10px;
+	width: 100%;
+	background-color: rgb(169, 161, 6);
+}
+
 /*//////////////////////////////////////////*/
 .row{
 	display: flex;
