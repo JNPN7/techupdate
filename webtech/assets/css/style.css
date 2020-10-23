@@ -1,3 +1,9 @@
+* {
+	box-sizing: border-box;
+	transition-property: all;
+	transition-duration: 0.3s;
+}
+
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
@@ -12,6 +18,151 @@ html{
     scroll-behavior: smooth;
 }
 
+/*--Navbar Properties start--*/
+
+#navbar {
+	display: inline-flex;
+	width: 100%;
+	height: 200px;
+	color: rgb(19, 46, 64);
+	padding: 30px;
+	position: sticky;
+	top: 0;
+	transition-property: all;
+	transition-duration: .3s;
+	transition-timing-function: linear;
+	text-align: center;
+	background-color: rgb(255, 26, 26);
+	z-index: 5;
+}
+
+	#navbar .navChild {
+		margin: auto;
+	}
+
+	#navbar #mainTitle {
+		font-size: 100px;
+	}
+
+
+	#navbar ul {
+		list-style-type: none;
+	}
+
+		#navbar ul li {
+			display: inline-block;
+			vertical-align: middle;
+			padding-top: 10px;
+		}
+
+.dropbtn:hover {
+	color: rgb(0, 22, 34)
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown, .dropbtn {
+	color: rgb(207, 209, 144);
+	padding: 5px;
+	background-color: inherit;
+	font-family: inherit;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: rgb(216, 109, 80);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	margin: 0;
+}
+
+	.dropdown-content a {
+		float: none;
+		color: rgb(19, 15, 65);
+		text-decoration: none;
+		display: block;
+		text-align: left;
+		padding: 15px;
+	}
+
+		.dropdown-content a:hover {
+			background-color: rgb(202, 209, 144);
+			color: rgb(10, 65, 95);
+		}
+
+#navbar .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#navbar ul li a {
+	text-decoration: none;
+}
+
+
+.dropright {
+	position: relative;
+}
+
+.dropright-content {
+	display: none;
+	position: absolute;
+	background-color: #b9b9cf;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	margin: 0;
+	left: 100%;
+	top: 0;
+	min-width: 250px;
+}
+
+#navbar .dropright:hover .dropright-content {
+	display: block;
+	z-index: 500;
+}
+
+
+#logo {
+	height: 120px;
+	width: auto;
+}
+
+#menu {
+	font-size: 35px;
+	color: rgb(248, 232, 232);
+	position: absolute;
+	margin: 10px;
+	background: transparent;
+	z-index: 5;
+	right: 10px;
+	border: none;
+}
+
+	#menu:hover {
+		color: rgb(86, 187, 201);
+	}
+
+#navbar .hide {
+	display: none;
+}
+
+#navbar #search {
+	background-color: rgb(134, 132, 39);
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid green;
+	font-size: 20px;
+}
+
+/*--Navbar Properties end--*/
 
 .row{
 	display: flex;

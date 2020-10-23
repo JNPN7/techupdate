@@ -1,91 +1,50 @@
-(function($) {
-	"use strict"
+window.onscroll = function () { scrollFunction() };
 
-	// Fixed Nav
-	var lastScrollTop = 0;
-	$(window).on('scroll', function() {
-		var wScroll = $(this).scrollTop();
-		if ( wScroll > $('#nav').height() ) {
-			if ( wScroll < lastScrollTop ) {
-				$('#nav-fixed').removeClass('slide-up').addClass('slide-down');
-			} else {
-				$('#nav-fixed').removeClass('slide-down').addClass('slide-up');
-			}
-		}
-		lastScrollTop = wScroll
-	});
+//function to change size of contents of Navbar when scrolled.
+function scrollFunction()
+{
+    if (window.scrollY == 0)
+    {
+        document.getElementById("navbar").style.padding = "30px";
+        document.getElementById("navbar").style.height = "200px";
+        document.getElementById("mainTitle").style.fontSize = "100px";
+    }
+    else
+    {
+        if (window.scrollY <= 100) {
+            //new_value = old_value - (window.scrollY / 100) * total_possible_change_in_value
+            document.getElementById("navbar").style.padding = Math.trunc(30 - (window.scrollY / 100) * 30).toString().concat("px");
+            document.getElementById("navbar").style.height = Math.trunc(200 - (window.scrollY / 100) * 100).toString().concat("px");
+            document.getElementById("mainTitle").style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
+        }
+        else
+        {
+            document.getElementById("navbar").style.padding = "0px";
+            document.getElementById("navbar").style.height = "100px";
+            document.getElementById("mainTitle").style.fontSize = "50px";
+        }
+    }
+}
 
-	// Search Nav
-	$('.search-btn').on('click', function () {
-		$('.search-form').addClass('active');
-	});
-
-	$('.search-close').on('click', function () {
-		$('.search-form').removeClass('active');
-	});
-
-	// Aside Nav
-	$(document).click(function(event) {
-		if (!$(event.target).closest($('#nav-aside')).length) {
-			if ( $('#nav-aside').hasClass('active') ) {
-				$('#nav-aside').removeClass('active');
-				$('#nav').removeClass('shadow-active');
-			} else {
-				if ($(event.target).closest('.aside-btn').length) {
-					$('#nav-aside').addClass('active');
-					$('#nav').addClass('shadow-active');
-				}
-			}
-		}
-	});
-
-	$('.nav-aside-close').on('click', function () {
-		$('#nav-aside').removeClass('active');
-		$('#nav').removeClass('shadow-active');
-	});
-
-	// Sticky Shares
-	var $shares = $('.sticky-container .sticky-shares'),
-	$sharesHeight = $shares.height(),
-	$sharesTop,
-	$sharesCon = $('.sticky-container'),
-	$sharesConTop,
-	$sharesConleft,
-	$sharesConHeight,
-	$sharesConBottom,
-	$offsetTop = 80;
-
-	function setStickyPos () {
-		if ($shares.length > 0) {
-			$sharesTop = $shares.offset().top
-			$sharesConTop = $sharesCon.offset().top;
-			$sharesConleft = $sharesCon.offset().left;
-			$sharesConHeight = $sharesCon.height();
-			$sharesConBottom = $sharesConHeight + $sharesConTop;
-		}
-	}
-
-	function stickyShares (wScroll) {
-		if ($shares.length > 0) {
-			if ( $sharesConBottom - $sharesHeight - $offsetTop < wScroll ) {
-				$shares.css({ position: 'absolute', top: $sharesConHeight - $sharesHeight , left:0});
-			} else if ( $sharesTop < wScroll + $offsetTop ) {
-				$shares.css({ position: 'fixed', top: $offsetTop, left: $sharesConleft });
-			} else {
-				$shares.css({position: 'absolute', top: 0, left: 0});
-			}
-		}
-	}
-
-	$(window).on('scroll', function() {
-		stickyShares($(this).scrollTop());
-	});
-
-	$(window).resize(function() {
-		setStickyPos();
-		stickyShares($(this).scrollTop());
-	});
-
-	setStickyPos();
-
-})(jQuery);
+//Show the menu when hamburger icon is pressed on small screen
+var s;
+var c = 0;
+function showMenu()
+{
+    s = document.getElementById("navbar").getElementsByTagName("li");
+    c++;
+    if (c % 2 == 1)
+    {
+        for (let i = 0; i < s.length; i++)
+        {
+            s[i].style.display = "flex";
+        }
+    }
+    else
+    {
+        for (let i = 1; i < s.length; i++)
+        {
+            s[i].style.display = "none";
+        }
+    }
+}
