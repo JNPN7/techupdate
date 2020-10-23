@@ -40,6 +40,7 @@
       <div class="end-text">
         Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2020
       </div>
-    </div>
+    </div> -->
 	</body>
-</html>-->
+  <script src='assets/js/main.js'></script>
+</html>
