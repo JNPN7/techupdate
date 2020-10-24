@@ -15,7 +15,7 @@ function scrollFunction2()
     else
     {
         if (window.scrollY <= 100) {
-            if(Math.abs(newScrollValue - oldScrollValue) >= 3)
+            if(Math.abs(newScrollValue - oldScrollValue) >= 2)
             {
                 //new_value = old_value - (window.scrollY / 100) * total_possible_change_in_value
                 document.getElementById("navbar").style.padding = Math.trunc(30 - (window.scrollY / 100) * 30).toString().concat("px");

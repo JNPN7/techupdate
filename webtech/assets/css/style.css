@@ -2,6 +2,10 @@
 	--default: rgb(255, 75, 75);
 }
 
+*{
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
@@ -67,7 +71,7 @@ h4{
 	position: sticky;
 	top: 0;
 	transition-property: all;
-	transition-duration: .3s;
+	transition-duration: .1s;
 	transition-timing-function: linear;
 	text-align: center;
 	background-color: rgb(255, 26, 26);
@@ -146,7 +150,6 @@ h4{
 	text-decoration: none;
 }
 
-
 .dropright {
 	position: relative;
 }
@@ -167,12 +170,6 @@ h4{
 #navbar .dropright:hover .dropright-content {
 	display: block;
 	z-index: 500;
-}
-
-
-#logo {
-	height: 120px;
-	width: auto;
 }
 
 #menu {
