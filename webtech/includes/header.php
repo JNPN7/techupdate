@@ -141,7 +141,7 @@
                         <i class="fa fa-tumblr"></i>                        
                     </button>
                 </div>   
-                <div>
+                <div id="search">
                     <input class="search" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" />
                     <button class="search searchButton">
                         <i class="fa fa-search"></i>

@@ -1,7 +1,6 @@
 @media screen and (max-width: 600px) {
     #navbar {
         height: 40px;
-        position: static;
     }
 
     #navbar ul li {
@@ -20,13 +19,28 @@
     #navbar #menu {
         display: flex;
         right: 50px;
+        position: absolute;
+        top: 50px;
+        right: 60px;
     }
 
-    #navbar input {
-        display: none;
+    #navbar .sign {
+        display: inline-block;
     }
 
-    #navbar .search {
+    #navbar #search {
+        position: absolute;
+        top: 10px;
+        right: 70px;
+    }
+
+    #navbar .sign {
+        position: relative;
+        top: 20px;
+        right: 20px;
+    }
+
+    #navbar .navChild .social {
         display: none;
     }
 }
