@@ -496,3 +496,137 @@ h4{
 	}
 }
 
+/*----------Foooter------------------*/
+#footer{
+    background-image: linear-gradient(to right,#000000,#222222);
+	color:white;
+	padding: 0 50px;
+}
+
+#footer a i{
+    font-size: 20px;
+}
+
+#footer .col-md-3{
+	flex: 20%;
+}
+
+#footer a{
+    border: none;
+    color: white;
+}
+
+#footer a .fa-facebook-official:hover{
+    color:  rgb(147, 206, 255);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#footer a .fa-snapchat-ghost:hover{
+    color: rgb(255, 252, 0);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#footer a .fa-instagram:hover{
+    color: var(--default);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#footer a .fa-twitter-square:hover{
+    color: #00acee;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+#footer a .fa-github-square:hover{
+    color: brown;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.f-line{
+    height:3px;
+    background-color: var(--default);
+}
+
+.f-space{
+    padding:40px 0;
+}
+
+.f-header{
+    text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 900;
+	color: var(--default);
+	margin-bottom: 0;
+}
+
+.f-links{
+    color: white;
+    text-decoration: none;
+}
+
+#footer a{
+    text-decoration: none;
+}
+
+#footer a:hover{
+    color: var(--default);
+    transition: 0.5s;
+}
+
+.emailbox{
+	margin:0;
+	height: 25px;
+	display: flex;
+}
+.emailbox i{
+	background-color: var(--default);
+	width:20px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.emailbox:hover > .tbox,.tbox:focus{
+	width: 100px;
+	padding: 0 10px;
+	transition: 0.8s ease;
+}
+
+.btn,.tbox{
+	outline: none;
+	border: none;
+	border-radius: 0;
+	margin: 0;
+}
+
+.tbox{
+	width: 0px;
+}
+
+.btn{
+	background: var(--default);
+	color:white;
+	text-transform: uppercase;
+	cursor: pointer;
+
+}
+
+.texts{
+	font-size: 12px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.end{
+    background: #222222;
+    color: white;
+    border-top: 1px rgba(204, 204, 204, 0.212) solid;
+    text-align: center;
+}
+
+.end-text{
+    padding: 20px 0;
+}
