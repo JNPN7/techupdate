@@ -1,0 +1,32 @@
+@media screen and (max-width: 600px) {
+    #navbar {
+        height: 40px;
+        position: static;
+    }
+
+    #navbar ul li {
+        display: none;
+    }
+
+    #navbar ul {
+        margin: auto;
+        text-align: center;
+    }
+
+    #navbar #mainTitle {
+        font-size: 30px;
+    }
+
+    #navbar #menu {
+        display: flex;
+        right: 50px;
+    }
+
+    #navbar input {
+        display: none;
+    }
+
+    #navbar .search {
+        display: none;
+    }
+}

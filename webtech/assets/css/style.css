@@ -72,6 +72,8 @@ h4{
 
 	#navbar .navChild {
 		margin: auto;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#navbar #mainTitle {
@@ -200,6 +202,53 @@ h4{
 	cursor:pointer;
 }
 
+#navbar .sign a {
+	text-decoration: none;
+	color: rgb(207, 209, 144);
+	margin: 10px;
+	font-size: 20px;
+}
+
+#navbar .sign a:hover {
+	color: rgb(0, 22, 34);
+}
+
+#navbar .navChild .social button {
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+	margin-right: 10px;
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+}
+
+#navbar .navChild .social button:hover {
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: wheat;
+	cursor: pointer;
+}
+
+#navbar .navChild .social .facebook:hover {
+	color: rgb(29, 29, 255);
+}
+
+#navbar .navChild .social .twitter:hover {
+	color: rgb(0, 140, 255);
+}
+
+#navbar .navChild .social .pinterest:hover {
+	color: rgb(255, 0, 0);
+}
+
+#navbar .navChild .social .instagram:hover {
+	color: rgb(255, 0, 85);
+}
+
+#navbar .navChild .social .tumblr:hover {
+	color: rgb(0, 31, 97);
+}
+
 /*--Navbar Properties end--*/
 .banner{
 	display: flex;
@@ -216,6 +265,21 @@ h4{
 .banner-home:hover ,.banner-home:after{
 	text-decoration: underline;
 }
+
+/*Goto Top button*/
+#gotoTop {
+	bottom: 200px;
+	right: 100px;
+	position: fixed;
+	display: none;
+	padding: 10px;
+	font-size: 30px;
+	background-color: rgba(138, 126, 126, 0.596);
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
 /*Divider properties start*/
 #divider {
 	height: 10px;
