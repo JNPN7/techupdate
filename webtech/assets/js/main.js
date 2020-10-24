@@ -69,7 +69,6 @@ function showMenu()
     c++;
     if (c % 2 == 1)
     {
-        document.getElementById("navbar").style.height = (s.length * 60).toString().concat("px");
         for (let i = 0; i < s.length; i++)
         {
             s[i].style.display = "flex";
@@ -79,7 +78,6 @@ function showMenu()
     }
     else
     {
-        document.getElementById("navbar").style.height = "40px";
         for (let i = 0; i < s.length; i++)
         {
             s[i].style.display = "none";

@@ -86,6 +86,9 @@ h4{
 
 	#navbar #mainTitle {
 		font-size: 100px;
+		transition-property: font-size;
+		transition-duration: .1s;
+		transition-timing-function: linear;
 	}
 
 
