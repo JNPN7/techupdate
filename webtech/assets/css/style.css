@@ -20,11 +20,41 @@ h1{
 	font-size: 35px;
 }
 h2{
-	font-size: 32px;
+	font-size: 30px;
+}
+h3{
+	font-size: 25px;
+}
+h4{
+	font-size: 20px;
 }
 
 .color-grey{
 	color: #696969 !important;
+}
+.input {
+ 	height: 40px;
+ 	border: 2px solid #eceef2;
+ 	width: 100%;
+ 	padding: 0px 15px;
+ 	transition: 0.2s border;
+}
+.input:focus {
+    border-color: #3d455c;
+}
+.primary-button {
+    padding: 9px 0;
+    border: none;
+    background-color: #212631;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    transition: 0.2s opacity;
+}
+ .primary-button:hover,.primary-button:focus {
+     color: #fff;
+     opacity: 0.9;
 }
 
 /*--Navbar Properties start--*/
@@ -47,6 +77,8 @@ h2{
 
 	#navbar .navChild {
 		margin: auto;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#navbar #mainTitle {
@@ -175,7 +207,83 @@ h2{
 	cursor:pointer;
 }
 
+#navbar .sign a {
+	text-decoration: none;
+	color: rgb(207, 209, 144);
+	margin: 10px;
+	font-size: 20px;
+}
+
+#navbar .sign a:hover {
+	color: rgb(0, 22, 34);
+}
+
+#navbar .navChild .social button {
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+	margin-right: 10px;
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+}
+
+#navbar .navChild .social button:hover {
+	border: 1px solid gray;
+	border-radius: 5px;
+	background-color: wheat;
+	cursor: pointer;
+}
+
+#navbar .navChild .social .facebook:hover {
+	color: rgb(29, 29, 255);
+}
+
+#navbar .navChild .social .twitter:hover {
+	color: rgb(0, 140, 255);
+}
+
+#navbar .navChild .social .pinterest:hover {
+	color: rgb(255, 0, 0);
+}
+
+#navbar .navChild .social .instagram:hover {
+	color: rgb(255, 0, 85);
+}
+
+#navbar .navChild .social .tumblr:hover {
+	color: rgb(0, 31, 97);
+}
+
 /*--Navbar Properties end--*/
+.banner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: linear-gradient(to top, rgb(0,0,0), rgb(95,95,95));
+	height: 30vh;
+	padding-left: 5%;
+}
+.banner-home{
+	color: #fff;
+	text-decoration: none;
+}
+.banner-home:hover ,.banner-home:after{
+	text-decoration: underline;
+}
+
+/*Goto Top button*/
+#gotoTop {
+	bottom: 200px;
+	right: 100px;
+	position: fixed;
+	display: none;
+	padding: 10px;
+	font-size: 30px;
+	background-color: rgba(138, 126, 126, 0.596);
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 10px;
+}
 
 /*Divider properties start*/
 #divider {
@@ -215,6 +323,12 @@ h2{
 .right-section{
 	flex: 30%;
 	
+}
+.main-contact{
+	flex: 60%;
+}
+.right-contact{
+	flex: 40%;
 }
 
 /*post*/
