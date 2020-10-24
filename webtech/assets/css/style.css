@@ -15,11 +15,41 @@ h1{
 	font-size: 35px;
 }
 h2{
-	font-size: 32px;
+	font-size: 30px;
+}
+h3{
+	font-size: 25px;
+}
+h4{
+	font-size: 20px;
 }
 
 .color-grey{
 	color: #696969 !important;
+}
+.input {
+ 	height: 40px;
+ 	border: 2px solid #eceef2;
+ 	width: 100%;
+ 	padding: 0px 15px;
+ 	transition: 0.2s border;
+}
+.input:focus {
+    border-color: #3d455c;
+}
+.primary-button {
+    padding: 9px 0;
+    border: none;
+    background-color: #212631;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    transition: 0.2s opacity;
+}
+ .primary-button:hover,.primary-button:focus {
+     color: #fff;
+     opacity: 0.9;
 }
 
 /*--Navbar Properties start--*/
@@ -171,7 +201,21 @@ h2{
 }
 
 /*--Navbar Properties end--*/
-
+.banner{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-image: linear-gradient(to top, rgb(0,0,0), rgb(95,95,95));
+	height: 30vh;
+	padding-left: 5%;
+}
+.banner-home{
+	color: #fff;
+	text-decoration: none;
+}
+.banner-home:hover ,.banner-home:after{
+	text-decoration: underline;
+}
 /*Divider properties start*/
 #divider {
 	height: 10px;
@@ -210,6 +254,12 @@ h2{
 .right-section{
 	flex: 30%;
 	
+}
+.main-contact{
+	flex: 60%;
+}
+.right-contact{
+	flex: 40%;
 }
 
 /*post*/
