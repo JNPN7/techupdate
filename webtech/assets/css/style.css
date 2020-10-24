@@ -1,3 +1,7 @@
+:root{
+	--default: rgb(255, 75, 75);
+}
+
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
