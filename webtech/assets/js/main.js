@@ -36,29 +36,27 @@ function scrollFunction2()
     else {
         gotoTop.style.display = "none";
     }
-    oldScrollValue = newScrollValue;
 }
 
 function scrollFunction() {
-    console.log("here");
     if(window.scrollY >= 300)
     {
-        console.log("yes");
-        console.log(oldScrollValue);
-        if(window.scrollY > oldScrollValue)
+        if(c%2 == 0)
         {
-            console.log("down");
-            document.getElementById("navbar").style.top = "-100px";
-        }
-        else 
-        {
-            console.log("up");
-            document.getElementById("navbar").style.top = "0px";
+            if(window.scrollY > oldScrollValue)
+            {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            else 
+            {
+                document.getElementById("navbar").style.top = "0px";
+            }
         }
     }
     if(window.innerWidth > 600) {
         scrollFunction2();
     }
+    oldScrollValue = window.scrollY;
 }
 
 //Show the menu when hamburger icon is pressed on small screen
@@ -71,7 +69,7 @@ function showMenu()
     c++;
     if (c % 2 == 1)
     {
-        document.getElementById("navbar").style.height = (s.length * 50).toString().concat("px");
+        document.getElementById("navbar").style.height = (s.length * 60).toString().concat("px");
         for (let i = 0; i < s.length; i++)
         {
             s[i].style.display = "flex";
