@@ -1,7 +1,6 @@
 <?php
 	include 'includes/header.php';
 ?>
-		<div id="divider"></div>
 		<section class="hot-news">
 			<div class="row">
 				<div class="hot-news-left">
@@ -25,7 +24,6 @@
 				
 			</div>
 		</section>
-		<div id="divider"></div>
 		<main role="main" class="main">
 			<div class="row">
 				<section class="main-section">
@@ -274,8 +272,7 @@
 			</div>
 			
 		</main>
-		<div id="divider"></div>
-
+		<br>
 <?php
 	include 'includes/footer.php';
 ?>

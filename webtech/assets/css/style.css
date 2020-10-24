@@ -297,6 +297,7 @@ h4{
 	flex-wrap: wrap;
 	flex-direction: row;
 }
+
 .col{
 	display: flex;
 	flex-direction: column;
@@ -455,6 +456,9 @@ h4{
 @media(max-width: 800px){
 	.main-section, .right-section{
 		flex: 100%;
+	}
+	#footer .row{
+		flex-direction: column;
 	}
 }
 @media(max-width: 600px){
