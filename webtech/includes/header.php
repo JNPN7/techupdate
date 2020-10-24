@@ -79,20 +79,32 @@
                         <div class="dropdown">
                             <a href="#">
                                 <button class="dropbtn">
-                                    CATEGORY
+                                    GAMING
                                 </button>
                             </a>
-                            <div class="dropdown-content">
-                                <a href="#">GAMING</a>
-                                <a href="#">PC</a>
-                                <a href="#">MOBILE</a>
-                            </div>
-
                         </div>
                     </li>
                     <li>
                         <div class="dropdown">
-                            <a href="#.html">
+                            <a href="index.php">
+                                <button class="dropbtn">
+                                    PC
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="index.php">
+                                <button class="dropbtn">
+                                    MOBILE
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#">
                                 <button class="dropbtn">
                                     MORE
                                 </button>

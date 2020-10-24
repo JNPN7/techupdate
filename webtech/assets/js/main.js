@@ -1,11 +1,9 @@
-if(window.innerWidth > 600) {
-    window.onscroll = function () { scrollFunction() };
-}
+window.onscroll = function () { scrollFunction() };
 
 //function to change size of contents of Navbar when scrolled.
 var oldScrollValue = 0;
 var gotoTop = document.getElementById("gotoTop");
-function scrollFunction()
+function scrollFunction2()
 {
     var newScrollValue = window.scrollY;
     if (window.scrollY == 0)
@@ -24,7 +22,6 @@ function scrollFunction()
                 document.getElementById("navbar").style.height = (200 - window.scrollY).toString().concat("px");
                 document.getElementById("mainTitle").style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
             }
-            oldScrollValue = newScrollValue;
         }
         else
         {
@@ -38,6 +35,29 @@ function scrollFunction()
     }
     else {
         gotoTop.style.display = "none";
+    }
+    oldScrollValue = newScrollValue;
+}
+
+function scrollFunction() {
+    console.log("here");
+    if(window.scrollY >= 300)
+    {
+        console.log("yes");
+        console.log(oldScrollValue);
+        if(window.scrollY > oldScrollValue)
+        {
+            console.log("down");
+            document.getElementById("navbar").style.top = "-100px";
+        }
+        else 
+        {
+            console.log("up");
+            document.getElementById("navbar").style.top = "0px";
+        }
+    }
+    if(window.innerWidth > 600) {
+        scrollFunction2();
     }
 }
 
@@ -119,7 +139,6 @@ function focusSearch() {
 }
 
 //Goto Top button
-
 gotoTop.addEventListener("click", GOTO);
 function GOTO() {
     window.scrollTo(0, 0);
