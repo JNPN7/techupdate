@@ -332,6 +332,9 @@ h4{
 }
 
 /*post*/
+.ht-60{
+	height: 60vh;
+}
 .ht-50{
 	height: 50vh;
 }
@@ -445,6 +448,20 @@ h4{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
+}
+/*///////////////////////////////////////*/
+
+.parallax{
+	margin-top: 0;
+	background-image: url("/assets/images/bg.jpeg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.category-topic{
+	padding-left: 5%;
+	padding-bottom: 5px;
 }
 
 @media(max-width: 700px){
