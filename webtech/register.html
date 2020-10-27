@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Register</title>
+    <style>
+      *{
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .batta{
+        border: 1px #ccc solid!important;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 8px #242424d0;
+      }
+      .form-content{
+        padding: 30px 30px;
+        text-align: center;
+      }
+      .form-control{
+        padding: 5px 10px;
+        margin-bottom: 10px;
+      }
+      .container{
+        margin: 20px;
+      }
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      .col-md-6{
+        flex:50%;
+        margin: 0;
+        margin-top: 70px;
+        text-align: center;
+      }
+
+      .txt{
+        padding: 10px 0 0 10px;
+        text-align: center;
+      }
+      .btn{
+        outline: none;
+        border: none;
+        background:  linear-gradient(to right,rgb(255, 45, 45),rgb(255, 96, 96));
+        color: white;
+        padding: 8px;
+        cursor:pointer;
+        margin-top: 15px;
+        width: 70%;
+        text-align: center;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .btn:hover{
+        background:  linear-gradient(to right,rgb(255, 96, 96),rgb(255, 45, 45));
+        transition: 0.9s ease;
+      }
+      input{
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid gray;
+        text-align: center;
+      }
+
+      .login{
+        text-decoration: none;
+        outline: none;
+        color: black;
+      }
+    
+      .login:hover{
+        color: red;
+      }
+
+      @media screen and (max-width: 800px) {
+        .row{
+          flex-direction: column;
+        }
+        .col-md-6{
+          flex: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="row" style="background: linear-gradient(to right,rgb(255, 45, 45),rgb(255, 96, 96)); box-shadow: 1px 1px 10px rgb(112, 112, 112);">
+      <h1 style="margin: 10px; color: white;">Techx</h1>
+    </nav>
+
+<!-------FORM SECTION------->
+<div class="main" style="background: rgb(255, 255, 255);">
+<div class="container">
+  <form action="" method="POST">
+  <div class="row">
+    <div class="col-md-6" style="position: sticky; top:0; left: 0;">
+      <img src="laptop.gif" style="width: 600px; height: auto;">
+    </div>
+    <div class="col-md-6" style="z-index: 1; max-width: 400px; margin: 0 auto;">
+      <div class="batta">
+            <h4 class="txt">REGISTER YOUR ACCOUNT</h4>
+            <div class="form-content">
+                <div class="form-col">First Name: <input type="text" placeholder="Enter your first name..." class="form-control" ></div>
+                <div class="form-col"> Lastname: <input type="text" placeholder="Enter your last name..." class="form-control" name=""></div>
+                <div class="form-col">Username: <input type="text" placeholder="Enter your username..." class="form-control" name="uid"></div>
+                <div class="form-col"> Email: <input type="text" placeholder="example@email..." class="form-control" name="mail"></div>
+                  <div class="form-col">Password: <input type="password" placeholder=".." class="form-control" name="[wd]"></div>
+                  <div class="form-col">Repeat Password: <input type="password" placeholder=".." class="form-control" name="pwd-repeat"></div>
+                  <button class="btn" type="submit" name="">Sign up</button>
+              </div>
+       </div>
+       <div class="batta" style="margin-top:20px;">
+          <div style="margin: 20px 0;">
+            <h6 class="txt">ALREADY HAVE AN ACCOUNT?</h6>
+            <p class="txt"></p><a href="login.html" class="login">Log-in</a></p>
+          </div>
+         </div>
+        </div>
+ 
+  </div>
+   </form>
+</div>
+</div>
+
+<!--------------footer-------->
+<div class="footer">
+  <div class="container">
+    <a href="index.html" style="text-decoration: none;">RETURN HOME</a>
+    <p style="text-align: right;">Copyright©2019</p>
+  <div>
+  </div>
+
+
+
+  </body>
+</html>
