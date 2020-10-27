@@ -29,6 +29,17 @@
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwen"/>
         <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwen"/>
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/elegant-icons.css" type="text/css"> 
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/style2.css" type="text/css">
 		<!-------------------------------------------->
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -119,7 +130,7 @@
             </div>
 
             <div class="navChild sign">
-                <a href="#">Sign In</a>
+                <a href="./login">Sign In</a>
                 <a href="#">Sign Up</a>
             </div>
 
