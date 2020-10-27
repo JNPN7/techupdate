@@ -474,10 +474,18 @@ h4{
 	.main-section, .right-section{
 		flex: 100%;
 	}
+}
+
+@media(max-width: 1000px){
+	.main-section, .right-section{
+		flex: 100%;
+	}
 	#footer .row{
 		flex-direction: column;
 	}
 }
+
+
 @media(max-width: 600px){
 	.grid-container{
 		grid-template-columns: 1fr;
