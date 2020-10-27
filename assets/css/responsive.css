@@ -1,50 +1,161 @@
-@media screen and (max-width: 600px) {
-    #navbar {
-        height: auto;
-    }
+@import "colors.css";
 
-    #navbar ul li {
-        display: none;
+@media screen and (min-width: 0px) and (max-width: 768px)   {
+    
+    #navbar {
+        padding: 10px;
     }
 
     #navbar ul {
-        margin: auto;
-        text-align: center;
+        margin-top: 50px;
+        display: none;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    #navbar ul li {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #navbar .searchbox {
+        display: none;
     }
 
     #navbar #mainTitle {
         font-size: 30px;
+        display: block;
     }
 
     #navbar #menu {
-        display: flex;
-        right: 50px;
+        display: block;
         position: absolute;
-        top: 50px;
-        right: 20px;
+        right: 100px;
+        margin: 10px;
+        top: 0;
     }
 
-    #navbar ul {
-        margin-top: 20px;
+    #navbar .sign a {
+        display: none;
     }
 
     #navbar .sign {
-        display: inline-block;
-    }
-
-    #navbar #search {
-        position: absolute;
-        top: 10px;
-        right: 30px;
-    }
-
-    #navbar .sign {
+        display: block;
         position: relative;
-        top: 20px;
+        top: 0px;
         right: 10px;
     }
 
     #navbar .navChild .social {
         display: none;
     }
+
+    #searchPage div .searchPageBox {
+        font-size: 20px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    #searchPage div i {
+        font-size: 30px;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #navbar #mainTitle {
+        font-size: 40px;
+    }
+
+    #navbar .navChild .social {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    #navbar .navChild .social {
+        display: none;
+    }
+}
+
+#searchPage {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(189, 54, 54, 0.527);
+    z-index: 10;
+    display: none;
+}
+
+#searchPage div {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: rgba(190, 60, 60, 0.74);
+    border-radius: 20px;
+}
+
+#searchPage .searchPageBox {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 95%;
+    height: 50px;
+    font-size: 30px;
+}
+
+#searchPage i {
+    font-size: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#navbar #user {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border: none;
+    font-size: 30px;
+    background: transparent;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#navbar #search {
+    position: absolute;
+    margin: 10px;
+    top: 0px;
+    right: 50px;
+    background: transparent;
+}
+
+#userOptions {
+    height: auto;
+    background-color: tomato;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    padding: 10px;
+    width: 300px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+}
+
+#userOptions a {
+	text-decoration: none;
+	color: rgb(207, 209, 144);
+	margin: 10px;
+    font-size: 20px;
+}
+
+#userOptions a:hover {
+	color: rgb(0, 22, 34);
 }

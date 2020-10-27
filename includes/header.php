@@ -27,10 +27,8 @@
 		<script src="https://kit.fontawesome.com/4b23978c25.js" crossorigin="anonymous"></script>
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwen"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwen"/>
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css"/>
 		<!-------------------------------------------->
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +46,13 @@
                 <i class="fa fa-bars"></i>
             </button>
 
+            <button id="user">
+                <i class="fa fa-user"></i>
+            </button>
+            <div id="userOptions">
+                <a href="login.php">Sign In</a>
+                <a href="register.php">Sign Up</a>
+            </div>
             <div id="mainTitle" class="navChild">
                 TECHX
             </div>
@@ -120,10 +125,7 @@
                 </ul>
             </div>
 
-            <div class="navChild sign">
-                <a href="./login">Sign In</a>
-                <a href="#">Sign Up</a>
-            </div>
+            
 
             <div class="navChild">
                 <div class="social">
@@ -144,7 +146,7 @@
                     </button>
                 </div>   
                 <div id="search">
-                    <input class="search" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" />
+                    <!-- <input class="search searchbox" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" /> -->
                     <button class="search searchButton">
                         <i class="fa fa-search"></i>
                     </button>
@@ -155,3 +157,10 @@
         <button id="gotoTop">
             <i class="fa fa-arrow-up"></i>
         </button>
+
+        <div id="searchPage">
+            <div>
+                <input class="searchPageBox" type="text" placeholder="Search">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
