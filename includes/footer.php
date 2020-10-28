@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3"><div class="f-space"></div>
+              <a href="index">
                 <i class="fa fa-robot" aria-hidden="true" style="color:#fff; font-size:70px;"></i> <b class="nname" style="color: #fff;">Techx</b>
+              </a>
             </div>
             <div class="col-md-3"><br>
               <h6 class="f-header">DEVELOPED BY</h6>
@@ -23,7 +25,8 @@
             <h6 class="f-header">QUICK LINKS</h6>
               <a class="f-link texts" href="#">NEWS</a><br>
               <a class="f-link texts" href="#">GAMING</a><br>
-              <a class="f-link texts" href="#">ABOUT</a><br>
+              <a class="f-link texts" href="about">ABOUT US</a><br>
+              <a class="f-link texts" href="contact">CONTACTS</a><br>
             </div>    
             <div class="col-md-3"><br>
               <h6 class="f-header">COMMUNITY</h6>
