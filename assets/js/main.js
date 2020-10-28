@@ -164,10 +164,10 @@ function toggleShowPassword(){
     if(show_password[0].classList.contains("fa-eye")){
         show_password[0].classList.remove("fa-eye");
         show_password[0].classList.add("fa-eye-slash");
-        password[0].setAttribute("type", "text");
+        password[0].setAttribute("type", "password");
     }else if(show_password[0].classList.contains("fa-eye-slash")){
         show_password[0].classList.remove("fa-eye-slash");
         show_password[0].classList.add("fa-eye");
-        password[0].setAttribute("type", "password");
+        password[0].setAttribute("type", "text");
     }
 }

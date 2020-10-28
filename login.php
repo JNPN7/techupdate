@@ -22,7 +22,7 @@
             <div class="input-login row" style="align-content: space-between;">
               <input class="password" type="password" name="passw" required="" style="width: 91%;">
               <label>Password</label>
-              <i class="fa fa-eye showpassword" onclick="toggleShowPassword()"></i>  
+              <i class="fa fa-eye-slash showpassword" onclick="toggleShowPassword()"></i>  
             </div>
 
             <button class="btn-style" type="submit" name="">Sign up</button>
