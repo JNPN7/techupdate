@@ -1,4 +1,5 @@
 <?php
+	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
 	include 'includes/header.php';
 ?>
 		<section class="hot-news">

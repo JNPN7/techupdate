@@ -1,4 +1,5 @@
 <?php
+    // include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
 	define('CAT_COLOR', ['cat-1','cat-2','cat-3','cat-4']);
 ?>
 <!DOCTYPE html>
@@ -12,8 +13,6 @@
 		<!-- Title -->
 		<title>WEBTECH</title>
 		
-
-    	<!-- Font Awesome -->
     	<!-- Font Awesome -->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
@@ -68,6 +67,7 @@
                             </a>
                         </div>
                     </li>
+                    
                     <li>
                         <div class="dropdown">
                             <a href="#">
@@ -82,33 +82,26 @@
                             </div>
                         </div>
                     </li>
+                    <?php
+                        $BlogCategory = new blogcategory();
+                        $blogcategories = $BlogCategory->getAllBlogCategory();
+                        // debugger($blogcategories,true);
+                        foreach ($blogcategories as $key => $blogcategory) {
+                    ?>
                     <li>
                         <div class="dropdown">
-                            <a href="#">
+                            <a href="category?id=<?php echo $blogcategory->id ?>">
                                 <button class="dropbtn">
-                                    GAMING
+                                    <?php echo $blogcategory->categoryname; ?>
                                 </button>
                             </a>
                         </div>
                     </li>
-                    <li>
-                        <div class="dropdown">
-                            <a href="index.php">
-                                <button class="dropbtn">
-                                    PC
-                                </button>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <a href="index.php">
-                                <button class="dropbtn">
-                                    MOBILE
-                                </button>
-                            </a>
-                        </div>
-                    </li>
+                    <?php
+                        }
+
+                    ?>
+                    
                     <li>
                         <div class="dropdown">
                             <a href="#">

@@ -1,5 +1,23 @@
 <?php
+	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
 	include 'includes/header.php';
+	if (isset($_GET['id']) && !empty($_GET['id'])) {
+        $blogcat_id = (int)$_GET['id'];
+        if($blogcat_id){
+            $BlogCategory = new blogcategory();
+            $blogcategory_info = $BlogCategory->getBlogCategorybyId($blogcat_id);
+            // debugger($blogcategory_info);
+            if ($blogcategory_info) {
+                $blogcategory_info = $blogcategory_info[0];
+                $breads = $blogcategory_info->categoryname;
+            }else{
+                redirect('index');
+            }
+        }else{
+            redirect('index');
+        }
+        }else{redirect('index');
+    }
 ?>
 
 <section class="parallax category-topic">
@@ -9,9 +27,9 @@
 			<div style="width: 15px"></div>
 			<p>/</p>
 			<div style="width: 15px"></div>
-			<p>Category Name</p>
+			<p><?php echo $breads; ?></p>
 		</div>
-		<h1 style="color: #fff; margin-top: 0;">Category name</h1>
+		<h1 style="color: #fff; margin-top: 0;"><?php echo $breads; ?></h1>
 </section>
 
 <main role="main" class="main">
