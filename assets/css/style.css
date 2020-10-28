@@ -495,8 +495,9 @@ h4{
 
 /*----------Foooter------------------*/
 #footer{
-    background-image: linear-gradient(to right,#000000,#222222);
-	color:white;
+	border: 1px solid transparent;
+    background-image: linear-gradient(to right,var(--linearGradientStart),var(--linearGradientEnd));
+	color: var(--footerFontColor);
 	padding: 0 50px;
 }
 
@@ -510,42 +511,42 @@ h4{
 
 #footer a{
     border: none;
-    color: white;
+    color: var(--footerFontColor);
 }
 
 .fa-facebook-official:hover{
-    color:  rgb(147, 206, 255);
+    color:  var(--facebookColor);
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .fa-snapchat-ghost:hover{
-    color: rgb(255, 252, 0);
+    color: var(--snapchatColor);
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .fa-instagram:hover{
-    color: var(--default);
+    color: var(--instagramColor);
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .fa-twitter-square:hover{
-    color: #00acee;
+    color: var(--twitterColor);
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .fa-github-square:hover{
-    color: brown;
+    color: var(--githubColor);
     transform: scale(1.2);
     transition: 0.5s;
 }
 
 .f-line{
     height:3px;
-    background-color: var(--default);
+    background-color: var(--secondary);
 }
 
 .f-space{
@@ -555,13 +556,13 @@ h4{
 .f-header{
     text-transform: uppercase;
 	font-size: 14px;
-	font-weight: 900;
+	font-weight: 700;
 	color: var(--default);
 	margin-bottom: 0;
 }
 
 .f-links{
-    color: white;
+    color: var(--navbarFontColor);
     text-decoration: none;
 }
 
@@ -570,7 +571,7 @@ h4{
 }
 
 #footer a:hover{
-    color: var(--default);
+    color: var(--navbarFontHoverColor);
     transition: 0.5s;
 }
 
@@ -580,7 +581,7 @@ h4{
 	display: flex;
 }
 .emailbox i{
-	background-color: var(--default);
+	background-color: var(--secondary);
 	width:20px;
 	line-height: 25px;
 	text-align: center;
@@ -604,23 +605,23 @@ h4{
 }
 
 .btn{
-	background: var(--default);
-	color:white;
+	background: var(--secondary);
+	color:var(--navbarFontColor);
 	text-transform: uppercase;
 	cursor: pointer;
 
 }
 
 .texts{
-	font-size: 12px;
-	font-weight: 900;
-	text-transform: uppercase;
+	font-size: 14px;
+	/* font-weight: 900;
+	text-transform: uppercase; */
 }
 
 .end{
-    background: #222222;
-    color: white;
-    border-top: 1px rgba(204, 204, 204, 0.212) solid;
+    background: var(--endBackgroundColor);
+    color: var(--navbarFontColor);
+    border-top: 1px var(--endBorderColor);
     text-align: center;
 }
 
