@@ -33,6 +33,19 @@
 			return $this->getData($args,$is_die);
 		}
 
+		public function getUserbyEmailPassive($email,$is_die=false){		
+			$args = array(
+				// 'fields' => array('id','username','email','password'),
+				'where'	=> array(
+					'and' => array(
+							'email' => $email,
+							'status' => 'Passive',
+							)
+						)
+					);
+			return $this->getData($args,$is_die);
+		}
+
 		public function getUserbySessionToken($sessiontoken,$is_die=false){		
 			$args = array(
 				'where'	=> array(

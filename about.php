@@ -12,7 +12,7 @@
 			<div style="width: 15px"></div>
 			<p>About us</p>
 		</div>
-		<h1 style="color: #fff; margin-top: 0;">About Us</h1>
+		<h1 style="color: #fff; margin-top: 15px;">About Us</h1>
 	</section>
 
 	<!-- main content -->

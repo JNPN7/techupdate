@@ -665,13 +665,6 @@ h4{
   .container{
 	margin: 20px;
   }
-  .row{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-content: space-between;
-  }
-
   .col-md-6{
 	flex:50%;
 	margin: 0;
@@ -679,11 +672,7 @@ h4{
 	text-align: center;
   }
 
-  .txt{
-	padding: 10px 0 0 10px;
-	text-align: center;
-  }
-  .btn{
+  .btn-style{
 	outline: none;
 	border: none;
 	background:  linear-gradient(to right,rgb(255, 45, 45),rgb(255, 96, 96));
@@ -696,37 +685,17 @@ h4{
 	border-bottom-left-radius: 20px;
 	border-top-right-radius: 20px;
   }
-  .btn:hover{
+  .btn-style:hover{
 	background:  linear-gradient(to right,rgb(255, 96, 96),rgb(255, 45, 45));
 	transition: 0.9s ease;
   }
-  input{
-	display: block;
-	width: 100%;
-	border: none;
-	outline: none;
-	border-bottom: 1px solid gray;
-	text-align: center;
-  }
-
-  .login{
-	text-decoration: none;
-	outline: none;
-	color: black;
-  }
-
-  .login:hover{
-	color: red;
-  }
+  
   .login-img{
 	width: 90%;
 	height: auto;
   }
 
   @media screen and (max-width: 1000px) {
-	.row{
-	  flex-direction: column;
-	}
 	.col-md-6{
 	  flex: 100%;
 	  margin: 0 auto;
@@ -735,3 +704,35 @@ h4{
 	  width: 100%;
 	}
   }
+
+
+.input-login{
+	position: relative;
+	color: #000;
+	margin-bottom: 40px;
+}
+.input-login input{	
+	border: none;
+	outline: none;
+	font-size: 17px;
+	color: #000;
+	border-bottom: 1px solid grey;
+	width: 100%;
+}
+.input-login label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 17px;
+	transition: .4s;
+
+}
+.input-login input:focus~ label,
+.input-login input:valid~ label
+{
+	position: absolute;
+	top: -18px;
+	left: 0;
+	color: darkblue;
+	font-size: 15px;
+}
