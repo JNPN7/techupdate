@@ -18,7 +18,8 @@
 	<div class="row">
 		<div class="main-section">
 			<div class="main-pad" style="padding-top: 40px">
-				<div class="col">
+				<!----------- oldie design ----------->
+				<!-- <div class="col">
 					<div class="post post-col">
 						<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
 						<div class="meta-col">
@@ -53,7 +54,10 @@
 							<div class="post-topic">I wish I was the monster you think of</div>
 							<div class="post-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </div>
 						</div>
-					</div>
+					</div> -->
+
+					<!---------------- new design ------------------->
+					
 				</div>
 			</div>
 		</div>
