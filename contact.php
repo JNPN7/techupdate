@@ -12,7 +12,7 @@
 			<div style="width: 15px"></div>
 			<p>Contact</p>
 		</div>
-		<h1 style="color: #fff; margin-top: 0;">Contact</h1>
+		<h1 style="color: #fff; margin-top: 15px;">Contact</h1>
 	</section>
 
 	<!-- main content -->

@@ -27,7 +27,7 @@
 		<script src="https://kit.fontawesome.com/4b23978c25.js" crossorigin="anonymous"></script>
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwe"/>
         <link type="text/css" rel="stylesheet" href="assets/css/responsive.css"/>
 		<!-------------------------------------------->
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -61,7 +61,7 @@
                 <ul>
                     <li>
                         <div class="dropdown">
-                            <a href="index.php">
+                            <a href="index">
                                 <button class="dropbtn">
                                     HOME
                                 </button>
@@ -93,7 +93,7 @@
                     </li>
                     <li>
                         <div class="dropdown">
-                            <a href="index.php">
+                            <a href="index">
                                 <button class="dropbtn">
                                     PC
                                 </button>
@@ -102,7 +102,7 @@
                     </li>
                     <li>
                         <div class="dropdown">
-                            <a href="index.php">
+                            <a href="index">
                                 <button class="dropbtn">
                                     MOBILE
                                 </button>
@@ -117,8 +117,8 @@
                                 </button>
                             </a>
                             <div class="dropdown-content">
-                                <a href="about.php">ABOUT US</a>
-                                <a href="contact.php">CONTACT</a>
+                                <a href="about">ABOUT US</a>
+                                <a href="contact">CONTACT</a>
                             </div>
                         </div>
                     </li>
