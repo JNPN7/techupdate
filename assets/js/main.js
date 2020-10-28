@@ -58,6 +58,7 @@ var s;
 var c = 0;
 function showMenu()
 {
+    console.log("ksahjfdkj");
     s = document.getElementById("navbar").getElementsByTagName("ul");
     var icon = document.getElementById("menu").getElementsByTagName("i");
     c++;
@@ -154,5 +155,19 @@ function toggleUserOptions() {
     }
     else {
         document.getElementById("userOptions").style.display = "flex";
+    }
+}
+
+var show_password = document.getElementsByClassName("showpassword");
+var password = document.getElementsByClassName("password");
+function toggleShowPassword(){
+    if(show_password[0].classList.contains("fa-eye")){
+        show_password[0].classList.remove("fa-eye");
+        show_password[0].classList.add("fa-eye-slash");
+        password[0].setAttribute("type", "text");
+    }else if(show_password[0].classList.contains("fa-eye-slash")){
+        show_password[0].classList.remove("fa-eye-slash");
+        show_password[0].classList.add("fa-eye");
+        password[0].setAttribute("type", "password");
     }
 }

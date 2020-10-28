@@ -28,7 +28,7 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwe"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwe"/>
 		<!-------------------------------------------->
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,8 +50,8 @@
                 <i class="fa fa-user"></i>
             </button>
             <div id="userOptions">
-                <a href="login.php">Sign In</a>
-                <a href="register.php">Sign Up</a>
+                <a href="login">Sign In</a>
+                <a href="register">Sign Up</a>
             </div>
             <div id="mainTitle" class="navChild">
                 TECHX

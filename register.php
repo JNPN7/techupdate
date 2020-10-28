@@ -27,9 +27,10 @@
                   <input type="text" name="email" required="" value="">
                   <label>Email</label>
                 </div>
-                <div class="input-login">
-                  <input type="password" name="passw" required="">
+                <div class="input-login row" style="align-content: space-between;">
+                  <input class="password" type="password" name="passw" required="" style="width: 91%;">
                   <label>Password</label>
+                  <i class="fa fa-eye showpassword" onclick="toggleShowPassword()"></i>  
                 </div>
                 <div class="input-login">
                   <input type="password" name="repassw" required="">
