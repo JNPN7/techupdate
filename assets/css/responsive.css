@@ -1,4 +1,4 @@
-/*@import "colors.css";*/
+@import "colors.css";
 
 @media screen and (min-width: 0px) and (max-width: 768px)   {
     
@@ -29,10 +29,10 @@
 
     #navbar #menu {
         display: block;
-        position: absolute;
-        right: 100px;
+        /* position: absolute; */
+        /* right: 100px; */
         margin: 10px;
-        top: 0;
+        /* top: 0; */
     }
 
     #navbar .sign a {
@@ -116,46 +116,69 @@
     cursor: pointer;
 }
 
-#navbar #user {
+#navbar #search {
+    /* position: absolute; */
+    margin: 10px;
+    /* top: 0px; */
+    /* right: 50px; */
+    background: transparent;
+}
+
+#navbar #user #userButton {
     display: block;
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 10px;
+    right: 10px; */
     border: none;
-    font-size: 30px;
+    font-size: 25px;
     background: transparent;
     cursor: pointer;
     margin: 10px;
+    color: var(--navbarIconsColor);
 }
 
-#navbar #search {
-    position: absolute;
-    margin: 10px;
-    top: 0px;
-    right: 50px;
-    background: transparent;
+#navbar #user #userButton:hover {
+    color: var(--navbarIconsHoverColor);
 }
 
-#userOptions {
-    height: auto;
-    background-color: tomato;
+
+
+#user {
+    float: left;
+    overflow: hidden;
+}
+
+#navbar #user #userOptions {
     position: absolute;
-    top: 50px;
+    /* padding: 10px; */
     right: 0;
-    padding: 10px;
-    width: 300px;
+    /* margin-top: 50px; */
+    min-width: 200px;
     z-index: 10;
     display: none;
     flex-direction: column;
+	background-color: var(--dropdownContentBackgroundColor);
+	box-shadow: 0px 8px 16px 0px var(--navbarDropdownContentBoxShadow);
+	border-radius: 5px;
+    margin: 0;
 }
 
-#userOptions a {
+#navbar #user #userOptions .a {
+    float: none;
+	color: var(--navbarFontColor);
 	text-decoration: none;
-	color: rgb(207, 209, 144);
+	display: block;
+	text-align: left;
+    padding: 15px;
+}
+
+#navbar #user #userOptions a {
+	text-decoration: none;
+	color: var(--navbarFontColor);
 	margin: 10px;
     font-size: 20px;
 }
 
-#userOptions a:hover {
-	color: rgb(0, 22, 34);
+#navbar #user #userOptions a:hover {
+	color: var(--navbarFontHoverColor);
 }

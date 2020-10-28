@@ -1,3 +1,4 @@
+@import "colors.css";
 :root{
 	--default: rgb(255, 75, 75);
 }
@@ -66,22 +67,21 @@ h4{
 	display: inline-flex;
 	width: 100%;
 	height: auto;
-	color: rgb(19, 46, 64);
+	color: var(--navbarFontColor);
 	position: sticky;
 	top: 0;
 	transition-property: all;
 	transition-duration: .1s;
 	transition-timing-function: linear;
 	text-align: center;
-	background-color: rgb(255, 26, 26);
+	background-image: linear-gradient(to right, var(--linearGradientStart),var(--linearGradientEnd));
 	z-index: 5;
-	padding-right: 100px;
 }
 
 	#navbar .navChild {
 		margin: auto;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	}
 
 	#navbar #mainTitle {
@@ -102,7 +102,8 @@ h4{
 		}
 
 .dropbtn:hover {
-	color: rgb(0, 22, 34)
+	color: var(--navbarFontHoverColor);
+	/* background-color: var(--navbarBtnHoverBackground); */
 }
 
 .dropdown {
@@ -111,7 +112,7 @@ h4{
 }
 
 .dropdown, .dropbtn {
-	color: rgb(207, 209, 144);
+	color: var(--navbarFontColor);
 	padding: 5px;
 	background-color: inherit;
 	font-family: inherit;
@@ -123,16 +124,16 @@ h4{
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: rgb(216, 109, 80);
+	background-color: var(--dropdownContentBackgroundColor);
 	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px var(--navbarDropdownContentBoxShadow);
 	border-radius: 5px;
 	margin: 0;
 }
 
 .dropdown-content a {
 	float: none;
-	color: rgb(19, 15, 65);
+	color: var(--navbarFontColor);
 	text-decoration: none;
 	display: block;
 	text-align: left;
@@ -140,8 +141,8 @@ h4{
 }
 
 	.dropdown-content a:hover {
-		background-color: rgb(202, 209, 144);
-		color: rgb(10, 65, 95);
+		/* background-color: var(--navbarBtnHoverBackground); */
+		color: var(--navbarFontHoverColor);
 	}
 
 #navbar .dropdown:hover .dropdown-content {
@@ -152,38 +153,16 @@ h4{
 	text-decoration: none;
 }
 
-.dropright {
-	position: relative;
-}
-
-.dropright-content {
-	display: none;
-	position: absolute;
-	background-color: #b9b9cf;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	border-radius: 5px;
-	margin: 0;
-	left: 100%;
-	top: 0;
-	min-width: 250px;
-}
-
-#navbar .dropright:hover .dropright-content {
-	display: block;
-	z-index: 500;
-}
-
 #menu {
-	font-size: 30px;
+	font-size: 25px;
 	background: transparent;
-	color: rgb(248, 232, 232);
-	position: absolute;
+	color: var(--navbarIconsColor);
+	/* position: absolute; */
 	border: none;
 }
 
 	#menu:hover {
-		color: rgb(86, 187, 201);
+		color: var(--navbarIconsHoverColor);
 	}
 
 #navbar .hide {
@@ -194,14 +173,21 @@ h4{
 	background: transparent;
 	border-radius: 5px;
 	border: none;
-	font-size: 30px;
+	font-size: 25px;
 }
 
 #navbar .searchButton {
 	cursor:pointer;
+	color: var(--navbarIconsColor);
 }
 
+#navbar .searchButton:hover {
+	color: var(--navbarIconsHoverColor);
+}
 
+#navbar .navChild .social {
+	margin-right: 100px;
+}
 
 #navbar .navChild .social button {
 	background-color: transparent;
@@ -209,34 +195,34 @@ h4{
 	padding: 10px;
 	margin-right: 10px;
 	font-size: 25px;
-	color: rgb(0, 0, 0);
+	color: var(--navbarIconsColor);
 }
 
 #navbar .navChild .social button:hover {
-	border: 1px solid gray;
+	/* border: 1px solid gray; */
 	border-radius: 5px;
-	background-color: wheat;
+	/* background-color: wheat; */
 	cursor: pointer;
 }
 
 #navbar .navChild .social .facebook:hover {
-	color: rgb(29, 29, 255);
+	color: var(--facebookColor);
 }
 
 #navbar .navChild .social .twitter:hover {
-	color: rgb(0, 140, 255);
+	color: var(--twitterColor);
 }
 
 #navbar .navChild .social .pinterest:hover {
-	color: rgb(255, 0, 0);
+	color: var(--pinterestColor);
 }
 
 #navbar .navChild .social .instagram:hover {
-	color: rgb(255, 0, 85);
+	color: var(--instagramColor);
 }
 
 #navbar .navChild .social .tumblr:hover {
-	color: rgb(0, 31, 97);
+	color: var(--tumblrColor);
 }
 
 /*--Navbar Properties end--*/

@@ -40,18 +40,7 @@
 	<body>
 		<!--Navbar start-->
         <div id="navbar">
-            <!-- Hamburger menu for smaller screens. Placed on rignt side of navbar..... for small screens -->
-            <button id="menu" class="hide" onclick="showMenu()">
-                <i class="fa fa-bars"></i>
-            </button>
 
-            <button id="user">
-                <i class="fa fa-user"></i>
-            </button>
-            <div id="userOptions">
-                <a href="login">Sign In</a>
-                <a href="register">Sign Up</a>
-            </div>
             <div id="mainTitle" class="navChild">
                 TECHX
             </div>
@@ -137,13 +126,30 @@
                     <button class="tumblr" onclick="window.location.href='https://www.tumblr.com'">    
                         <i class="fa fa-tumblr"></i>                        
                     </button>
-                </div>   
+                </div>
+
+                <!-- Hamburger menu for smaller screens. Placed on rignt side of navbar..... for small screens -->
+                <button id="menu" class="hide" onclick="showMenu()">
+                    <i class="fa fa-bars"></i>
+                </button>
+
                 <div id="search">
                     <!-- <input class="search searchbox" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" /> -->
                     <button class="search searchButton">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
+
+                <div id="user">
+                    <button id="userButton">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <div id="userOptions">
+                        <a href="login">Sign In</a>
+                        <a href="register">Sign Up</a>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!--Navbar end-->

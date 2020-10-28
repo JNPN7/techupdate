@@ -1,0 +1,38 @@
+:root {
+    --red: rgb(255, 0, 0);
+    --blue: rgb(0, 0, 255);
+    --green: rgb(0, 255, 0);
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --yellow: rgb(255, 255, 0);
+
+
+    
+    --primary: var(--black);
+    --secondary: var(--red);
+    --tertiary: var(--yellow);
+
+
+    /* For Navbar */
+    --linearGradientStart: var(--black);
+    --linearGradientEnd: rgb(50, 50, 50);
+    --navbarFontColor: rgba(255, 255, 255, 1);
+    --navbarDropdownContentBoxShadow: rgba(0,0,0,0.3);
+
+    /* For Navbar Dropdown */
+    --dropdownContentBackgroundColor: var(--primary);
+
+    /* For Navbar hover */
+    --navbarFontHoverColor: var(--tertiary);
+
+    /* For Navbar Icons */
+    --navbarIconsColor: var(--navbarFontColor);
+    --facebookColor: rgb(0, 0, 255);
+    --twitterColor: rgb(0, 140, 255);
+    --pinterestColor: rgb(255, 0, 0);
+    --instagramColor: rgb(255, 0, 85);
+    --tumblrColor: rgb(0, 31, 97);
+
+    /* For Navbar Icons Hover */
+    --navbarIconsHoverColor: var(--tertiary);
+}
