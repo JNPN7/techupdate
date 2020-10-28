@@ -5,7 +5,7 @@
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --yellow: rgb(255, 255, 0);
-
+    --default: rgb(255, 60, 0);
 
     
     --primary: var(--black);
@@ -23,7 +23,7 @@
     --dropdownContentBackgroundColor: var(--primary);
 
     /* For Navbar hover */
-    --navbarFontHoverColor: var(--tertiary);
+    --navbarFontHoverColor: var(--default);
 
     /* For Navbar Icons */
     --navbarIconsColor: var(--navbarFontColor);
