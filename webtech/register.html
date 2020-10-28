@@ -80,6 +80,10 @@
       .login:hover{
         color: red;
       }
+      .login-img{
+        width: 50%;
+        height: auto;
+      }
 
       @media screen and (max-width: 800px) {
         .row{
@@ -87,6 +91,10 @@
         }
         .col-md-6{
           flex: 100%;
+        }
+        }
+        .login-img{
+          width: 100%;
         }
       }
     </style>
@@ -102,7 +110,7 @@
   <form action="" method="POST">
   <div class="row">
     <div class="col-md-6" style="position: sticky; top:0; left: 0;">
-      <img src="laptop.gif" style="width: 600px; height: auto;">
+      <img src="laptop.gif" class="login-img">
     </div>
     <div class="col-md-6" style="z-index: 1; max-width: 400px; margin: 0 auto;">
       <div class="batta">
