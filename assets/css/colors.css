@@ -16,7 +16,7 @@
     /* For Navbar */
     --linearGradientStart: var(--black);
     --linearGradientEnd: rgb(50, 50, 50);
-    --navbarFontColor: rgba(255, 255, 255, 1);
+    --navbarFontColor: var(--white);
     --navbarDropdownContentBoxShadow: rgba(0,0,0,0.3);
 
     /* For Navbar Dropdown */
@@ -27,12 +27,23 @@
 
     /* For Navbar Icons */
     --navbarIconsColor: var(--navbarFontColor);
-    --facebookColor: rgb(0, 0, 255);
+    --facebookColor: var(--blue);
     --twitterColor: rgb(0, 140, 255);
-    --pinterestColor: rgb(255, 0, 0);
+    --pinterestColor: var(--red);
     --instagramColor: rgb(255, 0, 85);
     --tumblrColor: rgb(0, 31, 97);
+    --snapchatColor: var(--yellow);
+    --githubColor: brown;
 
     /* For Navbar Icons Hover */
     --navbarIconsHoverColor: var(--tertiary);
+    
+
+
+    /* For Footer */
+    --footerFontColor: var(--white);
+
+    /* For Footer .end */
+    --endBackgroundColor: #222222;
+    --endBorderColor: rgba(204, 204, 204, 0.212) solid;
 }
