@@ -1,5 +1,7 @@
 <?php
 	include 'includes/header.php';
+	$content = "paragraph<start>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.HAHAHAHHAAH<end>image<start>assets/images/mountain2.jpeg,caption<end>paragraph<start>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<end>image<start>assets/images/mountain1.jpeg,caption<end>image<start>assets/images/mountain3.jpeg,caption<end>paragraph<start>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<end>ad<start>90px<end>";
+	$arr = explode("<end>", $content);
 ?>
 
 <section class="parallax category-topic">
@@ -26,9 +28,31 @@
 							<div>Thats what she said, Micheal scott scott tots nowhere going on and on and on we are good and thanks for asking</div>
 						</div>
 					</div>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
+					<?php
+						foreach ($arr as $key => $value) {
+							$val = explode("<start>", $value);
+							if($val[0] == 'paragraph'){
+
+					?>
+								<p style="margin: 20px 0 10px 0"><?=$val[1]?></p>
+								<div style="height: 20px;"></div>
+					<?php
+							}elseif ($val[0] == 'image') {
+								$fig = explode(",", $val[1])
+					?>
+								<figure>
+									<img src="<?=$fig[0]?>">
+									<figcaption><?=$fig[1]?></figcaption>
+								</figure>
+					<?php
+							}elseif ($val[0] == 'ad') {
+					?>
+								<div style="background-color: grey; height: <?=$val[1]?>">
+								</div>
+					<?php
+							}
+						}
+					?>
 				</article>
 			</div>
 		</div>
@@ -119,9 +143,13 @@
 				<div>
 					<h2>Keep up with us</h2>
 					<div class="row">
-						<i class="fa fa-facebook-square" aria-hidden="true"></i>
-						<div style="width: 10px"></div>
-						<i class="fa fa-twitter-square" aria-hidden="true"></i>
+						<p style="margin-top: 0; font-size: 20px; color: blue;">
+							<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+				            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+				            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+				            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+				            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+			        	</p>
 					</div>
 				</div>
 			</div>

@@ -23,7 +23,7 @@
               <input type="password" name="pass" required="">
               <label>Password</label>
             </div>
-            <div>
+            <div class="input-login">
               <input type="checkbox" name="rememberme" /> Remember me 
             </div>
             <button class="btn-style" type="submit" name="">Sign up</button>

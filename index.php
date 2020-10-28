@@ -263,9 +263,13 @@
 						<div>
 							<h2>Keep up with us</h2>
 							<div class="row">
-								<i class="fa fa-facebook-square" aria-hidden="true"></i>
-								<div style="width: 10px"></div>
-								<i class="fa fa-twitter-square" aria-hidden="true"></i>
+								<p style="margin-top: 0; font-size: 20px; color: blue;">
+									<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+					        	</p>
 							</div>
 						</div>
 					</div>
