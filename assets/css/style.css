@@ -556,7 +556,7 @@ h4{
 .f-header{
     text-transform: uppercase;
 	font-size: 14px;
-	font-weight: 900;
+	font-weight: 700;
 	color: var(--default);
 	margin-bottom: 0;
 }
@@ -613,9 +613,9 @@ h4{
 }
 
 .texts{
-	font-size: 12px;
-	font-weight: 900;
-	text-transform: uppercase;
+	font-size: 14px;
+	/* font-weight: 900;
+	text-transform: uppercase; */
 }
 
 .end{
