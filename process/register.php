@@ -60,7 +60,7 @@
 			    $mail->Username = 'manandharsudip4@gmail.com'; // email
 			    $mail->Password = 'validatepwd456'; // password
 			    $mail->setFrom('manandharsudip4@gmail.com', 'Tech Max'); // From email and name
-			    $mail->addAddress('manandharsudip8@gmail.com', 'TechGais'); // to email and name
+			    $mail->addAddress($_POST['email'], 'TechGais'); // to email and name
 			    $mail->Subject = 'Verification Token';
 			    $mail->msgHTML("Verification token: ".$data['activate_token']); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
 			    $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
