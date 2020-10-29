@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-3"><div class="f-space"></div>
               <a href="index">
-                <i class="fa fa-robot" aria-hidden="true" style="color:#fff; font-size:70px;"></i> <b class="nname" style="color: #fff;">Techx</b>
+                <b class="nname" style="color: #fff; font-size: 50px; font-weight:900;">TECHX</b>
               </a>
             </div>
             <div class="col-md-3"><br>
