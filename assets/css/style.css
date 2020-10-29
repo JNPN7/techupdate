@@ -1,12 +1,15 @@
 @import "colors.css";
+@import "fonts.css";
 *{
 	box-sizing: border-box;
+	margin: 0;
+	font-family: var(--allFontFamily)
 }
 
 body {
-	font-family: 'Nunito', sans-serif;
-	font-size: 16px;
-	font-weight: 300;
+	font-family: var(--bodyFontFamily);
+	font-size: var(--bodyFontSize);
+	font-weight: var(--bodyFontWeight);
 	color: var(--bodyColor);
 	margin: 0;
 	padding: 0;
@@ -17,16 +20,16 @@ html{
     scroll-behavior: smooth;
 }
 h1{
-	font-size: 35px;
+	font-size: var(--h1FontSize);
 }
 h2{
-	font-size: 30px;
+	font-size: var(--h2FontSize);
 }
 h3{
-	font-size: 25px;
+	font-size: var(--h3FontSize);
 }
 h4{
-	font-size: 20px;
+	font-size: var(--h4FontSize);
 }
 
 .color-grey{
@@ -46,9 +49,9 @@ h4{
     padding: 9px 0;
     border: none;
     background-color: var(--primaryButtonBackgroundColor);
-    font-weight: 600;
+    font-weight: var(--primaryButtonFontWeight);
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: var(--primaryButtonFontSize);
     color: var(--primaryButtonColor);
     transition: 0.2s opacity;
 }
@@ -82,8 +85,8 @@ h4{
 	}
 
 	#navbar #mainTitle {
-		font-size: 100px;
-		font-weight: 800;
+		font-size: var(--navbarMainTitleFontSize);
+		font-weight: VAR(--navbarMainTitleFontWeight);
 		transition-property: font-size;
 		transition-duration: .2s ;
 		transition-timing-function: linear;
@@ -118,7 +121,7 @@ h4{
 	background-color: inherit;
 	font-family: inherit;
 	border: none;
-	font-size: 18px;
+	font-size: var(--dropdownFontSize);
 	cursor: pointer;
 }
 
@@ -156,7 +159,7 @@ h4{
 }
 
 #menu {
-	font-size: 18px;
+	font-size: var(--menuFontSize);
 	background: transparent;
 	color: var(--navbarIconsColor);
 	/* position: absolute; */
@@ -184,7 +187,7 @@ h4{
 	background: transparent;
 	border-radius: 5px;
 	border: none;
-	font-size: 18px;
+	font-size: var(--navbarSearchButtonFontSize);
 }
 
 #navbar .searchButton:hover {
@@ -202,7 +205,7 @@ h4{
 	border: none;
 	padding: 10px;
 	margin-right: 10px;
-	font-size: 18px;
+	font-size: var(--navbarSocialButtonFontSize);
 	color: var(--navbarIconsColor);
 }
 
@@ -257,7 +260,7 @@ h4{
 	position: fixed;
 	display: none;
 	padding: 10px;
-	font-size: 30px;
+	font-size: var(--gotoTopFontSize);
 	background-color: var(--gotoTopBackgroundColor);
 	cursor: pointer;
 	border: 2px solid var(--gotoTopBorderColor);
@@ -331,13 +334,13 @@ h4{
 	bottom: 20px;
 	left: 10px;
 	color: var(--postMetaColor);
-	font-weight: 900;
-	font-size: 25px;
+	font-weight: var(--postMetaFontWeight);
+	font-size: var(--postMetaFontSize);
 }
 .meta-outside{
 	position: static;
 	color: var(--metaOutsideColor);
-	font-size: 20px;
+	font-size: var(--metaOutsideFontSize);
 }
 .post-thumb{
 	width: 100%;
@@ -354,8 +357,8 @@ h4{
 	flex-direction: column;
 	color: var(--metaColColor);
 	padding-left: 5px;
-	font-size: 16px;
-	font-weight: 900;
+	font-size: var(--metaColFontSize);
+	font-weight: var(--metaColFontWeight);
 	flex: 60%;
 }
 .col-img{
@@ -365,11 +368,11 @@ h4{
 	text-decoration: underline;
 }
 .post-des{
-	font-size: 14px;
-	font-weight: 500;
+	font-size: var(--postDesFontSize);
+	font-weight: var(--postDesFontWeight);
 }
 .post-date{
-	font-size: 14px;
+	font-size: var(postDateFontSize);
 	color: var(--postDateColor);
 }
 .post .post-img:hover, .post .post-img:focus {
@@ -504,7 +507,7 @@ h4{
 }
 
 #footer a i{
-    font-size: 20px;
+    font-size: var(--footerAIFontSize);
 }
 
 #footer .col-md-3{
@@ -557,8 +560,8 @@ h4{
 
 .f-header{
     text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 700;
+	font-size: var(--fHeaderFontSize);
+	font-weight: var(--fHeaderFontWeight);
 	color: var(--default);
 	margin-bottom: 0;
 }
@@ -615,8 +618,8 @@ h4{
 }
 
 .texts{
-	font-size: 14px;
-	font-weight: 400;
+	font-size: var(--textsFontSize);
+	font-weight: var(--textsFontWeight);
 	/* font-weight: 900;
 	text-transform: uppercase; */
 }
@@ -634,10 +637,6 @@ h4{
 
 
 /* Login Page */
-*{
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
   .batta{
 	border: 1px var(--battaBorderColor);
 	background: var(--battaBackgroundColor);
@@ -699,7 +698,7 @@ h4{
 .input-login input{	
 	border: none;
 	outline: none;
-	font-size: 17px;
+	font-size: var(--inputLoginInputFontSize);
 	color: var(--inputLoginColor);
 	border-bottom: 1px solid var(--inputLoginBottomBorderColor);
 	width: 100%;
@@ -708,7 +707,7 @@ h4{
 	position: absolute;
 	top: 0;
 	left: 0;
-	font-size: 17px;
+	font-size: var(--inputLoginLabelFontSize);
 	transition: .4s;
 
 }
@@ -719,5 +718,5 @@ h4{
 	top: -18px;
 	left: 0;
 	color: var(--inputLoginInputFocusColor);
-	font-size: 15px;
+	font-size: var(--inputLoginInputFocusFontSize);
 }

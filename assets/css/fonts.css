@@ -1,0 +1,89 @@
+:root {
+
+    /* For * */
+    --allFontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+
+    /* For body */
+    --bodyFontFamily: 'Nunito', sans-serif;
+    --bodyFontSize: 16px;
+    --bodyFontWeight: 300;
+
+    /* For <h> */
+    --h1FontSize: 35px;
+    --h2FontSize: 30px;
+    --h3FontSize: 25px;
+    --h4FontSize: 20px;
+
+    /* For primary-button */
+    --primaryButtonFontWeight: 600;
+    --primaryButtonFontSize: 13px;
+
+    /* For #navbar #mainTitle */
+    --navbarMainTitleFontSize: 100px;
+    --navbarMainTitleFontWeight: 800;
+
+    /* For .dropdown */
+    --dropdownFontSize: 18px;
+
+    /* For #menu */
+    --menuFontSize: 18px;
+
+    /* For #navbar .searchButton */
+    --navbarSearchButtonFontSize: 18px;
+    
+    /* For #navbar Social Media Icons */
+    --navbarSocialButtonFontSize: 18px;
+
+    /* For #gotoTop */
+    --gotoTopFontSize: 30px;
+
+    /* For .post-meta */
+    --postMetaFontSize: 25px;
+    --postMetaFontWeight: 900;
+
+    /* For .meta-outside */
+    --metaOutsideFontSize: 20px;
+
+    /* For .meta-col */
+    --metaColFontSize: 16px;
+    --metaColFontWeight: 900;
+
+    /* For .post-des */
+    --postDesFontSize: 14px;
+    --postDesFontWeight: 500;
+
+    /* For .post-date */
+    --postDateFontSize: 14px;
+
+    /* For #footer a i */
+    --footerAIFontSize: 20px;
+
+    /* For .f-header */
+    --fHeaderFontSize: 14px;
+    --fHeaderFontWeight: 700;
+
+    /* For .texts */
+    --textsFontSize: 14px;
+    --textsFontWeight: 400;
+
+    /* For .input-login input */
+    --inputLoginInputFontSize: 17px;
+
+    /* For .input-login label */
+    --inputLoginLabelFontSize: 17px;
+
+    /* For .input-login input:focus~ label, .input-login input:valid~ label */
+    --inputLoginInputFocusFontSize: 15px;
+
+    /* For #searchPage .searchPageBox */
+    --searchPageSearchPageBoxFontSize: 30px;
+
+    /* For #searchPage i */
+    --searchPageIFontSize: 40px;
+
+    /* For #navbar #user #userButton */
+    --navbarUserUserButtonFontSize: 18px;
+
+    /* For #navbar #user #userOptions a */
+    --navbarUserUserOptionsAFontSize: 20px;
+}
