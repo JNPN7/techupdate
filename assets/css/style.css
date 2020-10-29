@@ -184,7 +184,7 @@ h4{
 #navbar .searchButton {
 	cursor:pointer;
 	color: var(--navbarIconsColor);
-	background: transparent;
+	background-color: transparent;
 	border-radius: 5px;
 	border: none;
 	font-size: var(--navbarSearchButtonFontSize);
