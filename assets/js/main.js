@@ -8,7 +8,7 @@ function scrollFunction2()
     var newScrollValue = window.scrollY;
     if (window.scrollY == 0)
     {
-        document.getElementById("mainTitle").style.fontSize = "100px";
+        document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "100px";
     }
     else
     {
@@ -16,12 +16,12 @@ function scrollFunction2()
             if(Math.abs(newScrollValue - oldScrollValue) >= 2)
             {
                 //new_value = old_value - (window.scrollY / 100) * total_possible_change_in_value
-                document.getElementById("mainTitle").style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
+                document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
             }
         }
         else
         {
-            document.getElementById("mainTitle").style.fontSize = "50px";
+            document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "50px";
         }
     }
     if(window.scrollY >= 500) {
@@ -171,4 +171,22 @@ function toggleShowPassword(){
         show_password[0].classList.add("fa-eye");
         password[0].setAttribute("type", "text");
     }
+}
+
+var postThumb = document.getElementsByClassName("post-thumb");
+for(let i = 0; i < postThumb.length; i++) {
+    postThumb[i].addEventListener("mouseover", function () {
+        addTransformFunction(i);
+    });
+    postThumb[i].addEventListener("mouseout", function () {
+        removeTransformFunction(i);
+    });
+}
+
+function addTransformFunction(t) {
+    postThumb[t].style.transform = "scale(1.2)";
+}
+
+function removeTransformFunction(t) {
+    postThumb[t].style.transform = "scale(1)";
 }

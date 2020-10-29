@@ -42,21 +42,11 @@
         <div id="navbar">
 
             <div id="mainTitle" class="navChild">
-                TECHX
+                <a href="index">TECHX</a>
             </div>
 
             <div class="navChild">
                 <ul>
-                    <li>
-                        <div class="dropdown">
-                            <a href="index">
-                                <button class="dropbtn">
-                                    HOME
-                                </button>
-                            </a>
-                        </div>
-                    </li>
-                    
                     <li>
                         <div class="dropdown">
                             <a href="#">
