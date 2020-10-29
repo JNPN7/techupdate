@@ -13,14 +13,35 @@
     --tertiary: var(--yellow);
 
 
+
+    /* Body */
+    --bodyColor: #3d455c;
+
+
+    /* For color-grey */
+    --colorGreyColor: #696969 !important;
+
+    /* For input */
+    --inputBorderColor: #eceef2;
+    --inputFocusBorderColor: #3d455c;
+
+    /* For primary-button */
+    --primaryButtonColor: var(--white);
+    --primaryButtonBackgroundColor: #212631;
+    --primaryButtonHoverColor: var(--white);
+
+
     /* For Navbar */
     --linearGradientStart: var(--black);
     --linearGradientEnd: rgb(50, 50, 50);
     --navbarFontColor: var(--white);
+    --navMainTitleColor: var(--white);
     --navbarDropdownContentBoxShadow: rgba(0,0,0,0.3);
 
     /* For Navbar Dropdown */
     --dropdownContentBackgroundColor: var(--primary);
+    --navDropbtnHoverColor: var(--default);
+    --navDropdownAHoverColor: var(--default);
 
     /* For Navbar hover */
     --navbarFontHoverColor: var(--default);
@@ -36,8 +57,86 @@
     --githubColor: brown;
 
     /* For Navbar Icons Hover */
-    --navbarIconsHoverColor: var(--tertiary);
+    --navbarIconsHoverColor: var(--default);
     
+    /* For Search */
+    --searchPageBackgroundColor: rgba(0, 0, 0, 0.5);
+    --searchPageDivBackgroundColor: rgba(0, 0, 0, 0.8);
+    --searchPageIColor: var(--white);
+    --searchPageIHoverColor: var(--navbarIconsHoverColor);
+    --searchPageBoxBorderColor: rgb(169, 235, 47);
+    --searchPageBoxBackgroundColor: rgb(0, 0, 0);
+    --searchPageBoxFontColor: rgb(255, 255, 255);
+
+    /* For Goto Top Button */
+    --gotoTopBackgroundColor: rgba(138, 126, 126, 0.596);
+    --gotoTopBorderColor: var(--black);
+
+
+
+
+
+    /* Index.php */
+    
+    /* For hot-news right */
+    --hotNewsRightBackgroundColor: rgba(202, 202, 202, 0.952);
+    /* For hot-news left */
+    --hotNewsLeftBackgroundColor: #212121;
+
+    /* For main Section */
+    --mainSectionBackgroundColor: rgba(0, 0, 0, 0);
+
+    /* For post-meta */
+    --postMetaColor: #FFF;
+
+    /* For post-date */
+    --postDateColor: #eceef2;
+
+    /* For grid-container > div */
+    --gridContainerDivBackgroundColor: blue;
+    
+    /* For meta-outside */
+    --metaOutsideColor: #000000 !important;
+
+    /* For meta-col */
+    --metaColColor: #000000 !important;
+
+
+
+
+    /* About.php */
+
+    /* For banner */
+    --bannerBackgroundColor: linear-gradient(to top, rgb(0,0,0), rgb(95,95,95));
+
+    /* For banner-home */
+    --bannerHomeColor: (--white);
+
+
+
+
+
+
+    /* Login.php */
+
+    /* For batta */
+    --battaBorderColor: #ccc solid!important;
+    --battaBackgroundColor: var(--white);
+    --battaBoxShadowColor: #242424d0;
+
+    /* For btn-style */
+    --btnStyleBackgroundColor: linear-gradient(to right,rgb(255, 45, 45),rgb(255, 96, 96));
+    --btnStyleColor: var(--white);
+    --btnStyleHoverBackgroundColor: linear-gradient(to right,rgb(255, 96, 96),rgb(255, 45, 45));
+
+    /* For input-login */
+    --inputLoginColor: var(--black);
+    --inputLoginBottomBorderColor: grey;
+
+    /* For.input-login input:focus~ label, .input-login input:valid~ label */
+    --inputLoginInputFocusColor: darkblue;
+
+
 
 
     /* For Footer */

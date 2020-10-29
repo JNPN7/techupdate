@@ -135,7 +135,7 @@
 
                 <div id="search">
                     <!-- <input class="search searchbox" type="text" name="search" value="Search" onclick="changeSearchBackground(3)" /> -->
-                    <button class="search searchButton">
+                    <button class="searchButton">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>

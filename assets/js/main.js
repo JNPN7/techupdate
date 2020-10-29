@@ -143,6 +143,7 @@ function toggleSearch() {
     }
     else {
         document.getElementById("searchPage").style.display = "block";
+        document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0].focus();
     }
 }
 
