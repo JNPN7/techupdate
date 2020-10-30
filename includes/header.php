@@ -38,6 +38,9 @@
 
     </head>
 	<body>
+        <div id="loading">
+            <i class="fa fa-cog"></i>
+        </div>
 		<!--Navbar start-->
         <div id="navbar">
 
@@ -154,6 +157,4 @@
             </div>
         </div>
 
-        <div id="loading">
-            <i class="fa fa-cog"></i>
-        </div>
+        

@@ -3,6 +3,28 @@ window.onscroll = function () { scrollFunction() };
 //function to change size of contents of Navbar when scrolled.
 var oldScrollValue = 0;
 var gotoTop = document.getElementById("gotoTop");
+
+function scrollFunction() {
+    if(window.scrollY >= 300)
+    {
+        if(c%2 == 0)
+        {
+            if(window.scrollY > oldScrollValue)
+            {
+                document.getElementById("navbar").style.top = "-1000px";
+            }
+            else 
+            {
+                document.getElementById("navbar").style.top = "0px";
+            }
+        }
+    }
+    if(window.innerWidth > 1024) {
+        scrollFunction2();
+    }
+    oldScrollValue = window.scrollY;
+}
+
 function scrollFunction2()
 {
     var newScrollValue = window.scrollY;
@@ -30,27 +52,6 @@ function scrollFunction2()
     else {
         gotoTop.style.display = "none";
     }
-}
-
-function scrollFunction() {
-    if(window.scrollY >= 300)
-    {
-        if(c%2 == 0)
-        {
-            if(window.scrollY > oldScrollValue)
-            {
-                document.getElementById("navbar").style.top = "-1000px";
-            }
-            else 
-            {
-                document.getElementById("navbar").style.top = "0px";
-            }
-        }
-    }
-    if(window.innerWidth > 1024) {
-        scrollFunction2();
-    }
-    oldScrollValue = window.scrollY;
 }
 
 //Show the menu when hamburger icon is pressed on small screen

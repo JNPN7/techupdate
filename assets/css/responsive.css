@@ -24,7 +24,7 @@
     }
 
     #navbar #mainTitle {
-        font-size: 30px;
+        --navbarMainTitleFontSize: 30px;
         display: block;
     }
 
@@ -66,7 +66,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #navbar #mainTitle {
-        font-size: 40px;
+        --navbarMainTitleFontSize: 40px;
     }
 
     #navbar .navChild .social {
@@ -76,7 +76,8 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
     #navbar .navChild .social {
-        display: none;
+        /* display: none; */
+        margin-right: 0;
     }
 }
 
@@ -215,7 +216,7 @@
 }
 
 #loading i {
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-name: load;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
