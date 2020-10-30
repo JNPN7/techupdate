@@ -45,7 +45,7 @@
         <div id="navbar">
 
             <div id="mainTitle" class="navChild">
-                <a href="index">TECHX</a>
+                <a href="index"><img src="assets\images\logo\techx_logo_white_with_text_textshadow.png" alt="TECHX"></a>
             </div>
 
             <div class="navChild">

@@ -87,13 +87,24 @@ h4{
 	#navbar #mainTitle a {
 		text-decoration: none;
 		font-size: var(--navbarMainTitleFontSize);
-		font-weight: VAR(--navbarMainTitleFontWeight);
+		font-weight: var(--navbarMainTitleFontWeight);
 		transition-property: font-size;
 		transition-duration: .2s ;
 		transition-timing-function: linear;
 		color: var(--navMainTitleColor);
 	}
 
+	#navbar #mainTitle img {
+		/* text-decoration: none; */
+		/* font-size: var(--navbarMainTitleFontSize); */
+		/* font-weight: VAR(--navbarMainTitleFontWeight); */
+		transition-property: height, width;
+		transition-duration: .2s ;
+		transition-timing-function: linear;
+		width: auto;
+		height: var(--navbarMainTitleFontSize);
+		/* color: var(--navMainTitleColor); */
+	}
 
 	#navbar ul {
 		list-style-type: none;
