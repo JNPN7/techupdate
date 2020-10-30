@@ -10,8 +10,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+        <!-- Logo -->
+        <link rel="icon" type="image/png" href="assets\images\logo\techx_logo_red_noshadow.png">
+
 		<!-- Title -->
-		<title>WEBTECH</title>
+		<title>TECHX</title>
 		
     	<!-- Font Awesome -->
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -45,7 +48,7 @@
         <div id="navbar">
 
             <div id="mainTitle" class="navChild">
-                <a href="index"><img src="assets\images\logo\techx_logo_white_with_text_textshadow.png" alt="TECHX"></a>
+                <a href="index"><img src="assets\images\logo\techx_logo_white_with_text_noshadow.png" alt="TECHX"></a>
             </div>
 
             <div class="navChild">

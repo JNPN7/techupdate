@@ -75,6 +75,7 @@ h4{
 	text-align: center;
 	background-image: linear-gradient(to right, var(--linearGradientStart),var(--linearGradientEnd));
 	z-index: 5;
+	padding: 10px;
 }
 
 	#navbar .navChild {
