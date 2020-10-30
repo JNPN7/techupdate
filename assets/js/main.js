@@ -31,6 +31,7 @@ function scrollFunction2()
     if (window.scrollY == 0)
     {
         document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "100px";
+        document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = "100px";
     }
     else
     {
@@ -39,11 +40,13 @@ function scrollFunction2()
             {
                 //new_value = old_value - (window.scrollY / 100) * total_possible_change_in_value
                 document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
+                document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
             }
         }
         else
         {
             document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "50px";
+            document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = "50px";
         }
     }
     if(window.scrollY >= 500) {
@@ -59,7 +62,6 @@ var s;
 var c = 0;
 function showMenu()
 {
-    console.log("ksahjfdkj");
     s = document.getElementById("navbar").getElementsByTagName("ul");
     var icon = document.getElementById("menu").getElementsByTagName("i");
     c++;
