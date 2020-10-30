@@ -201,3 +201,30 @@ window.onload = function () {
 function hideLoadingAnimation () {
     setTimeout(() => {document.getElementById("loading").style.display = "none";}, 200);  
 }
+
+// Search
+var searchBar = document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0];
+var searchPageSearchButton = document.getElementById("searchPage").getElementsByTagName("i");
+// console.log(searchPageSearchButton);
+searchPageSearchButton[0].addEventListener("click", initiateSearch);
+searchBar.addEventListener("keyup", function(event) {
+    if (event.key == "Enter") {
+      initiateSearch();
+    }
+    else if (event.key == "Escape") {
+        toggleSearch();
+      }
+  });
+
+searchPageSearchButton[0].addEventListener("keyup", initiateSearch);
+function initiateSearch() {
+    var criteria = searchBar.value;
+    if(criteria == "") {
+        alert("Enter keywords to search.");
+    }
+    else {
+        console.log(criteria);
+        console.log("searching...");
+        window.location.href = "search";
+    }
+}
