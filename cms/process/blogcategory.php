@@ -1,5 +1,5 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
 	
 	$BlogCategory = new blogcategory();
 	 // debugger($_POST,true);
@@ -49,6 +49,7 @@
 	$success = $BlogCategory->addBlogCategory($data);
 	}
 	if ($success) {
+
 		redirect('../blogcategory','success','BlogCategory '.$act.'ed Succesfully');
 	}else{
 		redirect('../blogcategory','error','Problem While '.$act.'ing BlogCategory');

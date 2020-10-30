@@ -35,7 +35,7 @@
 							if($val[0] == 'paragraph'){
 
 					?>
-								<p style="margin: 20px 0 10px 0"><?=$val[1]?></p>
+								<p style="margin: 20px 0 10px"><?=$val[1]?></p>
 								<div style="height: 20px;"></div>
 					<?php
 							}elseif ($val[0] == 'image') {
