@@ -1,5 +1,5 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
 	// debugger($_POST,true);
 	$data=array();
 	if ($_POST) {

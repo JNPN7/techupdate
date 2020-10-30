@@ -1,5 +1,5 @@
 <?php
-  include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
   
   $Contact = new contact();
    debugger($_GET);

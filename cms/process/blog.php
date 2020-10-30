@@ -1,5 +1,5 @@
 <?php
-  include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
   
   $Blog = new blog();
    // debugger($_POST);
@@ -33,6 +33,7 @@
             unlink(UPLOAD_PATH.'blog/'.$_POST['old_img']);
         }
     }else{
+
       redirect('../addblog','error','Error while Uploading Image.');
     }  
 

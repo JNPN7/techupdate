@@ -1,5 +1,5 @@
 <?php
-	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+	include $_SERVER['DOCUMENT_ROOT'].'/config/init.php';
 	
 	$FollowUs = new followus();
 	    //debugger($_POST,true);
