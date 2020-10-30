@@ -77,70 +77,129 @@
 
 				<!---------------- new design ------------------->
 				<div class="col">
-					<div class="post ht-60 post-rel">
-						<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" ></a>
-						<div class="post-meta">
-							<div class="post-date">Jan 2, 2020</div>
-							<div class="post-topic">Thats what she said, Micheal scott scott tots nowhere going on and on and on we are good and thanks for asking</div>
-						</div>
-					</div>
+					<?php 
+						$Blog = new blog();
+						$featuredBlogs = $Blog->getAllFeaturedBlogByCategoryWithLimit($blogcat_id,0,4);
+						if(isset($featuredBlogs[0]) && !empty($featuredBlogs[0])){
+							// debugger($featuredBlogs[1], true);
+					?>
+					<!-- Top Post -->
+							<div class="post ht-60 post-rel">
+								<?php
+									if (isset($featuredBlogs[0]->image) && !empty($featuredBlogs[0]->image)) {
+										$imageArray = explode(" ", $featuredBlogs[0]->image);
+										// debugger($imageArray, true);
+										if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+											$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+										}else{
+											$thumbnail = UPLOAD_URL.'noimg.png';
+										}	
+									}else{
+										$thumbnail = UPLOAD_URL.'noimg.png';
+									}
+								?>
+								<a class="post-img" href="blog?id=<?php echo $featuredBlogs[0]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" ></a>
+								<div class="post-meta">
+									<div class="post-date"><?php echo date('M d, Y',strtotime($featuredBlogs[0]->created_date)) ?></div>
+									<div class="post-topic"><a href="blog?id=<?php echo $featuredBlogs[0]->id ?>" style="color: white"><?php echo $featuredBlogs[0]->title; ?></a></div>
+								</div>
+							</div>
+					<?php
+							}
+					?>
+					<!-- Top Post -->
 					<div style="height: 30px;"></div>
+					<!-- 2nd and 3rd Post -->
+					<?php
+						if(isset($featuredBlogs[1]) && !empty($featuredBlogs[1]) && isset($featuredBlogs[2]) && !empty($featuredBlogs[2])){
+					?>
 					<div class="row dontmissup" style="justify-content: space-between;">
 						<div class="post dontmissup-content"  >
-							<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
+							<?php
+								if (isset($featuredBlogs[1]->image) && !empty($featuredBlogs[1]->image)) {
+									$imageArray = explode(" ", $featuredBlogs[1]->image);
+									// debugger($imageArray, true);
+									if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+										$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+									}else{
+										$thumbnail = UPLOAD_URL.'noimg.png';
+									}	
+								}else{
+									$thumbnail = UPLOAD_URL.'noimg.png';
+								}
+							?>
+							<a class="post-img" href="blog?id=<?php echo $featuredBlogs[1]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail?>" alt="Snow" style="width:100%; height: 40vh"></a>
 							<div class="post-meta meta-outside">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">Dont be afraid I not a moster Identity theft is not a joke!!!</div>
+								<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($featuredBlogs[1]->created_date)); ?></div>
+								<div class="post-topic"><a href="blog?id=<?php echo $featuredBlogs[1]->id ?>"><?php echo $featuredBlogs[1]->title; ?></a></div>
 							</div>
 						</div>
 					
 					
 						<div class="post dontmissup-content">
-							<a class="post-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%; height: 40vh"></a>
+							<?php
+								if (isset($featuredBlogs[2]->image) && !empty($featuredBlogs[2]->image)) {
+									$imageArray = explode(" ", $featuredBlogs[2]->image);
+									// debugger($imageArray, true);
+									if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+										$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+									}else{
+										$thumbnail = UPLOAD_URL.'noimg.png';
+									}	
+								}else{
+									$thumbnail = UPLOAD_URL.'noimg.png';
+								}
+							?>
+							<a class="post-img" href="blog?id=<?php echo $featuredBlogs[2]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail?>" alt="Snow" style="width:100%; height: 40vh"></a>
 							<div class="post-meta meta-outside">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">Dont be afraid I not a moster Identity theft is not a joke</div>
+								<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($featuredBlogs[2]->created_date)); ?></div>
+								<div class="post-topic"><a href="blog?id=<?php echo $featuredBlogs[2]->id ?>"><?php echo $featuredBlogs[2]->title; ?></a></div>
 							</div>
 						</div>
 					</div>
+					<?php
+						}
+					?>
+					<!-- 2nd and 3rd Post -->
 					<div style="height: 30px;"></div>
 					<div class="ad" style=" height: 100px; background: grey;"></div>
 					<div style="height: 30px;"></div>
-					<div class="post post-col">
-						<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
-						<div class="meta-col">
-							<div class="post-date color-grey">May 13, 2020</div>
-							<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
-							<div class="post-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
+					<!-- Other Posts -->
+					<?php
+
+						$allblogsoc = $Blog->getAllRecentBlogByCategoryWithLimit($blogcat_id,0,4);
+							if (isset($allblogsoc) && !empty($allblogsoc)) {
+								foreach ($allblogsoc as $key => $blog) {
+					?>
+								<div class="post post-col">
+									<?php
+										if (isset($blog->image) && !empty($blog->image)) {
+											$imageArray = explode(" ", $blog->image);
+											// debugger($imageArray, true);
+											if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+												$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+											}else{
+												$thumbnail = UPLOAD_URL.'noimg.png';
+											}	
+										}else{
+											$thumbnail = UPLOAD_URL.'noimg.png';
+										}
+									?>
+									<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; height: 25vh"></a>
+									<div class="meta-col">
+										<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
+										<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
+										<div class="post-des"><?php echo html_entity_decode(substr(explode('..break..', $blog->content)[0], 0, 300).'.......') ?><a href="blog?id=<?php echo $blog->id ?>">Show More</a></div>
+									</div>
+								</div>
+								<div style="height: 10px"></div>
+					<?php
+								}
+							}
+					?>
+					
 					<div style="height: 10px"></div>
-					<div class="post post-col">
-						<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
-						<div class="meta-col">
-							<div class="post-date color-grey">May 13, 2020</div>
-							<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
-							<div class="post-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
-						</div>
-					</div>
-					<div style="height: 10px"></div>
-					<div class="post post-col">
-						<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
-						<div class="meta-col">
-							<div class="post-date color-grey">May 13, 2020</div>
-							<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
-							<div class="post-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  </div>
-						</div>
-					</div>
-					<div style="height: 10px"></div>
-					<div class="post post-col">
-						<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
-						<div class="meta-col">
-							<div class="post-date color-grey">May 13, 2020</div>
-							<div class="post-topic">I wish I was the monster you think of</div>
-							<div class="post-des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </div>
-						</div>
-					</div>
+					<!-- Other Posts -->
 					<div style="background: green; margin: 20px; text-align: center; width: 300px; padding: 0;" >
 						<h3 style="padding: 0;">Load more</h3>
 					</div>
@@ -154,38 +213,39 @@
 				<!-- latest news -->
 				<div>
 					<h2>Latest News</h2>
+					
 					<div class="col">
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the monster you think of</div>
-							</div>
-						</div>
+						<?php
+							// $allblogs = $Blog->getAllFeaturedBlogByCategoryWithLimit($blogcat_id,0,4);
+							$allblogs=$Blog->getAllRecentBlogWithLimit(0,4);
+							if (isset($allblogs) && !empty($allblogs)) {
+								foreach ($allblogs as $key => $blog) {
+						?>	
+									<div class="post post-col">
+										<?php
+											if (isset($blog->image) && !empty($blog->image)) {
+												$imageArray = explode(" ", $blog->image);
+												// debugger($imageArray, true);
+												if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+													$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+												}else{
+													$thumbnail = UPLOAD_URL.'noimg.png';
+												}	
+											}else{
+												$thumbnail = UPLOAD_URL.'noimg.png';
+											}
+										?>
+										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; height: 10vh"></a>
+										<div class="meta-col">
+											<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
+											<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
+										</div>
+									</div>
+									<div style="height: 10px"></div>
+						<?php
+								}
+							}
+						?>
 					</div>
 				</div>
 
@@ -196,37 +256,37 @@
 				<div>
 					<h2>Featured News</h2>
 					<div class="col">
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the monster you think of</div>
-							</div>
-						</div>
+						<?php
+							$allftblogs = $Blog->getAllFeaturedBlogWithLimit(0,4);
+							// debugger($allftblogs);
+							if (isset($allftblogs) && !empty($allftblogs)) {
+								foreach ($allftblogs as $key => $blog) {
+						?>
+									<div class="post post-col">
+										<?php
+											if (isset($blog->image) && !empty($blog->image)) {
+												$imageArray = explode(" ", $blog->image);
+												// debugger($imageArray, true);
+												if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+													$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+												}else{
+													$thumbnail = UPLOAD_URL.'noimg.png';
+												}	
+											}else{
+												$thumbnail = UPLOAD_URL.'noimg.png';
+											}
+										?>
+										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; height: 15vh"></a>
+										<div class="meta-col">
+											<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
+											<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>" ><?php echo $blog->title; ?></a></div>
+										</div>
+									</div>
+									<div style="height: 10px"></div>
+						<?php
+								}
+							}
+						?>
 					</div>
 				</div>
 

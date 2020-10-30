@@ -390,8 +390,12 @@ h4{
 .col-img{
 	flex: 40%;
 }
-.post-topic:hover{
-	text-decoration: underline;
+.post-topic>a{
+    color: var(--primary);
+    text-decoration: none;
+}
+.post-topic>a:hover{
+    text-decoration: underline;
 }
 .post-des{
 	font-size: var(--postDesFontSize);
