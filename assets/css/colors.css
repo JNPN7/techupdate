@@ -72,8 +72,11 @@
     --gotoTopBackgroundColor: rgba(138, 126, 126, 0.596);
     --gotoTopBorderColor: var(--black);
 
+    /* For #loading */
+    --loadingBackgroundColor: rgba(0, 0, 0, 0.7);
 
-
+    /* For #loading i */
+    --loadingIColor: var(--white);
 
 
     /* Index.php */

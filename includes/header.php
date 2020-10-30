@@ -153,3 +153,7 @@
                 <i class="fa fa-search"></i>
             </div>
         </div>
+
+        <div id="loading">
+            <i class="fa fa-cog"></i>
+        </div>

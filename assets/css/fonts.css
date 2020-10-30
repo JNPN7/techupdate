@@ -37,6 +37,9 @@
     /* For #gotoTop */
     --gotoTopFontSize: 30px;
 
+    /* For #loading i */
+    --loadingIFontSize: 20vw;
+
     /* For .post-meta */
     --postMetaFontSize: 25px;
     --postMetaFontWeight: 900;

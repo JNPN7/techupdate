@@ -190,3 +190,11 @@ function addTransformFunction(t) {
 function removeTransformFunction(t) {
     postThumb[t].style.transform = "scale(1)";
 }
+
+window.onload = function () {
+    hideLoadingAnimation();
+}
+
+function hideLoadingAnimation () {
+    setTimeout(() => {document.getElementById("loading").style.display = "none";}, 200);  
+}

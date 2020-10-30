@@ -200,3 +200,33 @@
     transform: scale(1.3);
     transition-duration: .3s;
 }
+
+#loading {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: var(--loadingBackgroundColor);
+}
+
+#loading i {
+    animation-duration: 1.5s;
+    animation-name: load;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: var(--loadingIFontSize);
+    color: var(--loadingIColor);
+}
+
+@keyframes load {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(360deg);}
+}
