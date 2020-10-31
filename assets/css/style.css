@@ -531,6 +531,11 @@ h4{
 }
 
 /*----------Foooter------------------*/
+#footer .nname img {
+	height: 50px;
+	width: auto;
+}
+
 #footer{
 	border: 1px solid transparent;
     background-image: linear-gradient(to right,var(--linearGradientStart),var(--linearGradientEnd));

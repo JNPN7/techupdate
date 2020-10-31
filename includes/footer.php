@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-3"><div class="f-space"></div>
               <a href="index">
-                <b class="nname" style="color: #fff; font-size: 50px; font-weight:900;">TECHX</b>
+                <b class="nname" style="color: #fff; font-size: 50px; font-weight:900;"><img src="assets\images\logo\techx_logo_white_with_text_noshadow.png" alt="TECHX"></b>
               </a>
             </div>
             <div class="col-md-3"><br>
