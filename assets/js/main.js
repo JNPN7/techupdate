@@ -1,3 +1,5 @@
+localStorage.setItem("noKeyword", 0);
+
 window.onscroll = function () { scrollFunction() };
 
 //function to change size of contents of Navbar when scrolled.
@@ -143,6 +145,9 @@ searchPage.addEventListener("mouseup", function (e) {
 function toggleSearch() {
     if(document.getElementById("searchPage").style.display == "block") {
         document.getElementById("searchPage").style.display = "none";
+        // if(console.log(document.getElementById("noKeywordMessage"))) {
+            document.getElementById("noKeywordMessage").style.display = "none";
+        // }
     }
     else {
         document.getElementById("searchPage").style.display = "block";
@@ -204,27 +209,9 @@ function hideLoadingAnimation () {
 
 // Search
 var searchBar = document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0];
-var searchPageSearchButton = document.getElementById("searchPage").getElementsByTagName("i");
-// console.log(searchPageSearchButton);
-searchPageSearchButton[0].addEventListener("click", initiateSearch);
 searchBar.addEventListener("keyup", function(event) {
-    if (event.key == "Enter") {
-      initiateSearch();
-    }
-    else if (event.key == "Escape") {
+    if (event.key == "Escape") {
+        console.log("running");
         toggleSearch();
-      }
+    }
   });
-
-searchPageSearchButton[0].addEventListener("keyup", initiateSearch);
-function initiateSearch() {
-    var criteria = searchBar.value;
-    if(criteria == "") {
-        alert("Enter keywords to search.");
-    }
-    else {
-        console.log(criteria);
-        console.log("searching...");
-        window.location.href = "search";
-    }
-}

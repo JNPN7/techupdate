@@ -40,7 +40,7 @@
 		<![endif]-->
 
     </head>
-	<body>
+	<body onload="searchResults()">
         <div id="loading">
             <i class="fa fa-cog"></i>
         </div>
@@ -155,9 +155,17 @@
 
         <div id="searchPage">
             <div>
-                <input class="searchPageBox" type="text" placeholder="Search">
-                <i class="fa fa-search"></i>
+                <form action="search" method="get">
+                    <input name="keyword" class="searchPageBox" type="text" placeholder="Search">
+                    <button  type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </div>
         </div>
 
-        
+        <?php
+            // print_r($_SESSION);
+            // echo isset($_SESSION['noKeyword']);
+            if(isset($_SESSION['noKeyword']) && $_SESSION['noKeyword'] == 1) {
+                alertUser();
+            }
+        ?>

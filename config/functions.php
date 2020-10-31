@@ -140,5 +140,28 @@
 		// 		return false;
 		// 	}
 		// }
+
+
+
+		function goBack() {
+			$_SESSION['noKeyword'] = 1;
+			header('Location: '.$_SERVER['HTTP_REFERER']);
+		}
+
+		function alertUser () {
+			echo '
+						<script>
+								if(document.getElementById("searchPage").style.display == "block") {
+									document.getElementById("searchPage").style.display = "none";
+								}
+								else {
+									document.getElementById("searchPage").style.display = "block";
+									document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0].focus();
+								}
+						</script>
+						<div id="noKeywordMessage"><div>Please enter some keywords to search</div></div>
+					';
+			$_SESSION['noKeyword'] = 0;
+		}
+
 ?>
- 
