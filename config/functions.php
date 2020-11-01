@@ -164,4 +164,97 @@
 			$_SESSION['noKeyword'] = 0;
 		}
 
+		function search($data, $keyword, $arg) {
+			$keywordLower = strtolower($keyword);
+			$keywordLength = strlen($keyword);
+			$rows = count($data);
+			$count = 0;
+			for($i = 0; $i < $rows; $i++) {
+				$Data = (array)$data[$i];
+				$keys = array_keys($Data);
+				if ($arg == 0) {
+					$link = 'category?id='.$Data[$keys[0]];
+				}
+				else {
+					$link = 'blog?id='.$Data[$keys[0]];
+				}
+				
+				$flag = 0;
+				for($j = 1; $j < count($Data); $j++) {
+					$searchIn = html_entity_decode($Data[$keys[$j]]);
+					$searchInLower = strtolower($searchIn);
+					if($flag) {
+						$flag = 0;
+						$j = count($Data);
+					}
+					else {
+						if(strpos($searchInLower, $keywordLower) !== false) {
+							$flag = 1;
+							echo '<div class="searchResults"><a href='.$link.'>';
+							for($k = 1; $k < count($Data); $k++) {
+								$searchIn = html_entity_decode($Data[$keys[$k]]);
+								$searchInLower = strtolower($searchIn);
+								if(strpos($searchInLower, $keywordLower) !== false) {
+									$count += substr_count($searchInLower, $keywordLower);
+									$lastPos = 0;
+									$positions = array();
+									while (($lastPos = strpos($searchInLower, $keywordLower, $lastPos)) !== false) {
+										$positions[] = $lastPos;
+										$lastPos += $keywordLength;
+									}
+									if(strlen($searchInLower) > 300) {
+										if($positions[0] + $keywordLength < 300) {
+											$searchInPart = substr($searchIn, 0, 300)."...";
+										}
+										else {
+											if($positions[0] + 300 < strlen($searchInLower)) {
+												$searchInPart = "...".substr($searchIn, $positions[0] - 300/2, 300)."...";
+											}
+											else {
+												$searchInPart = "...".substr($searchIn, strlen($searchInLower) - 300, 300);
+											}
+										}
+										$searchInPartLower = strtolower($searchInPart);
+										$lastPos = 0;
+										$positions = array();
+										while (($lastPos = strpos($searchInPartLower, $keywordLower, $lastPos)) !== false) {
+											$positions[] = $lastPos;
+											$lastPos += $keywordLength;
+										}
+										echo '<p>'.substr($searchInPart, 0, $positions[0]);
+										for ($x = 0; $x < count($positions); $x++) {
+											echo '<font color="green">'.substr($searchInPart, $positions[$x], $keywordLength).'</font>';
+											if($x < count($positions) - 1) {
+												echo substr($searchInPart, $positions[$x] + $keywordLength, $positions[$x + 1] - $positions[$x] - $keywordLength);
+											}
+										}
+										echo substr($searchInPart, $positions[count($positions) - 1] + $keywordLength).'</p>';
+									}
+									else {
+										echo '<p>'.substr($searchIn, 0, $positions[0]);
+										for ($x = 0; $x < count($positions); $x++) {
+											echo '<font color="green">'.substr($searchIn, $positions[$x], $keywordLength).'</font>';
+											if($x < count($positions) - 1) {
+												echo substr($searchIn, $positions[$x] + $keywordLength, $positions[$x + 1] - $positions[$x] - $keywordLength);
+											}
+										}
+										echo substr($searchIn, $positions[count($positions) - 1] + $keywordLength).'</p>';
+									}
+								}
+								else {
+									if(strlen($searchIn) > 300) {
+										echo '<p>'.substr($searchIn, 0, 300).'</p>';
+									}
+									else {
+										echo '<p>'.$searchIn.'</p>';
+									}                                        
+								}
+							}
+							echo '</a></div>';
+						}
+					}
+				}
+			}
+			return $count;
+		}
 ?>

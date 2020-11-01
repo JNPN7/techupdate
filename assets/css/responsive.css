@@ -271,9 +271,18 @@
 
 .searchResults {
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-size: 25px;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+}
+
+.searchResults p:first-child {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.searchResults p {
+    margin: 10px;
 }
 
 .searchResults a {
