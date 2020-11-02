@@ -96,6 +96,8 @@
 							</figure>
 					<?php
 						}
+						// Comment section
+						include 'comments.php';
 					?>
 				</article>
 			</div>

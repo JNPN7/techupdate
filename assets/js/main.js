@@ -215,3 +215,40 @@ searchBar.addEventListener("keyup", function(event) {
         toggleSearch();
     }
   });
+
+var replyLinks = document.getElementById("commentContainer").getElementsByClassName("replyButton");
+for(var i = 0; i < replyLinks.length; i++) {
+    replyLinks[i].addEventListener("click", function () {
+        toggleReplyBox();
+    });
+}
+var ReplyLink = document.getElementById("commentContainer").getElementsByTagName("input")[0];
+ReplyLink.addEventListener("click", function () {
+    toggleReplyBox();
+});
+var textarea = document.getElementById("replyBox").getElementsByTagName("textarea")[0];
+textarea.addEventListener("keyup", function (event) {
+    if(event.key == "Escape") {
+        toggleReplyBox();
+    }
+});
+var cancelButton = document.getElementById("replyBox").getElementsByClassName("cancelButton")[0];
+cancelButton.addEventListener("click", function () {
+    toggleReplyBox();
+});
+
+
+function toggleReplyBox() {
+    console.log("run");
+    var replyBox = document.getElementById("replyBox");
+    console.log(replyBox.style);
+    if(replyBox.style.display == "flex") {
+        replyBox.style.display = "none";
+    }
+    else {
+        console.log("here");
+        replyBox.style.display = "flex";
+        textarea.focus();
+    }
+    // location.href='checklogin';
+}

@@ -257,4 +257,9 @@
 			}
 			return $count;
 		}
+
+		function signOut () {
+			echo 'yes';
+			unset($_SESSION['token']);
+		}
 ?>

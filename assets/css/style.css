@@ -757,3 +757,133 @@ h4{
 	color: var(--inputLoginInputFocusColor);
 	font-size: var(--inputLoginInputFocusFontSize);
 }
+
+/* comments.php */
+#commentContainer {
+	/* border: 2px solid black; */
+	width: 100%;
+	padding: 10px;
+}
+
+#commentContainer .commentNumber {
+	font-size: 30px;
+	/* border: 2px solid black; */
+	font-weight: bold;
+	margin: 10px;
+	width: 100%;
+}
+
+#commentContainer .comment {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid gray;
+}
+
+#commentContainer .comment .commentContent {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 10px;
+}
+
+#commentContainer .comment .commentContent .commentatorImage {
+	padding: 10px;
+	/* border: 2px solid black; */
+}
+
+#commentContainer .comment .commentContent .commentatorImage img {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	/* border: 1px solid black; */
+}
+
+#commentContainer .comment .commentContent .commentDetails {
+	padding: 10px;
+	/* border: 2px solid black; */
+}
+
+#commentContainer .comment .commentContent .commentDetails .commentator {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#commentContainer .comment .commentContent .commentDetails .commentTime {
+	font-size: smaller;
+}
+
+#commentContainer .comment .commentContent .commentDetails .commentTime .replyButton {
+	font-weight: bold;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	margin-left: 20px;
+}
+
+#commentContainer .comment .commentContent .commentDetails .commentDescription {
+	font-size: larger;
+	font-weight: bold;
+}
+
+#commentContainer .comment .reply {
+	border-top: 1px solid gray;
+	margin-left: 50px;
+}
+
+#commentContainer .leaveAReply {
+	/* border: 2px solid black; */
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+#commentContainer .leaveAReply .heading {
+	font-size: 30px;
+	margin: 10px;
+	width: 100%;
+}
+
+#commentContainer .leaveAReply input {
+	font-size: 20px;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid gray;
+	
+}
+
+#commentContainer .leaveAReply input[type="text"]:focus {
+	outline: none;
+}
+
+#replyBox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 10;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+}
+
+#replyBox .replyForm {
+	display: flex;
+	flex-direction: column;
+	/* padding-top: 10px; */
+	/* padding-bottom: 10px; */
+	border: 2px solid black;
+	width: 90%;
+	height: auto;
+}
+
+#replyBox .replyForm .message textarea {
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+}
+
