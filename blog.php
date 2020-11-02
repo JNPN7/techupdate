@@ -99,6 +99,7 @@
 					?>
 				</article>
 			</div>
+
 		</div>
 		<aside class="right-section">
 			<div class="main-pad col" style="padding-top: 50px;">

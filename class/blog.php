@@ -247,6 +247,29 @@
 			return $this->getData($args,$is_die);
 		}
 
+		public function getAllBlogBySearchWithLimit($search, $offset, $no_of_data, $is_die = false){	
+			$args = array(
+				'fields'=>	['id',
+				            'title',
+				            'content',
+				            'quote',
+				            'bloggername',
+				            'featured',
+				            'blogcategoryid',
+				            '(SELECT categoryname from blogcategories where id = blogcategoryid) as category',
+				            'view',
+				            'image'],
+				'where'	=> " where title LIKE '%".$search."%' OR content LIKE '%".$search."%'",
+				'order' => 'ASC',
+				'limit' => array(
+								'offset' => $offset,				//take data leaving some no.
+								'no_of_data' => $no_of_data
+								)
+				);
+
+			return $this->getData($args,$is_die);
+		}
+
 
 		public function updateBlogbyId($data,$id,$is_die = false){
 			$args = array(

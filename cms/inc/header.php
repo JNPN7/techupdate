@@ -12,6 +12,9 @@
 
     <title>TechX | <?php echo(isset($header) && !empty($header))? $header:"Dashboard" ?></title>
 
+    <!-- Logo -->
+        <link rel="icon" type="image/png" href="assets\images\logo\techx_logo_red_noshadow.png">
+
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
