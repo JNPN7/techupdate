@@ -96,7 +96,95 @@
 							</figure>
 					<?php
 						}
+
 					?>
+						<!-- comment -->
+						<?php
+							$Comment = new comment();
+							$Count = $Comment->getNumberCommentByBlog($blog_id);
+							$comments = $Comment->getAllAcceptCommentByBlog($blog_id);
+							
+						?>
+						<div id="commentContainer">
+						    <div class="commentNumber"><?php echo $Count[0]->total ?> comments</div>
+						    <?php
+						    	if(isset($comments) && !empty($comments)){
+						    		foreach ($comments as $key => $comment) {
+						    ?>
+							    <div class="comment">
+							        <div class="commentContent">
+							            <div class="commentatorImage">
+							                <img src="assets\images\bg.jpeg" alt="">
+							            </div>
+							            <div class="commentDetails">
+							                <p class="commentator"><?php echo $comment->name; ?></p>
+							                <p class="commentTime"><?php echo date('M d, Y h:m a',strtotime($comment->created_date)) ?><button  class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
+							                <p class="commentDescription"><?php echo html_entity_decode($comment->message) ?></p>
+							            </div>
+							        </div>
+							        <?php 
+							        	$replies = $Comment->getAllAcceptReplyByBlogByComment($blog_id,$comment->id);
+							        	// debugger($replies);
+							        	if (isset($replies) && !empty($replies)){
+							        		foreach ($replies as $key => $reply) {
+							        ?>
+										        <div class="reply commentContent">
+										            <div class="commentatorImage">
+										                <img src="assets\images\bg.jpeg" alt="">
+										            </div>
+										            <div class="commentDetails">
+										                <p class="commentator"><?php echo $reply->name; ?></p>
+										                <p class="commentTime"><?php echo date('M d, Y h:m a',strtotime($reply->created_date)) ?><button class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
+										                <p class="commentDescription"><?php echo html_entity_decode($reply->message) ?></p>
+										            </div>
+										        </div>
+							        <?php
+							        		}
+							        	}
+							        ?>
+							    </div>
+						    <?php
+						    		}
+						    	}
+						    ?>
+						    
+						    <!-- <div class="comment">
+						        <div class="commentContent">
+						            <div class="commentatorImage">
+						                <img src="assets\images\bg.jpeg" alt="">
+						            </div>
+						            <div class="commentDetails">
+						                <p class="commentator">Anonymous</p>
+						                <p class="commentTime">Jun 07, 2020 10:06 am<button class="replyButton" onclick="reply(this);" data-commentid="<?php echo '10' ?>">Reply</button></p>
+						                <p class="commentDescription">Captain Fantastico ???????????</p>
+						            </div>
+						        </div>
+						    </div> -->
+						    <div class="leaveAReply">
+						        <div class="heading">LEAVE A REPLY</div>
+						        <input placeholder="Type a message." type="text">        
+						    </div>
+						</div>
+						<div id="replyBox">
+						    <div class="replyForm">
+						            <form action="process/comment" method="post">
+						                <div class="message">
+						                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+						                </div>
+						                <div>
+						                	<input type="hidden" name="commentid" id="commentid" value="">
+						                	<input type="hidden" name="blogid" value="<?php echo $blog_id ?>">
+						                    <button class="cancelButton">
+						                        Cancel
+						                    </button>
+						                    <button type="submit" class="submitButton">
+						                        Submit
+						                    </button>
+						                </div>
+						            </form>
+						        </div>
+						</div>
+						<!-- comment -->
 				</article>
 			</div>
 
@@ -206,3 +294,12 @@
 <?php
 	include 'includes/footer.php';
 ?>
+
+<script type="text/javascript">
+	function reply(element) {
+		// console.log(element);
+		var commentid = $(element).data('commentid');
+		// console.log(commentid);
+		document.getElementById("commentid").value = commentid;
+	}
+</script>

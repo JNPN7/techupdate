@@ -37,9 +37,9 @@
                       <li><a href="contactinfo"> Contact Info.</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Querys <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Comments <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="query"> Querys</a></li>
+                      <li><a href="comment"> Comments</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Social Media <span class="fa fa-chevron-down"></span></a>

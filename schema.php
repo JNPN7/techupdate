@@ -78,15 +78,15 @@
 					updated_date datetime on update current_timestamp
 				)
 		",
-		'query'=>"
-			CREATE TABLE IF NOT EXISTS querys
+		'comment'=>"
+			CREATE TABLE IF NOT EXISTS comments
 				(
 					id int not null AUTO_INCREMENT PRIMARY KEY,
 					name varchar(50),
 					message text,
-					queryType enum('question','reply') default 'question',
-					questionid int,
-					productid int,
+					commentType enum('comment','reply') default 'comment',
+					commentid int,
+					blogid int,
 					state enum('waiting','accept','reject') default 'accept',
 					status enum('Active','Passive') default 'Active',
 					added_by int,

@@ -1,19 +1,19 @@
 <?php
-	class query extends database{
+	class comment extends database{
 		function __construct(){
-			$this->table = 'querys';
+			$this->table = 'comments';
 			database::__construct();
 		}
-		public function addQuery($data,$is_die=false){
+		public function addComment($data,$is_die=false){
 			return $this->addData($data,$is_die);
 		}
 
-		public function getQuerybyId($query_id,$is_die=false){
+		public function getCommentbyId($comment_id,$is_die=false){
 			
 			$args = array(
 				'where'	=> array(
 					'and' => array(
-							'id' => $query_id,
+							'id' => $comment_id,
 						)
 					)
 				);
@@ -21,7 +21,7 @@
 			return $this->getData($args,$is_die);
 		}
 
-		public function getAllQuery($is_die=false){
+		public function getAllComment($is_die=false){
 			
 			$args = array(
 				'where'	=> array(
@@ -34,7 +34,7 @@
 
 			return $this->getData($args,$is_die);
 		}
-		public function getAllWaitingQuery($is_die=false){
+		public function getAllWaitingComment($is_die=false){
 			$args = array(
 				'where'	=> array(
 					'and' => array(
@@ -47,7 +47,7 @@
 
 			return $this->getData($args,$is_die);
 		}
-		public function getAllWaitingQueryForNotifications($offset,$no_of_data,$is_die=false){
+		public function getAllWaitingCommentForNotifications($offset,$no_of_data,$is_die=false){
 			
 			$args = array(
 				'where'	=> array(
@@ -65,7 +65,7 @@
 
 			return $this->getData($args,$is_die);
 		}
-		public function getNumberWaitingQuerys($is_die=false){
+		public function getNumberWaitingComments($is_die=false){
 			
 			$args = array(
 				'fields'=>	['COUNT(id) as total'],           
@@ -78,15 +78,15 @@
 
 			return $this->getData($args,$is_die);
 		}
-		public function getAllAcceptQueryByProduct($product_id,$is_die=false){
+		public function getAllAcceptCommentByBlog($blog_id,$is_die=false){
 			
 			$args = array(
 				'where'	=> array(
 					'and' => array(
 							'status' => 'Active',
 							'state' => 'accept',
-							'productid' => $product_id,
-							'queryType' => 'question'
+							'blogid' => $blog_id,
+							'commentType' => 'comment'
 						)
 					),
 				'order' => 'ASC'
@@ -95,16 +95,16 @@
 			return $this->getData($args,$is_die);
 		}
 		//reply
-		public function getAllAcceptReplyByProductByQuery($product_id,$query_id,$is_die=false){
+		public function getAllAcceptReplyByBlogByComment($blog_id,$comment_id,$is_die=false){
 			
 			$args = array(
 				'where'	=> array(
 					'and' => array(
 							'status' => 'Active',
 							'state' => 'accept',
-							'productid' => $product_id,
-							'queryType' => 'reply',
-							'questionid' => $query_id
+							'blogid' => $blog_id,
+							'commentType' => 'reply',
+							'commentid' => $comment_id
 						)
 					),
 				'order' => 'ASC'
@@ -112,8 +112,8 @@
 
 			return $this->getData($args,$is_die);
 		}
-		//count query
-		public function getNumberQueryByProduct($product_id,$is_die=false){
+		//count comment
+		public function getNumberCommentByBlog($blog_id,$is_die=false){
 			
 			$args = array(
 				'fields'=>	['COUNT(id) as total'],           
@@ -121,7 +121,7 @@
 					'and' => array(
 							'status' => 'Active',
 							'state' => 'accept',
-							'productid' => $product_id
+							'blogid' => $blog_id
 						)
 					)
 				);
@@ -129,7 +129,7 @@
 			return $this->getData($args,$is_die);
 		}
 
-		public function updateQuerybyId($data,$id,$is_die=false){
+		public function updateCommentbyId($data,$id,$is_die=false){
 			$args = array(
 				'where'	=> array(
 					'and' => array(
@@ -141,7 +141,7 @@
 			return $this->updateData($data,$args,$is_die);
 		}
 
-		public function deleteQuerybyId($id,$is_die=false){
+		public function deleteCommentbyId($id,$is_die=false){
 			$args = array(
 				'where'	=> array(
 					'and' => array(

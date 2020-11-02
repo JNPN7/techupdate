@@ -136,14 +136,39 @@
                     </button>
                 </div>
 
+                <!-- <form action="login" method="get">
+                    <button type="submit" name="signOut">Sign Out</button>
+                </form> -->
+
                 <div id="user">
-                    <button id="userButton">
-                        <i class="fa fa-user"></i>
-                    </button>
-                    <div id="userOptions">
-                        <a href="login">Sign In</a>
-                        <a href="register">Sign Up</a>
-                    </div>
+                    <?php
+                        $User = new user();
+                        $userDetails = isset($_SESSION['token']) ? (array)$User->getUserbySessionToken($_SESSION['token'])[0] : array();
+                        $image = isset($userDetails['image']) ? $userDetails['image'] : 'assets/images/bg.jpeg';
+                        if (isset($userDetails['session_token']) && $userDetails['session_token'] == $_SESSION['token']) {
+                            echo '
+                                        <button id="userButton">
+                                            <img src="'.$image.'" />
+                                        </button>
+                                        <div id="userOptions">
+                                            <a href="cms/logout">Sign Out</a>
+                                            <a href="register">Sign Up</a>
+                                        </div>                    
+                                    ';
+                        }
+                        else {
+                            echo '
+                                        <button id="userButton"
+                                            <i class="fa fa-user"></i>
+                                        </button>
+                                        <div id="userOptions">
+                                            <a href="login">Sign In</a>
+                                            <a href="register">Sign Up</a>
+                                        </div>
+                                    ';
+                        }
+                    ?>
+                    
                 </div>
 
             </div>

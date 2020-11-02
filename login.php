@@ -1,6 +1,12 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
     include 'includes/header.php';
+    if (isset($_COOKIE['_auth_user_']) && !empty($_COOKIE['_auth_user_'])) {
+      $token = $_COOKIE['_auth_user_'];
+      setcookie('_auth_user',$token,time()+(60*60*24*7),'/');
+      $_SESSION['token'] = $token;
+      redirect('../index','success','Welcome '.$user_info[0]->username);
+    }
 ?>
     <!-- Register Section Begin -->
     <!-------FORM SECTION------->
@@ -26,7 +32,7 @@
             <div class="input-login">
               <input type="checkbox" name="rememberme" /> Remember me 
             </div>
-            <button class="btn-style" type="submit" name="">Sign up</button>
+            <button class="btn-style" type="submit" name="">Sign in</button>
           </div>
         </div>
        <div class="batta" style="margin-top:20px;">

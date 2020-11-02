@@ -1,6 +1,6 @@
 
 <?php
-$header = "Query"; 
+$header = "Comment"; 
     include 'inc/header.php';
     include 'inc/checklogin.php';
 ?>
@@ -12,7 +12,7 @@ $header = "Query";
             ?>
             <div class="page-title">
               <div class="title_left">               
-                <h3>Query</h3>
+                <h3>Comment</h3>
               </div>
             </div>
 
@@ -22,7 +22,7 @@ $header = "Query";
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Querys</h2>
+                    <h2>List of Comments</h2>
 
                     <div class="clearfix"></div>
                   </div>
@@ -33,33 +33,33 @@ $header = "Query";
                           <th style="text-align: center">Name</th>
                           <th style="text-align: center">Message</th>
                           <th style="text-align: center">Time</th>
-                          <th style="text-align: center">Query Type</th>
-                          <th style="text-align: center">Query ID</th>
-                          <th style="text-align: center">Product ID</th>
+                          <th style="text-align: center">Comment Type</th>
+                          <th style="text-align: center">Comment ID</th>
+                          <th style="text-align: center">Blog ID</th>
                           <th style="text-align: center">Status</th>
                           <th style="text-align: center">Action</th>
                         </thead>
                         <tbody>
-                          <?php $Query = new query();
-                          $querys = $Query->getAllQuery();
-                          // debugger($querys, true);
-                          if ($querys) {
-                            foreach ($querys as $key => $query) {
+                          <?php $Comment = new comment();
+                          $comments = $Comment->getAllComment();
+                          // debugger($comments, true);
+                          if ($comments) {
+                            foreach ($comments as $key => $comment) {
                           ?>
                           <tr>
                             <td><?php echo $key+1; ?></td>
-                            <td><?php echo $query->name;?></td>
-                            <td><?php echo html_entity_decode($query->message);?></td>
-                            <td><?php echo date("M d, Y h:i:s a",strtotime($query->created_date));?></td>
-                            <td><?php echo $query->queryType;?></td>
-                            <td><?php echo (isset($query->questionid) && !empty($query->questionid))?$query->questionid:"Null";?></td>
-                            <td><?php echo $query->productid;?></td>
-                            <td><?php echo $query->state;?></td>
+                            <td><?php echo $comment->name;?></td>
+                            <td><?php echo html_entity_decode($comment->message);?></td>
+                            <td><?php echo date("M d, Y h:i:s a",strtotime($comment->created_date));?></td>
+                            <td><?php echo $comment->commentType;?></td>
+                            <td><?php echo (isset($comment->questionid) && !empty($comment->questionid))?$comment->questionid:"Null";?></td>
+                            <td><?php echo $comment->blogid;?></td>
+                            <td><?php echo $comment->state;?></td>
                             <td>
-                              <a href="process/query?id=<?php echo($query->id)?>&amp;act=<?php echo substr(md5("Accept-Query-".$query->id.$_SESSION['token']), 3,15) ?>" class="btn btn-success" onclick="return confirm('Are you sure you want to accept this query?');">
+                              <a href="process/comment?id=<?php echo($comment->id)?>&amp;act=<?php echo substr(md5("Accept-Comment-".$comment->id.$_SESSION['token']), 3,15) ?>" class="btn btn-success" onclick="return confirm('Are you sure you want to accept this comment?');">
                                 <i class="fa fa-check"></i>
                               </a>
-                              <a href="process/query?id=<?php echo($query->id)?>&amp;act=<?php echo substr(md5("Reject-Query-".$query->id.$_SESSION['token']), 3,15) ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to reject this query?');">
+                              <a href="process/comment?id=<?php echo($comment->id)?>&amp;act=<?php echo substr(md5("Reject-Comment-".$comment->id.$_SESSION['token']), 3,15) ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to reject this comment?');">
                                 <i class="fa fa-close"></i>
                               </a>
                             </td>
