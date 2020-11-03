@@ -27,26 +27,21 @@ function scrollFunction() {
     oldScrollValue = window.scrollY;
 }
 
-function scrollFunction2()
-{
+function scrollFunction2(){
     var newScrollValue = window.scrollY;
-    if (window.scrollY == 0)
-    {
+    if (window.scrollY == 0){
         document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "100px";
         document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = "100px";
     }
-    else
-    {
+    else{
         if (window.scrollY <= 100) {
-            if(Math.abs(newScrollValue - oldScrollValue) >= 2)
-            {
+            if(Math.abs(newScrollValue - oldScrollValue) >= 2){
                 //new_value = old_value - (window.scrollY / 100) * total_possible_change_in_value
                 document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
                 document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = Math.trunc(100 - (window.scrollY / 100) * 50).toString().concat("px");
             }
         }
-        else
-        {
+        else{
             document.getElementById("mainTitle").getElementsByTagName("a")[0].style.fontSize = "50px";
             document.getElementById("mainTitle").getElementsByTagName("img")[0].style.height = "50px";
         }
@@ -62,19 +57,16 @@ function scrollFunction2()
 //Show the menu when hamburger icon is pressed on small screen
 var s;
 var c = 0;
-function showMenu()
-{
+function showMenu(){
     s = document.getElementById("navbar").getElementsByTagName("ul");
     var icon = document.getElementById("menu").getElementsByTagName("i");
     c++;
-    if (c % 2 == 1)
-    {
+    if (c % 2 == 1){
         s[0].style.display = "block";
         icon[0].classList.remove("fa-bars");
         icon[0].classList.add("fa-times");
     }
-    else
-    {
+    else{
         s[0].style.display = "none";
         icon[0].classList.remove("fa-times");
         icon[0].classList.add("fa-bars");
@@ -145,9 +137,7 @@ searchPage.addEventListener("mouseup", function (e) {
 function toggleSearch() {
     if(document.getElementById("searchPage").style.display == "block") {
         document.getElementById("searchPage").style.display = "none";
-        // if(console.log(document.getElementById("noKeywordMessage"))) {
-            document.getElementById("noKeywordMessage").style.display = "none";
-        // }
+        document.getElementById("noKeywordMessage").style.display = "none";
     }
     else {
         document.getElementById("searchPage").style.display = "block";
@@ -211,11 +201,12 @@ function hideLoadingAnimation () {
 var searchBar = document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0];
 searchBar.addEventListener("keyup", function(event) {
     if (event.key == "Escape") {
-        console.log("running");
         toggleSearch();
     }
   });
 
+
+var replyBox = document.getElementById("replyBox");
 var replyLinks = document.getElementById("commentContainer").getElementsByClassName("replyButton");
 for(var i = 0; i < replyLinks.length; i++) {
     replyLinks[i].addEventListener("click", function () {
@@ -239,16 +230,45 @@ cancelButton.addEventListener("click", function () {
 
 
 function toggleReplyBox() {
-    // console.log("run");
-    var replyBox = document.getElementById("replyBox");
-    // console.log(replyBox.style);
     if(replyBox.style.display == "flex") {
         replyBox.style.display = "none";
     }
     else {
-        // console.log("here");
         replyBox.style.display = "flex";
         textarea.focus();
     }
-    // location.href='checklogin';
 }
+
+replyBox.addEventListener("mouseup", function (e) {
+    if(!replyBox.getElementsByClassName("replyForm")[0].contains(e.target)) {
+        toggleReplyBox();
+    }
+});
+
+
+var signInAlert = document.getElementById("signInAlert");
+signInAlert.addEventListener("mouseup", function (e) {
+    if(!signInAlert.getElementsByClassName("alertBox")[0].contains(e.target)) {
+        toggleSignInAlert();
+    }
+});
+
+function toggleSignInAlert () {
+    if(signInAlert.style.display == "flex") {
+        signInAlert.style.display = "none";
+    }
+    else {
+        signInAlert.style.display = "flex";
+    }
+}
+
+var buttons = document.getElementById("signInAlert").getElementsByTagName("button");
+buttons[0].addEventListener("click", function () {
+    toggleSignInAlert();
+});
+buttons[1].addEventListener("click", function () {
+    location.href = "login";
+});
+buttons[2].addEventListener("click", function () {
+    location.href = "register";
+});

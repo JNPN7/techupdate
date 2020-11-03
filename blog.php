@@ -173,17 +173,21 @@
 						    <div class="replyForm">
 						            <form action="process/comment" method="post">
 						                <div class="message">
-						                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+						                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type a message."></textarea>
 						                </div>
 						                <div>
 						                	<input type="hidden" name="commentid" id="commentid" value="">
-						                	<input type="hidden" name="blogid" value="<?php echo $blog_id ?>">
-						                    <button class="cancelButton">
-						                        Cancel
-						                    </button>
-						                    <button type="submit" class="submitButton">
-						                        Submit
-						                    </button>
+											<input type="hidden" name="blogid" value="<?php echo $blog_id ?>">
+											<div>
+												<div href="#" class="cancelButton">
+													Cancel
+												</div>
+												<div>
+													<button type="submit" class="submitButton">
+														Submit
+													</button>
+												</div>
+											</div>
 						                </div>
 						            </form>
 						    </div>
@@ -296,6 +300,9 @@
 </main>
 
 <?php
+	if(isset($_SESSION['commentMessage'])) {
+		showCommentBox();
+	}
 	include 'includes/footer.php';
 ?>
 

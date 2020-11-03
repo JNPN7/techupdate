@@ -4,7 +4,17 @@
 	$Comment = new comment();
 	//$Categor = new comment();
 	if(isset($_SESSION['token']) && !empty($_SESSION['token'])){
+		if($_POST['message'] == "") {
+			unset($_POST);
+			header('Location: '.$_SERVER['HTTP_REFERER']);	
+		}
 		$user_info = $User->getUserbySessionToken($_SESSION['token']);
+	}
+	else {
+		$_SESSION['alert'] = "You must log in first!!!";
+		$_SESSION['commentMessage'] = $_POST['message'];
+		unset($_POST);
+		header('Location: '.$_SERVER['HTTP_REFERER']);
 	}
 	// debugger($_POST, true);
 	 $act="Add";

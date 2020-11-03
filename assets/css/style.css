@@ -764,8 +764,6 @@ h4{
 	font-size: var(--inputLoginInputFocusFontSize);
 }
 
-<<<<<<< HEAD
-=======
 /* comments.php */
 #commentContainer {
 	/* border: 2px solid black; */
@@ -872,7 +870,7 @@ h4{
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 10;
 	/* display: flex; */
 	justify-content: center;
@@ -884,15 +882,148 @@ h4{
 	flex-direction: column;
 	/* padding-top: 10px; */
 	/* padding-bottom: 10px; */
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	width: 90%;
 	height: auto;
 }
 
 #replyBox .replyForm .message textarea {
+	background-color: var(--black);
+	color: var(--white);
 	width: 100%;
-	padding: 10px;
+	padding: 20px;
 	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+	/* outline: none; */
 }
 
+#replyBox .replyForm .message textarea:focus {
+	/* outline: 2px; */
+	outline-color: var(--default);
+	/* outline: none; */
+}
 
+#replyBox .replyForm div div {
+	display: flex;
+	flex-direction: row;
+}
+
+#replyBox .replyForm div div div {
+	margin: auto;
+	/* border: 2px solid black; */
+}
+
+#replyBox .replyForm div div .cancelButton {
+	margin-top: 10px;
+	padding: 20px;
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 20px;
+	border: 2px solid var(--secondary);
+	border-radius: 10px;
+	width: 150px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	/* text-align: center; */
+	/* border: 2px solid black; */
+}
+
+#replyBox .replyForm div div div button{
+	background-color: var(--black);
+	color: var(--white);
+	border-radius: 10px;
+	padding: 20px;
+	font-size: 20px;
+	margin-top: 10px;
+	width: 150px;
+	border: 2px solid var(--green);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#replyBox .replyForm div div div button:focus {
+	outline: none;
+}
+
+#replyBox .replyForm div div .cancelButton:hover, #replyBox .replyForm div div div button:hover {
+	color: var(--default);
+	transform: scale(1.2);
+	transition-duration: .2s;
+}
+
+/* Sign In Alert */
+#signInAlert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+#signInAlert .alertBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	background-color: black;
+	padding: 20px;
+	border-radius: 10px;
+	min-width: 500px;
+	height: 300px;
+	border: 2px solid var(--default);
+}
+
+#signInAlert .alertBox .message {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--white);
+	margin: auto;
+}
+
+#signInAlert .alertBox .options {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	width: 100%;
+}
+
+#signInAlert .alertBox .options button {
+	margin: auto;
+	padding: 10px;
+	background-color: transparent;
+	color: var(--white);
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid green;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+<<<<<<< HEAD
+
+=======
+#signInAlert .alertBox .options button:first-child {
+	border-color: red;
+}
+
+#signInAlert .alertBox .options button:focus {
+	outline: none;
+}
+
+#signInAlert .alertBox .options button:hover {
+	transform: scale(1.2);
+	transition-duration: .2s;
+	color: var(--default);
+}
+>>>>>>> a0cd4da63a972accf3d8f92fac6381eb6c518564
