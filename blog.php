@@ -27,6 +27,10 @@
 	}
 	include 'includes/header.php';
 	$Blog = new blog();
+	$User = new user();
+	if(isset($_SESSION['token']) && !empty($_SESSION['token'])){
+		$user_info = $User->getUserbySessionToken($_SESSION['token']);
+	}
 ?>
 <section class="parallax category-topic">
 	<div style="height: 7vw;"></div>
@@ -118,7 +122,7 @@
 							            </div>
 							            <div class="commentDetails">
 							                <p class="commentator"><?php echo $comment->name; ?></p>
-							                <p class="commentTime"><?php echo date('M d, Y h:m a',strtotime($comment->created_date)) ?><button  class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
+							                <p class="commentTime"><?php echo date('M d, Y h:i a',strtotime($comment->created_date)) ?><button  class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
 							                <p class="commentDescription"><?php echo html_entity_decode($comment->message) ?></p>
 							            </div>
 							        </div>
@@ -134,7 +138,7 @@
 										            </div>
 										            <div class="commentDetails">
 										                <p class="commentator"><?php echo $reply->name; ?></p>
-										                <p class="commentTime"><?php echo date('M d, Y h:m a',strtotime($reply->created_date)) ?><button class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
+										                <p class="commentTime"><?php echo date('M d, Y h:i a',strtotime($reply->created_date)) ?><button class="replyButton" onclick="reply(this);" data-commentid="<?php echo $comment->id ?>">Reply</button></p>
 										                <p class="commentDescription"><?php echo html_entity_decode($reply->message) ?></p>
 										            </div>
 										        </div>
@@ -162,7 +166,7 @@
 						    </div> -->
 						    <div class="leaveAReply">
 						        <div class="heading">LEAVE A REPLY</div>
-						        <input placeholder="Type a message." type="text">        
+						        	<input placeholder="Type a message." type="text">        
 						    </div>
 						</div>
 						<div id="replyBox">
@@ -182,7 +186,7 @@
 						                    </button>
 						                </div>
 						            </form>
-						        </div>
+						    </div>
 						</div>
 						<!-- comment -->
 				</article>
@@ -302,4 +306,20 @@
 		// console.log(commentid);
 		document.getElementById("commentid").value = commentid;
 	}
+
+
+	// function openForm() {
+	//   document.getElementById("myForm").style.display = "block";
+	// }
+
+	// function closeForm() {
+	//   document.getElementById("myForm").style.display = "none";
+	// }
+
+	// document.getElementById("loginbtn").onclick = function(){
+	// 	location.href = "login";
+	// }
+	// document.getElementById("registerbtn").onclick = function(){
+	// 	location.href = "register";
+	// }
 </script>

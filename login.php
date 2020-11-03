@@ -1,6 +1,7 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
     include 'includes/header.php';
+    include 'includes/checklogin.php';
     if (isset($_COOKIE['_auth_user_']) && !empty($_COOKIE['_auth_user_'])) {
       $token = $_COOKIE['_auth_user_'];
       setcookie('_auth_user',$token,time()+(60*60*24*7),'/');

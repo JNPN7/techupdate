@@ -162,6 +162,39 @@
 
 			return $this->getData($args,$is_die);
 		}
+
+		public function getAllPopularBlogWithLimit($offset,$no_of_data,$is_die=false){
+			
+			$args = array(
+				'fields'=>	['id',
+				            'title',
+				            'content',
+				            'quote',
+				            'bloggername',
+				            'featured',
+				            'blogcategoryid',
+				            '(SELECT categoryname from blogcategories where id = blogcategoryid) as category',
+				            'view',
+				            'image',
+				        	'created_date'],	             
+				'where'	=> array(
+					'and' => array(
+							'status' => 'Active'
+						)
+					),
+				'order' => array(
+						'columnname'=>'view',
+						'orderType'=>'DESC'
+						),
+				'limit' => array(
+								'offset' => $offset,				//take data leaving some no.
+								'no_of_data' => $no_of_data
+								)
+				);
+
+			return $this->getData($args,$is_die);
+		}
+
 		public function getAllBlog($is_die=false){
 			
 			$args = array(
