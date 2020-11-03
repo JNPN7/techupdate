@@ -4,6 +4,10 @@
 	$Comment = new comment();
 	//$Categor = new comment();
 	if(isset($_SESSION['token']) && !empty($_SESSION['token'])){
+		if($_POST['message'] == "") {
+			unset($_POST);
+			header('Location: '.$_SERVER['HTTP_REFERER']);	
+		}
 		$user_info = $User->getUserbySessionToken($_SESSION['token']);
 	}
 	else {
