@@ -258,8 +258,29 @@
 			return $count;
 		}
 
-		function signOut () {
-			echo 'yes';
-			unset($_SESSION['token']);
+		function alertSignIn () {
+			echo '
+							<script>
+								if(document.getElementById("signInAlert").style.display == "flex") {
+									document.getElementById("signInAlert").style.display = "none";
+								}
+                                else {
+									document.getElementById("signInAlert").style.display = "flex";
+								}
+                            </script>
+                        ';
+			unset($_SESSION['alert']);
 		}
+
+		function showCommentBox() {
+			echo '
+						<script>
+							document.getElementById("replyBox").style.display = "flex";
+							document.getElementById("replyBox").getElementsByTagName("textarea")[0].focus();
+							document.getElementById("replyBox").getElementsByTagName("textarea")[0].value = "'.$_SESSION['commentMessage'].'";
+						</script>
+					';
+			unset($_SESSION['commentMessage']);
+		}
+
 ?>

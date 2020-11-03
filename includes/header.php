@@ -187,10 +187,26 @@
             </div>
         </div>
 
+        <div id="signInAlert">
+            <div class="alertBox">
+                    <div class="message">You must sign in first!!!</div>
+                    <div class="options">
+                        <button>Cancel</button>
+                        <button>Sign In</button>
+                        <button>Sign Up</button>
+                    </div>
+            </div>
+        </div>
+
         <?php
             // print_r($_SESSION);
             // echo isset($_SESSION['noKeyword']);
             if(isset($_SESSION['noKeyword']) && $_SESSION['noKeyword'] == 1) {
                 alertUser();
             }
+
+            if(isset($_SESSION['alert']) && !empty($_SESSION['alert'])) {
+                alertSignIn();
+            }
+
         ?>
