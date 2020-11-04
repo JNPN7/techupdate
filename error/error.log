@@ -1,2 +1,2 @@
 
-Nov 03, 2020 12:59:28 pm : (getData) : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DESC  LIMIT 0,6' at line 1
+

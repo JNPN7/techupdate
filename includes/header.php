@@ -41,9 +41,9 @@
 
     </head>
 	<body onload="searchResults()">
-        <!-- <div id="loading">
+        <div id="loading">
             <i class="fa fa-cog"></i>
-        </div> -->
+        </div>
 		<!--Navbar start-->
         <div id="navbar">
 
