@@ -3,6 +3,7 @@
   
   $Blog = new blog();
    // debugger($_POST);
+   //  debugger($_FILES['image']['error']['0']);
    // debugger($_FILES,true);
   if($_POST){
     $data = array(
@@ -19,13 +20,12 @@
     // debugger(array_filter($_FILES['image']['name']),true);
     // debugger($_FILES['image'],true);
 
-  if (isset($_FILES) && !empty($_FILES)){
+  if (isset($_FILES) && !empty($_FILES) && $_FILES['image']['error']['0']==0){
       foreach ($_FILES['image']['error'] as $key => $err) {
         if($err==0){
           $condition = "valid";
         }
       }
-    }
     if($condition=="valid"){
         $success = uploadMultiImage($_FILES['image'],'blog');
         $data['image'] = $success;
@@ -33,9 +33,9 @@
             unlink(UPLOAD_PATH.'blog/'.$_POST['old_img']);
         }
     }else{
-
       redirect('../addblog','error','Error while Uploading Image.');
-    }  
+    }
+  }  
 
   if (isset($_POST['id']) && !empty($_POST['id'])) {
     $act = 'Updat';

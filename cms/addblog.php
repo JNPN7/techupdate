@@ -126,7 +126,7 @@ $header = "Blog";
                         </div> -->
                         <div class="form-group col-md-8">
                           <input type="hidden" name="old_img" id="old_img" value="<?php echo(isset($blog_image->id) && !empty($blog_image->id))?"$blog_image->id":""?>">
-                           <input type="hidden" name="id" id="id" value="<?php echo(isset($blog_info->id) && !empty($blog_info->id))?"$blog_info->id":""?>">    
+                          <input type="hidden" name="id" id="id" value="<?php echo(isset($blog_info->id) && !empty($blog_info->id))?"$blog_info->id":""?>">    
                           <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </form>  

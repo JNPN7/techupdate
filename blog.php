@@ -73,35 +73,45 @@
 						for($i=0;$i<sizeof($contentarr);$i++) {
 					?>
 							<p style="margin: 20px 0 10px"><?php echo $contentarr[$i] ?></p>
-							<figure style="width: 10px">
-								<?php
-							if (isset($blog_info->image) && !empty($blog_info->image)) {
-								$imageArray = explode(" ", $blog_info->image);
+								<figure style="width: 10px">
+					<?php
+						if (isset($blog_info->image) && !empty($blog_info->image)) {
+							$imageArray = explode(" ", $blog_info->image);
 								// debugger($imageArray, true);
 								if(isset($imageArray[$i+'1']) && !empty($imageArray[$i+'1'])){
 									if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[$i+'1'])){	
-									$thumbnail = UPLOAD_URL.'blog/'.$imageArray[$i+'1'];
-								}else{
-									$thumbnail = UPLOAD_URL.'noimg.png';
-								}
+										$thumbnail = UPLOAD_URL.'blog/'.$imageArray[$i+'1'];
+									}else{
+										$thumbnail = UPLOAD_URL.'noimg.png';
+									}
 								}else{
 									$thumbnail = '';
 								}	
-							}else{
-								$thumbnail = UPLOAD_URL.'noimg.png';
-							}
-							if(isset($thumbnail) && !empty($thumbnail)){
-						?>			
-									<img style="width: 40vh" src="<?php echo $thumbnail?>" style="">
-									<figcaption><?php echo 'caption';?></figcaption>
+						}else{
+							$thumbnail = UPLOAD_URL.'noimg.png';
+						}
+						if(isset($thumbnail) && !empty($thumbnail)){
+					?>			
+							<img style="width: 40vh" src="<?php echo $thumbnail?>" style="">
+							<figcaption><?php echo 'caption';?></figcaption>
 						<?php
 							}
 						?>
 							</figure>
 					<?php
 						}
-
 					?>
+					<div style="float: right;">
+						<h4>Share Post On: </h4>
+						<div class="row">
+							<p style="margin-top: 0; font-size: 20px; color: blue;">
+								<a href="#" target="_blank" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-github-square"></i></a>
+				        	</p>
+						</div>
+					</div>
 						<!-- comment -->
 						<?php
 							$Comment = new comment();
@@ -110,7 +120,7 @@
 							
 						?>
 						<div id="commentContainer">
-						    <div class="commentNumber"><?php echo $Count[0]->total ?> comments</div>
+						    <div class="commentNumber"><?php echo $Count[0]->total ?> Comments</div>
 						    <?php
 						    	if(isset($comments) && !empty($comments)){
 						    		foreach ($comments as $key => $comment) {
@@ -152,18 +162,6 @@
 						    	}
 						    ?>
 						    
-						    <!-- <div class="comment">
-						        <div class="commentContent">
-						            <div class="commentatorImage">
-						                <img src="assets\images\bg.jpeg" alt="">
-						            </div>
-						            <div class="commentDetails">
-						                <p class="commentator">Anonymous</p>
-						                <p class="commentTime">Jun 07, 2020 10:06 am<button class="replyButton" onclick="reply(this);" data-commentid="<?php echo '10' ?>">Reply</button></p>
-						                <p class="commentDescription">Captain Fantastico ???????????</p>
-						            </div>
-						        </div>
-						    </div> -->
 						    <div class="leaveAReply">
 						        <div class="heading">LEAVE A REPLY</div>
 						        	<input placeholder="Type a message." type="text">        
@@ -285,11 +283,11 @@
 					<h2>Keep up with us</h2>
 					<div class="row">
 						<p style="margin-top: 0; font-size: 20px; color: blue;">
-							<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
-				            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
-				            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
-				            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
-				            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+							<a href="#" target="_blank" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+				            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+				            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-instagram"></i></a>
+				            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+				            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-github-square"></i></a>
 			        	</p>
 					</div>
 				</div>
