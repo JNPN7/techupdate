@@ -11,7 +11,7 @@
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!-- Logo -->
-        <link rel="icon" type="image/png" href="assets\images\logo\techx_logo_red_noshadow.png">
+        <link rel="icon" type="image/png" href="assets\images\logo\logo.png">
 
 		<!-- Title -->
 		<title>TECHX</title>
@@ -48,7 +48,7 @@
         <div id="navbar">
 
             <div id="mainTitle" class="navChild">
-                <a href="index"><img src="assets\images\logo\techx_logo_white_with_text_noshadow.png" alt="TECHX"></a>
+                <a href="index"><img src="assets\images\logo\logo.png" alt="TECHX"></a>
             </div>
 
             <div class="navChild">
