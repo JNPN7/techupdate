@@ -630,9 +630,12 @@ h4{
 	height: 25px;
 	display: flex;
 }
+.emailbox .fa{
+	padding: 0 5px;
+}
 .emailbox i{
 	background-color: var(--secondary);
-	width:20px;
+	width:30px;
 	line-height: 25px;
 	text-align: center;
 }
