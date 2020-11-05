@@ -21,9 +21,11 @@ html{
 }
 h1{
 	font-size: var(--h1FontSize);
+	padding: 5px 0 10px 0;
 }
 h2{
 	font-size: var(--h2FontSize);
+	padding: 30px 0 10px 0;
 }
 h3{
 	font-size: var(--h3FontSize);
@@ -309,7 +311,7 @@ h4{
 }
 
 .main-pad{
-	padding: 0 20px 0 20px;
+	padding: 40px 20px 0 20px;
 }
 
 .right-section{
@@ -495,6 +497,7 @@ h4{
 @media(max-width: 600px){
 	.grid-container{
 		grid-template-columns: 1fr;
+		grid-gap: 15px;
 	}
 	.grid-item1{
 		grid-row-start: 1;
@@ -519,6 +522,8 @@ h4{
 	.grid-item5{
 		grid-row-start: 5;
 		grid-row-end: 6;
+		grid-column-start: 1;
+		grid-column-end: 2;
 	}
 	.test{
 		height: 50vh !important;
@@ -533,6 +538,7 @@ h4{
 	}
 	.grid-dontmiss{
 		grid-template-columns: 1fr;
+		grid-gap: 15px;
 	}
 }
 
@@ -998,21 +1004,7 @@ h4{
 	width: 100%;
 }
 
-#signInAlert .alertBox .options button {
-	margin: auto;
-	padding: 10px;
-	background-color: transparent;
-	color: var(--white);
-	font-size: 20px;
-	font-weight: bold;
-	border: 2px solid green;
-	border-radius: 5px;
-	cursor: pointer;
-}
 
-<<<<<<< HEAD
-
-=======
 #signInAlert .alertBox .options button:first-child {
 	border-color: red;
 }
@@ -1026,4 +1018,28 @@ h4{
 	transition-duration: .2s;
 	color: var(--default);
 }
->>>>>>> a0cd4da63a972accf3d8f92fac6381eb6c518564
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination div {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination div.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+.pagination div:hover{
+	cursor: pointer;
+}
+
+.pagination div:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}

@@ -160,7 +160,7 @@
 										$thumbnail = UPLOAD_URL.'noimg.png';
 									}
 								?>
-								<a class="post-img col-img" href="blog?id=<?php echo $fblog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%;"></a>
+								<a class="post-img col-img" href="blog?id=<?php echo $fblog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; height: 20vh"></a>
 								<div class="meta-col">
 									<div class="post-date color-grey"><?php echo date('M d,Y',strtotime($fblog->created_date)); ?></div>
 									<div class="post-topic"><a href="blog?id=<?php echo $fblog->id ?>" ><?php echo $fblog->title; ?></a></div>
@@ -197,7 +197,7 @@
 														$thumbnail = UPLOAD_URL.'noimg.png';
 													}
 												?>
-												<a class="post-img col-img" href="#"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%;"></a>
+												<a class="post-img col-img" href="#"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; min-height: 13vw"></a>
 												<div class="meta-col">
 													<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 													<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
@@ -240,7 +240,7 @@
 														$thumbnail = UPLOAD_URL.'noimg.png';
 													}
 												?>
-												<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; height: 10vh"></a>
+												<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; min-height: 15vh"></a>
 												<div class="meta-col">
 													<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 													<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
@@ -281,7 +281,7 @@
 														$thumbnail = UPLOAD_URL.'noimg.png';
 													}
 												?>
-												<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; height: 15vh"></a>
+												<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; min-height: 15vh"></a>
 												<div class="meta-col">
 													<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 													<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>" ><?php echo $blog->title; ?></a></div>
