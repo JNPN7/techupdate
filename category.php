@@ -164,45 +164,29 @@
 					<div style="height: 30px;"></div>
 					<div class="ad" style=" height: 100px; background: grey;"></div>
 					<div style="height: 30px;"></div>
-					<!-- Other Posts -->
-					<?php
-
-						$allblogsoc = $Blog->getAllRecentBlogByCategoryWithLimit($blogcat_id,0,4);
-							if (isset($allblogsoc) && !empty($allblogsoc)) {
-								foreach ($allblogsoc as $key => $blog) {
-					?>
-								<div class="post post-col">
-									<?php
-										if (isset($blog->image) && !empty($blog->image)) {
-											$imageArray = explode(" ", $blog->image);
-											// debugger($imageArray, true);
-											if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
-												$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
-											}else{
-												$thumbnail = UPLOAD_URL.'noimg.png';
-											}	
-										}else{
-											$thumbnail = UPLOAD_URL.'noimg.png';
-										}
-									?>
-									<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; height: 25vh"></a>
-									<div class="meta-col">
-										<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
-										<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
-										<div class="post-des"><?php echo html_entity_decode(substr(explode('..break..', $blog->content)[0], 0, 300).'.......') ?><a href="blog?id=<?php echo $blog->id ?>">Show More</a></div>
-									</div>
-								</div>
-								<div style="height: 10px"></div>
-					<?php
-								}
-							}
-					?>
 					
-					<div style="height: 10px"></div>
 					<!-- Other Posts -->
-					<div style="background: green; margin: 20px; text-align: center; width: 300px; padding: 0;" >
+					<div id="filter_data" data-categoryid='<?=$blogcategory_info->id?>' style=""></div>
+					
+					<div style="height: 30px"></div>
+					<!-- Other Posts -->
+					<!-- <div style="background: green; margin: 20px; text-align: center; width: 300px; padding: 0;" >
 						<h3 style="padding: 0;">Load more</h3>
+					</div> -->
+					<div style="width: 100%; text-align: center;">
+						<div class="pagination" data-val="1">
+							<div id="<">&laquo;</div>
+							<?php
+								for ($i=1; $i < 5; $i++) { 
+							?>
+							<div id="<?=$i?>"><?=$i?></div>
+							<?php
+								 } 
+							?>
+						  	<div id=">">&raquo;</div>
+						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -235,7 +219,7 @@
 												$thumbnail = UPLOAD_URL.'noimg.png';
 											}
 										?>
-										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; height: 10vh"></a>
+										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%; min-height: 15vh"></a>
 										<div class="meta-col">
 											<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 											<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
@@ -276,7 +260,7 @@
 												$thumbnail = UPLOAD_URL.'noimg.png';
 											}
 										?>
-										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; height: 15vh"></a>
+										<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; min-height: 15vh"></a>
 										<div class="meta-col">
 											<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 											<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>" ><?php echo $blog->title; ?></a></div>
@@ -312,3 +296,57 @@
 <?php
 	include 'includes/footer.php';
 ?>
+
+<script type="text/javascript">
+	var limit = 4;
+	var offset;	 
+	var categoryid;
+	$(document).ready(function(){
+		var pagination = $('.pagination').data('val');
+		offset = (pagination - 1) * 7;
+		categoryid = $('#filter_data').data('categoryid');
+		console.log(offset);
+		$('#' + pagination).addClass('active').siblings().removeClass('active');
+		$.post('ajax_fetch/fetch_data.php',{
+			limit: limit,
+			offset: offset,
+			categoryid: categoryid
+		},function(data, status){
+			console.log(status);
+			$('#filter_data').html(data);
+		});
+		
+	});
+	$(document).delegate( ".pagination div", "click", function(e){
+		var inputId = this.id;
+		var pagination = $('.pagination').data('val');
+		categoryid = $('#filter_data').data('categoryid');
+		if (inputId == "<"){
+			pagination -= 1;
+			if(pagination > 0){
+				offset = (pagination - 1) * limit;
+				$('.pagination').data('val', pagination);
+				$('#' + pagination).addClass('active').siblings().removeClass('active');
+			}
+		}else if (inputId == ">"){
+			pagination += 1;
+			offset = (pagination - 1) * limit;
+			$('.pagination').data('val', pagination);
+			$('#' + pagination).addClass('active').siblings().removeClass('active');
+		}else{
+			pagination = inputId;
+			offset = (pagination - 1) * limit;
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.pagination').data('val', inputId);
+		}
+		$.post('ajax_fetch/fetch_data.php',{
+			limit: limit,
+			offset: offset,
+			categoryid: categoryid
+		},function(data, status){
+			console.log(status);
+			$('#filter_data').html(data);
+		});
+    }
+);
+</script>
