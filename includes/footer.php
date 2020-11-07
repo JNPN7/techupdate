@@ -8,26 +8,21 @@
                 <b class="nname" style="color: #fff; font-size: 50px; font-weight:900;"><img src="assets\images\logo\logo.png" alt="TECHX"></b>
               </a>
             </div>
-            <div class="col-md-3"><br>
-              <h6 class="f-header">DEVELOPED BY</h6>
-              <p class="texts">
-                  Abhinandan Shrestha<br>
-                  Bibek Manandhar<br>
-                  Sudip Manandhar<br>
-                  Juhel Phanju<br><br>
-              <a href="#"><i class="fa fa-facebook-official"></i></a>
-              <a href="#"><i class="fa fa-snapchat-ghost"></i></a>
-              <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-twitter-square"></i></a>
-              <a href="#"><i class="fa fa-github-square"></i></a>
-              </p>
-            </div>  
+              
             <div class="col-md-3"><br>
             <h6 class="f-header">QUICK LINKS</h6>
               <a class="f-link texts" href="#">NEWS</a><br>
               <a class="f-link texts" href="#">GAMING</a><br>
               <a class="f-link texts" href="about">ABOUT US</a><br>
               <a class="f-link texts" href="contact">CONTACTS</a><br>
+              <div style="height: 4px;"></div>
+              <p class="texts">
+              <a href="#"><i class="fa fa-facebook-official"></i></a>
+              <a href="#"><i class="fa fa-snapchat-ghost"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-twitter-square"></i></a>
+              <a href="#"><i class="fa fa-github-square"></i></a>
+              </p> 
             </div>    
             <div class="col-md-3"><br>
               <h6 class="f-header">COMMUNITY</h6>

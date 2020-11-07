@@ -1,5 +1,10 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+	if ($_GET['id'] <= 0){
+		include 'includes/header.php';
+		include 'easter/developer_page.php';
+	}else{
+
 	if (isset($_GET['id']) && !empty($_GET['id'])) {
 		$blog_id = (int)$_GET['id'];
 		if($blog_id){
@@ -301,6 +306,7 @@
 	if(isset($_SESSION['commentMessage'])) {
 		showCommentBox();
 	}
+}
 	include 'includes/footer.php';
 ?>
 
