@@ -319,7 +319,7 @@
 	});
 	$(document).delegate( ".pagination div", "click", function(e){
 		var inputId = this.id;
-		var pagination = $('.pagination').data('val');
+		var pagination = parseInt($('.pagination').data('val'));
 		categoryid = $('#filter_data').data('categoryid');
 		if (inputId == "<"){
 			pagination -= 1;
