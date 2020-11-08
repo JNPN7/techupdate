@@ -272,9 +272,3 @@ buttons[1].addEventListener("click", function () {
 buttons[2].addEventListener("click", function () {
     location.href = "register";
 });
-
-console.log("131313131313131313");
-console.log("131313131313131313");
-console.log("131313131313131313");
-console.log("131313131313131313");
-console.log("131313131313131313");
