@@ -9,7 +9,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+        <!-- for share link -->
+        <meta property="og:title" content="<?php echo $bread ?>">
+        <!-- <meta property="og:description" content="Some Description of it."> -->
+        <meta property="og:image" content="<?php echo $thumbnail ?>">
+        <meta property="og:url" content="http://techxx.ml//blog?id=<?php echo $blog_id ?>">
+        <!-- for share link -->
         <!-- Logo -->
         <link rel="icon" type="image/png" href="assets\images\logo\logo.png">
 

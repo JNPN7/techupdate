@@ -16,6 +16,17 @@
 				$bread = $blog_info->title ;
 				$catname = $blog_info->category;
 				$contentarr = explode("..break..", html_entity_decode($blog_info->content));
+				if (isset($blog_info->image) && !empty($blog_info->image)) {
+					$imageArray = explode(" ", $blog_info->image);
+					// debugger($imageArray, true);
+					if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+						$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+					}else{
+						$thumbnail = 'assets\images\logo\logo.png';
+					}	
+				}else{
+					$thumbnail = 'assets\images\logo\logo.png';
+				}
 				// debugger($contentarr,true);
 				$data = array(
 					'view' => $blog_info->view + 1
@@ -52,6 +63,23 @@
 <main role="main" class="main">
 	<div class="row">
 		<div class="main-section">
+			<div class="share-btn-container">
+				<a target="_blank" href="https://www.facebook.com/sharer.php?u=http://techxx.ml/blog?id=<?php echo $blog_id ?>">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a target="_blank" href="http://twitter.com/share?url=http://techxx.ml/blog?id=<?php echo $blog_id ?>&hashtags=#techX">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a target="_blank" href="#">
+					<i class="fa fa-pinterest"></i>
+				</a>
+				<a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://techxx.ml/blog?id=<?php echo $blog_id ?>">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<a target="_blank" href="mailto:?Subject=techX Mail&Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://techxx.ml/blog?id=<?php echo $blog_id ?>">
+					<i class="fa fa-inbox"></i>
+				</a>
+			</div>
 			<div class="main-pad" style="padding-top: 40px">
 				<article>
 					<div class="post-header ht-60 post-rel">
@@ -106,17 +134,6 @@
 					<?php
 						}
 					?>
-					<div style="float: right;">
-						<h4>Share Post On: </h4>
-						<div class="row">
-							<p style="margin-top: 0; font-size: 20px; color: blue;">
-								<a href="#" target="_blank" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
-					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
-					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
-					            <a href="#" target="_blank" style="color: #000000"><i class="fa fa-github-square"></i></a>
-				        	</p>
-						</div>
-					</div>
 						<!-- comment -->
 						<?php
 							$Comment = new comment();
