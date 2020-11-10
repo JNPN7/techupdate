@@ -180,18 +180,23 @@
 				}
 				
 				$flag = 0;
-				for($j = 1; $j < count($Data); $j++) {
+				for($j = 1; $j < count($Data) - 1; $j++) {
 					$searchIn = html_entity_decode($Data[$keys[$j]]);
 					$searchInLower = strtolower($searchIn);
 					if($flag) {
 						$flag = 0;
-						$j = count($Data);
+						$j = count($Data) - 1;
 					}
 					else {
 						if(strpos($searchInLower, $keywordLower) !== false) {
 							$flag = 1;
-							echo '<div class="searchResults"><a href='.$link.'>';
-							for($k = 1; $k < count($Data); $k++) {
+							if(isset($Data[$keys[count($keys) - 1]])) {
+								echo '<div class="searchResults"><a href='.$link.'><div class="searchResultImage"><img src="'.UPLOAD_URL.'blog/'.$Data[$keys[count($keys) - 1]].'"/></div><div>';
+							}
+							else {
+								echo '<div class="searchResults"><a href='.$link.'><div>';
+							}
+							for($k = 1; $k < count($Data) - 1; $k++) {
 								$searchIn = html_entity_decode($Data[$keys[$k]]);
 								$searchInLower = strtolower($searchIn);
 								if(strpos($searchInLower, $keywordLower) !== false) {
@@ -223,7 +228,7 @@
 										}
 										echo '<p>'.substr($searchInPart, 0, $positions[0]);
 										for ($x = 0; $x < count($positions); $x++) {
-											echo '<font color="green">'.substr($searchInPart, $positions[$x], $keywordLength).'</font>';
+											echo '<font color="green" style="background-color: white;">'.substr($searchInPart, $positions[$x], $keywordLength).'</font>';
 											if($x < count($positions) - 1) {
 												echo substr($searchInPart, $positions[$x] + $keywordLength, $positions[$x + 1] - $positions[$x] - $keywordLength);
 											}
@@ -233,7 +238,7 @@
 									else {
 										echo '<p>'.substr($searchIn, 0, $positions[0]);
 										for ($x = 0; $x < count($positions); $x++) {
-											echo '<font color="green">'.substr($searchIn, $positions[$x], $keywordLength).'</font>';
+											echo '<font color="green" style="background-color: white;">'.substr($searchIn, $positions[$x], $keywordLength).'</font>';
 											if($x < count($positions) - 1) {
 												echo substr($searchIn, $positions[$x] + $keywordLength, $positions[$x + 1] - $positions[$x] - $keywordLength);
 											}
@@ -250,7 +255,7 @@
 									}                                        
 								}
 							}
-							echo '</a></div>';
+							echo '</a></div></div>';
 						}
 					}
 				}

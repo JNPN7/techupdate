@@ -10,14 +10,14 @@
     else {
         $Database = new database();
         
-        $sqlForBlogCategories = "SELECT id, categoryname, created_date, description FROM blogcategories";
-        $sqlForBlogs = "SELECT id, title, created_date, content, quote, bloggername FROM blogs";
+        // $sqlForBlogCategories = "SELECT id, categoryname, created_date, description, image FROM blogcategories";
+        $sqlForBlogs = "SELECT id, title, created_date, content, quote, bloggername, image FROM blogs";
         $count = 0;
         
-        $data = $Database->getDataFromQuery($sqlForBlogCategories);
-        if(count($data) > 0) {
-            $count += search($data, $keyword, 0);
-        }
+        // $data = $Database->getDataFromQuery($sqlForBlogCategories);
+        // if(count($data) > 0) {
+        //     $count += search($data, $keyword, 0);
+        // }
 
         $data = $Database->getDataFromQuery($sqlForBlogs);
         if(count($data) > 0) {
