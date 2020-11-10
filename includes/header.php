@@ -34,8 +34,8 @@
 		<script src="https://kit.fontawesome.com/4b23978c25.js" crossorigin="anonymous"></script>
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwen"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwen"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwenn"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwenn"/>
 
 
         <link type="text/css" rel="stylesheet" href="assets/css/easter.css?pwen"/>
@@ -57,7 +57,7 @@
         <div id="navbar">
 
             <div id="mainTitle" class="navChild">
-                <a href="index"><img src="assets\images\logo\logo.png" alt="TECHX"></a>
+                <a href="index"><img class="logo" src="assets\images\logo\logo.png" alt="TECHX"></a>
             </div>
 
             <div class="navChild">

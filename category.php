@@ -6,6 +6,8 @@
         if($blogcat_id){
             $BlogCategory = new blogcategory();
             $blogcategory_info = $BlogCategory->getBlogCategorybyId($blogcat_id);
+            $Blog = new blog();
+            $total_no_of_blog = $Blog->getNumberOfBlogsByCategory($blogcat_id);
             // debugger($blogcategory_info);
             if ($blogcategory_info) {
                 $blogcategory_info = $blogcategory_info[0];
@@ -78,7 +80,7 @@
 				<!---------------- new design ------------------->
 				<div class="col">
 					<?php 
-						$Blog = new blog();
+						
 						$featuredBlogs = $Blog->getAllFeaturedBlogByCategoryWithLimit($blogcat_id,0,4);
 						if(isset($featuredBlogs[0]) && !empty($featuredBlogs[0])){
 							// debugger($featuredBlogs[1], true);
@@ -162,7 +164,7 @@
 					?>
 					<!-- 2nd and 3rd Post -->
 					<div style="height: 30px;"></div>
-					<div class="ad" style=" height: 100px; background: grey;"></div>
+					<div id="scrollhere" class="ad" style=" height: 100px; background: grey;"></div>
 					<div style="height: 30px;"></div>
 					
 					<!-- Other Posts -->
@@ -301,6 +303,8 @@
 	var limit = 4;
 	var offset;	 
 	var categoryid;
+	var elmnt = document.getElementById("scrollhere");
+  	
 	$(document).ready(function(){
 		var pagination = $('.pagination').data('val');
 		offset = (pagination - 1) * 7;
@@ -318,6 +322,7 @@
 		
 	});
 	$(document).delegate( ".pagination div", "click", function(e){
+		elmnt.scrollIntoView();
 		var inputId = this.id;
 		var pagination = parseInt($('.pagination').data('val'));
 		categoryid = $('#filter_data').data('categoryid');
@@ -347,6 +352,8 @@
 			console.log(status);
 			$('#filter_data').html(data);
 		});
-    }
-);
+
+    });
+
+    
 </script>

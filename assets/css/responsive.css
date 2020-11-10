@@ -364,6 +364,10 @@
     .share-btn-container a{
         margin: 0 32px;
     }
+    .blog-pad{
+        padding: 40px 20px 0 20px;
+    }
+
 }
 
 @media (max-width: 400px){
