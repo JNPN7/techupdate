@@ -80,7 +80,7 @@
 					<i class="fa fa-inbox"></i>
 				</a>
 			</div>
-			<div class="main-pad" style="padding-top: 40px">
+			<div class="blog-pad" style="padding-top: 40px">
 				<article>
 					<div class="post-header ht-60 post-rel">
 						<?php
@@ -106,7 +106,7 @@
 						for($i=0;$i<sizeof($contentarr);$i++) {
 					?>
 							<p style="margin: 20px 0 10px"><?php echo $contentarr[$i] ?></p>
-								<figure style="width: 10px">
+					<figure class="blog-figure">
 					<?php
 						if (isset($blog_info->image) && !empty($blog_info->image)) {
 							$imageArray = explode(" ", $blog_info->image);
@@ -125,12 +125,12 @@
 						}
 						if(isset($thumbnail) && !empty($thumbnail)){
 					?>			
-							<img style="width: 40vh" src="<?php echo $thumbnail?>" style="">
-							<figcaption><?php echo 'caption';?></figcaption>
+						<img class="blog-image" src="<?php echo $thumbnail?>" style="">
+						<figcaption><?php echo 'caption';?></figcaption>
 						<?php
 							}
 						?>
-							</figure>
+					</figure>
 					<?php
 						}
 					?>
