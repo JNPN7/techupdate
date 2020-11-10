@@ -1022,8 +1022,20 @@ h4{
 	flex-direction: row;
 	margin: auto;
 	width: 100%;
+	/* border: 2px solid yellow; */
 }
 
+#signInAlert .alertBox .options button {
+	margin: auto;
+	background-color: transparent;
+	/* border: none; */
+	padding: 20px;
+	color: var(--white);
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px solid var(--default);
+}
 
 #signInAlert .alertBox .options button:first-child {
 	border-color: red;
