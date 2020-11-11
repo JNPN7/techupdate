@@ -191,7 +191,9 @@
 						if(strpos($searchInLower, $keywordLower) !== false) {
 							$flag = 1;
 							if(isset($Data[$keys[count($keys) - 1]])) {
-								echo '<div class="searchResults"><a href='.$link.'><div class="searchResultImage"><img src="'.UPLOAD_URL.'blog/'.$Data[$keys[count($keys) - 1]].'"/></div><div>';
+								$imageArr = explode(' ', $Data[$keys[count($keys) - 1]]);
+								// debugger($imageArr,true);
+								echo '<div class="searchResults"><a href='.$link.'><div class="searchResultImage"><img src="'.UPLOAD_URL.'blog/'.$imageArr['0'].'"/></div><div>';
 							}
 							else {
 								echo '<div class="searchResults"><a href='.$link.'><div>';
