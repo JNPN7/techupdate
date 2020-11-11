@@ -268,7 +268,7 @@
 				'where'	=> array(
 					'and' => array(
 							'status' => 'Active',
-							'categoryid' => $cat_id
+							'blogcategoryid' => $cat_id
 						)
 					),
 				'limit' => array(
@@ -298,6 +298,20 @@
 								'offset' => $offset,				//take data leaving some no.
 								'no_of_data' => $no_of_data
 								)
+				);
+
+			return $this->getData($args,$is_die);
+		}
+
+		public function getNumberOfBlogsByCategory($cat_id, $is_die=false){
+			$args = array(
+				'fields'=>	['COUNT(id) as total'],           
+				'where'	=> array(
+					'and' => array(
+							'status' => 'Active',
+							'blogcategoryid' => $cat_id
+						)
+					)
 				);
 
 			return $this->getData($args,$is_die);

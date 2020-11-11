@@ -60,6 +60,10 @@
     #searchPage div i {
         font-size: 30px;
     }
+
+    .searchResults {
+        font-size: 15px;
+    }
 }
 
 
@@ -299,19 +303,40 @@
 }
 
 .searchResults {
+    margin-top: 5px;
     padding: 10px;
-    font-size: 25px;
-    border-top: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
+    /* font-size: 25px; */
+    /* border-top: 2px solid var(--black); */
+    /* border-bottom: 2px solid var(--black); */
+    display: flex;
+    /* flex-direction: row; */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .searchResults .searchResultImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.searchResults .searchResultImage img {
+    max-width: 20vw;
+}
+
+.searchResults div {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .searchResults p:first-child {
     font-weight: bold;
     font-size: larger;
+    text-decoration: underline;
 }
 
 .searchResults p {
     margin: 10px;
+    font-weight: bolder;
 }
 
 .searchResults a {
@@ -339,6 +364,10 @@
     .share-btn-container a{
         margin: 0 32px;
     }
+    .blog-pad{
+        padding: 40px 20px 0 20px;
+    }
+
 }
 
 @media (max-width: 400px){

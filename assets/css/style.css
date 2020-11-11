@@ -124,6 +124,10 @@ h4{
 	/* background-color: var(--navbarBtnHoverBackground); */
 }
 
+.dropbtn:focus {
+	outline: none;
+}
+
 .dropdown {
 	float: left;
 	overflow: hidden;
@@ -184,6 +188,10 @@ h4{
 		transition: 0.5s;
 	}
 
+	#menu:focus {
+		outline: none;
+	}
+
 #navbar .hide {
 	display: none;
 }
@@ -204,8 +212,13 @@ h4{
 }
 
 #navbar .searchButton:hover {
-	transition-duration: .3s;
+	transform: scale(1.3);
+	transition-duration: .2s;
 	color: var(--navbarIconsHoverColor);
+}
+
+#navbar .searchButton:focus {
+	outline: none;
 }
 
 #navbar .navChild .social {
@@ -225,6 +238,10 @@ h4{
 	border-radius: 5px;
 	cursor: pointer;
 	transition-duration: 0.3s;
+}
+
+#navbar .navChild .social button:focus {
+	outline: none;
 }
 
 #navbar .navChild .social .facebook:hover {
@@ -308,6 +325,10 @@ h4{
 
 .main-pad{
 	padding: 40px 20px 0 20px;
+}
+
+.blog-pad{
+	padding: 40px 20px 0 100px;
 }
 
 .right-section{
@@ -1001,8 +1022,20 @@ h4{
 	flex-direction: row;
 	margin: auto;
 	width: 100%;
+	/* border: 2px solid yellow; */
 }
 
+#signInAlert .alertBox .options button {
+	margin: auto;
+	background-color: transparent;
+	/* border: none; */
+	padding: 20px;
+	color: var(--white);
+	font-size: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px solid var(--default);
+}
 
 #signInAlert .alertBox .options button:first-child {
 	border-color: red;
@@ -1085,4 +1118,14 @@ h4{
 
 .share-btn-container .fa-inbox{
 	color: ea4335;
+}
+
+.blog-image{
+	max-width: 100%;
+	/*padding: 10px;*/
+}
+.blog-figure{
+	padding: 25px;
+	width: 100%;
+	text-align: center;
 }
