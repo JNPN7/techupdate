@@ -37,7 +37,7 @@
               <div class="emailbox">
                 <i class="fa fa-envelope"></i>
                 <input class="tbox" type="email" name="email" id="email" value="" placeholder="Enter your email...">
-                <button class="btn" type="button" name="button" onclick="emailForm()">Subscribe</button>
+                <button class="btn" type="button" name="button" onclick="emailForm()" style="padding: 0 5px;">Subscribe</button>
               </div>
             </form>
             </div>      

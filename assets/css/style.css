@@ -653,6 +653,7 @@ h4{
 }
 .emailbox .fa{
 	padding: 0 5px;
+	font-size: 15px;
 }
 .emailbox i{
 	background-color: var(--secondary);
