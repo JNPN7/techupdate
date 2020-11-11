@@ -188,7 +188,7 @@
 				(
 					id int not null AUTO_INCREMENT PRIMARY KEY,
 					username varchar(50),
-					email varchar(150),
+					email varchar(150) UNIQUE KEY,
 					message text,
 					type enum('message','subscription') default 'subscription',
 					status enum('Active','Passive') default 'Active',

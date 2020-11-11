@@ -84,6 +84,9 @@ $header = "Blog";
                               <a href="addblog?id=<?php echo($blog->id)?>&amp;act=<?php echo substr(md5("Edit-Blog-".$blog->id.$_SESSION['token']), 3,15) ?>" class="btn btn-info">
                                 <i class="fa fa-edit"></i>
                               </a>
+                              <a href="process/sendmail?id=<?php echo($blog->id)?>&amp;act=<?php echo substr(md5("Send-Blog-".$blog->id.$_SESSION['token']), 3,15) ?>" class="btn btn-success" onclick="return confirm('Are you ready to send mail to subscribers? Check once before sending.');">
+                                <i class="fa fa-inbox"></i>
+                              </a>
                               <a href="process/blog?id=<?php echo($blog->id)?>&amp;act=<?php echo substr(md5("Delete-Blog-".$blog->id.$_SESSION['token']), 3,15) ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this blog?');">
                                 <i class="fa fa-trash"></i>
                               </a>

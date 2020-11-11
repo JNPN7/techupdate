@@ -31,15 +31,15 @@
               <a class="f-link texts" href="#">PRIVACY & SECURITY</a><br>
             </div>
             <div class="col-md-3"><br>
-            <form action="">
+            <form >
               <h6 class="f-header">Join Newsletter</h6>
               <p class="texts" href="#">Get email about our latest updates</p>
               <div class="emailbox">
                 <i class="fa fa-envelope"></i>
-                <input class="tbox" type="email" name="" value="" placeholder="Enter your email...">
-                <button class="btn" type="button" name="button">Subscribe</button>
+                <input class="tbox" type="email" name="email" id="email" value="" placeholder="Enter your email...">
+                <button class="btn" type="button" name="button" onclick="emailForm()">Subscribe</button>
               </div>
-              </form>
+            </form>
             </div>      
         </div>
     </div>
@@ -53,5 +53,19 @@
 <script src="assets/js/main.js"></script>
 <!-- MS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function emailForm(){
+        var email = $('#email').val();
+        // console.log(email);
+        $.ajax({
+            url:"process/subEmail",
+            type:"POST",
+            data:{email:email},
+            success:function(data,success){
+              // console.log(data);
+            }
+        });
+    }
+</script>
 </body>
 </html>

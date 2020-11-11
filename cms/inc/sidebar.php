@@ -32,9 +32,9 @@
                       <li><a href="blog">List of Blogs</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Contact Info. <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Contact<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="contactinfo"> Contact Info.</a></li>
+                      <li><a href="contact"> Contact</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Comments <span class="fa fa-chevron-down"></span></a>
@@ -52,11 +52,11 @@
                       <li><a href="ads"> Ads</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Sales <span class="fa fa-chevron-down"></span></a>
+                  <!-- <li><a><i class="fa fa-edit"></i> Sales <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="sale"> Sales</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>

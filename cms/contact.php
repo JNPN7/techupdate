@@ -44,7 +44,7 @@ $header = "Contact";
                         <tbody>
                           <?php $Contact = new contact();
                           $contacts = $Contact->getAllContact();
-                          // debugger($contacts);
+                          // debugger($contacts,true);
                           if ($contacts) {
                             foreach ($contacts as $key => $contact) {
                           ?>
