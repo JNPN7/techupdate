@@ -47,7 +47,7 @@
 </section>
 <div class="end">
   <div class="end-text">
-  Copyright<i class="fa fa-copyright" aria-hidden="true"></i>2020
+  Copyright <i class="fa fa-copyright" aria-hidden="true"></i> <?php echo date("Y"); ?>
   </div>
 </div>
 <script src="assets/js/main.js"></script>
