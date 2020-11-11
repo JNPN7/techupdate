@@ -653,6 +653,7 @@ h4{
 }
 .emailbox .fa{
 	padding: 0 5px;
+	font-size: 15px;
 }
 .emailbox i{
 	background-color: var(--secondary);
@@ -1128,4 +1129,43 @@ h4{
 	padding: 25px;
 	width: 100%;
 	text-align: center;
+}
+
+/* testimonials_section */
+#testimonials{
+    /* background: rgba(0, 0, 0, 0.022); */
+}
+
+#testimonials .row{
+	display: flex;
+	flex-direction: row;
+}
+
+.ttxt1{
+	color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ttxt1::after{
+    content: '';
+    background: #000000;
+    width:50px;
+    height:2px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+}
+
+.dev{
+    position: relative;
+    margin: 0 auto auto;
+}
+.dev img{
+    height: 150px;
+    width:auto;
+    margin-left: auto;
+    border-radius: 50% ;
+    box-shadow:  0 2px 10px rgb(0, 0, 0);
 }

@@ -5,17 +5,6 @@
 
 <main role="main" class="col">
 	<!-- banner -->
-	<section class="banner">
-		<div class="row" style="color: #fff;">
-			<a href="index" class="banner-home"><p>Home</p></a>
-			<div style="width: 15px"></div>
-			<p>/</p>
-			<div style="width: 15px"></div>
-			<p>Contact</p>
-		</div>
-		<h1 style="color: #fff; margin-top: 15px;">Contact</h1>
-	</section>
-
 	<!-- main content -->
 	<section class="row">
 		<!-- main section -->
