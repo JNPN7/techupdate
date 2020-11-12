@@ -9,9 +9,31 @@
 		<!-- main section -->
 		<article class="main-section">
 			<div class="main-pad">
-				<h4 class="ttxt1">ABOUT DEVELOPERS</h4>
+			<section id ="Overview">
+				<h4 class="ttxt1">Overview</h4>
+					<p>Techx is one of the most popular e-business and technology news publishers in Nepal. Our network of business and technology news publications attracts a targeted audience of buyers and decision-makers who need news and reliable analysis about present industries up to date.
+					The site currently includes several e-business and technology news sites. Techx also publishes daily newsletters and Techx Weekly Newsletter.
+					These publications are some of the most and widely-read business and technology news sites of the Internet age. Techx features an aspiring team of writers who produce daily news and industry analysis. Content throughout the blog covers the following areas:
+					</p>
+					<ul>
+					<li>E-Commerce and E-Business</li>
+					<li>Information Technology (IT)</li>
+					<li>Customer Relationship Management (CRM)</li>
+					<li>Cloud Computing</li>
+					<li>Internet Trends</li>
+					<li>Enterprise Networking</li>
+					<li>Internet and Network Security</li>
+					<li>Mobile Devices and Wireless Technologies</li>
+					<li>Mobile Commerce (M-Commerce)</li>
+					<li>Linux and Open Source</li>
+					<li>Operating Systems</li>
+					<li>Tech Stocks & Financial Deals</li>
+					</ul>
+					
+				</section><br>
 				<!-- <img src="assets\images\about.jpg" style="width:100%; height: auto;"> -->
 				<section id="testimonials">
+				<h4 class="ttxt1">Developer Team</h4>
 					<div class="container row">
 							<div class="dev">
 								<img src="img\insta-1.jpg">
