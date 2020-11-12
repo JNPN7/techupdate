@@ -37,7 +37,8 @@ if ($_GET) {    // SendMail
                 $mail->addAddress($contact->email, $contact->email); // to email and name
                 $mail->Subject = html_entity_decode($blog_info['0']->title);
                 // $mail->msgHTML("Blog URL: http://www.manandharsudip.com.np/blog-post?id=23"); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
-                $mail->msgHTML(file_get_contents('http://www.manandharsudip.com.np/blog-post?id=23'));
+                $mail->IsHTML(true);
+                $mail->msgHTML(file_get_contents('http://techxx.ml/blogemail?id='.$blog_id));
                 $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
                 if (isset($blog_info['0']->image) && !empty($blog_info['0']->image)) {
                   $imageArray = explode(" ", $blog_info['0']->image);
@@ -66,11 +67,11 @@ if ($_GET) {    // SendMail
                           $success = true;
                     }
             }
-            if ($success) {
-              redirect('../blog','success','Mail Send Succesfully.');
-            }else{
-              redirect('../blog','error','Error while Sending Mail.');
-            }
+            // if ($success) {
+            //   redirect('../blog','success','Mail Send Succesfully.');
+            // }else{
+            //   redirect('../blog','error','Error while Sending Mail.');
+            // }
           } else {
             redirect('../blog','error','Blog Not Found.');
           }
