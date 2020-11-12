@@ -15,7 +15,7 @@
 				// debugger($blog_info);
 				$bread = $blog_info->title ;
 				$catname = $blog_info->category;
-				$contentarr = explode("..break..", html_entity_decode($blog_info->content));
+				$contentarr = explode("#end#", html_entity_decode($blog_info->content));
 				if (isset($blog_info->image) && !empty($blog_info->image)) {
 					$imageArray = explode(" ", $blog_info->image);
 					// debugger($imageArray, true);
@@ -102,36 +102,54 @@
 							<div><?php echo $blog_info->title; ?></div>
 						</div>
 					</div>
+					<div style="display: flex; justify-content: flex-end;">
+						<p>By  <span style="color: red;"><?=$blog_info->bloggername?></span> | <?=date('M d, Y',
+						strtotime($blog_info->created_date))?></p>
+					</div>
+					
 					<?php
-						for($i=0;$i<sizeof($contentarr);$i++) {
+						$i = 1;
+						foreach ($contentarr as $key => $value) {
+							$val = explode("#start#", $value);
+							if (filter_var($val[0],FILTER_SANITIZE_STRING) == "paragraph"){
 					?>
-							<p style="margin: 20px 0 10px"><?php echo $contentarr[$i] ?></p>
-					<figure class="blog-figure">
+								<p style="margin: 20px 0 10px"><?=$val[1]?></p>
 					<?php
-						if (isset($blog_info->image) && !empty($blog_info->image)) {
-							$imageArray = explode(" ", $blog_info->image);
-								// debugger($imageArray, true);
-								if(isset($imageArray[$i+'1']) && !empty($imageArray[$i+'1'])){
-									if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[$i+'1'])){	
-										$thumbnail = UPLOAD_URL.'blog/'.$imageArray[$i+'1'];
+							}elseif (filter_var($val[0],FILTER_SANITIZE_STRING) == "image"){
+					?>
+								<figure class="blog-figure">
+								<?php
+									if (isset($blog_info->image) && !empty($blog_info->image)) {
+										$imageArray = explode(" ", $blog_info->image);
+											// debugger($imageArray, true);
+											if(isset($imageArray[$i]) && !empty($imageArray[$i])){
+												if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[$i])){	
+													$thumbnail = UPLOAD_URL.'blog/'.$imageArray[$i];
+												}else{
+													$thumbnail = UPLOAD_URL.'noimg.png';
+												}
+											}else{
+												$thumbnail = '';
+											}
+										$i++;
 									}else{
 										$thumbnail = UPLOAD_URL.'noimg.png';
 									}
-								}else{
-									$thumbnail = '';
-								}	
-						}else{
-							$thumbnail = UPLOAD_URL.'noimg.png';
-						}
-						if(isset($thumbnail) && !empty($thumbnail)){
-					?>			
-						<img class="blog-image" src="<?php echo $thumbnail?>" style="">
-						<figcaption><?php echo 'caption';?></figcaption>
-						<?php
-							}
-						?>
-					</figure>
+									if(isset($thumbnail) && !empty($thumbnail)){
+								?>			
+									<img class="blog-image" src="<?php echo $thumbnail?>" style="">
+									<figcaption><?=$val[1]?></figcaption>
+									<?php
+										}
+									?>
+								</figure>
 					<?php
+							}elseif (filter_var($val[0],FILTER_SANITIZE_STRING) == 'ad') {
+					?>
+								<div class="ad" style="background-color: grey; height: <?=$val[1]?>">
+								</div>
+					<?php
+							}
 						}
 					?>
 						<!-- comment -->

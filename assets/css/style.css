@@ -662,6 +662,11 @@ h4{
 	text-align: center;
 }
 
+.tbox{
+	width: 0px;
+	transition: 0.8s ease;
+}
+
 .emailbox:hover > .tbox,.tbox:focus{
 	width: 100px;
 	padding: 0 10px;
@@ -673,10 +678,6 @@ h4{
 	border: none;
 	border-radius: 0;
 	margin: 0;
-}
-
-.tbox{
-	width: 0px;
 }
 
 .btn{
@@ -1132,8 +1133,18 @@ h4{
 }
 
 /* testimonials_section */
-#testimonials{
-    /* background: rgba(0, 0, 0, 0.022); */
+#Overview{
+	padding: 10px;
+	/* border: 1px solid gray; */
+	font-weight: 400;
+}
+
+#Overview p{
+	text-align: justify;
+}
+
+#Overview ul{
+	margin-left: 20px;
 }
 
 #testimonials .row{
@@ -1145,7 +1156,7 @@ h4{
 	color: black;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .ttxt1::after{
@@ -1153,7 +1164,7 @@ h4{
     background: #000000;
     width:50px;
     height:2px;
-    margin-left:auto;
+	margin-left:auto; 
     margin-right:auto;
     display: block;
 }
@@ -1168,4 +1179,59 @@ h4{
     margin-left: auto;
     border-radius: 50% ;
     box-shadow:  0 2px 10px rgb(0, 0, 0);
+}
+/* testimonials_section ko end */
+
+/* Contact page */
+
+.contact-text p{
+	font-size: medium;
+}
+
+/* Contact page ko end */
+
+#subscribePopup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#subscribePopup .subscribeMessageContainer {
+	background-color: var(--black);
+	border: 2px solid var(--default);
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#subscribePopup .subscribeMessageContainer .subscribeMessage {
+	margin-bottom: 30px;
+	color: var(--white);
+}
+
+#subscribePopup .subscribeMessageContainer button {
+	padding: 20px;
+	background-color: transparent;
+	display: flex;
+	border: 2px solid var(--green);
+	border-radius: 5px;
+	color: var(--white);
+	margin: auto;
+	cursor: pointer;
+}
+
+#subscribePopup .subscribeMessageContainer button:hover {
+	transform: scale(1.2);
+	transition-duration: .2s;
+}
+
+#subscribePopup .subscribeMessageContainer button:focus {
+	outline: none;
 }

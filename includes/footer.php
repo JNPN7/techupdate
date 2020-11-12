@@ -50,6 +50,26 @@
   Copyright <i class="fa fa-copyright" aria-hidden="true"></i> <?php echo date("Y"); ?>
 </div>
 </div>
+
+<div id="subscribePopup">
+    <div class="subscribeMessageContainer">
+        <div class="subscribeMessage">
+            <?php 
+                echo $_SESSION['subscribeMessage'];
+            ?>
+        </div>
+        <div">
+            <button>OK</button>
+        </div>
+    </div>
+</div>
+
+<?php
+    if(isset($_SESSION['subscribeMessage']) && !empty($_SESSION['subscribeMessage'])) {
+        showSubscribeMessage();
+    }
+?>
+
 <script src="assets/js/main.js"></script>
 <!-- MS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

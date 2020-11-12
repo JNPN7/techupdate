@@ -9,14 +9,23 @@
 	<section class="row">
 		<!-- main section -->
 		<article class="main-contact">
-			<div class="main-pad">
-				<h3>Contact Information</h3>
-				<p>Oh! So, you wanna contact me. Why? I don't see any reason for you to contact me. Why I wanna get in contact with this world burden, who should be dead, not tying to contact me. Ok! Ok! Don't cry! I have left some of my detail down there. Contact me just before dying, I need some reason to celebrate!!</p>
-				<ul class="list-style">
-					<li><p><strong>Email:</strong> <a href="#"> jpphanju54@gmail.com</a></p></li>
-					<li><p><strong>Phone:</strong> Dream About it</p></li>
-					<li><p><strong>Address:</strong> Hahaha Why??</p></li>
-				</ul>
+			<div class="main-pad contact-text">
+				<h2>Contact</h2>
+				<p>Techx Network, Inc<br>
+				Kathmandu,44600<br>
+				Capital of Nepal</p>
+				<h6>Bibek Manandhar</h6>
+				<p>Email: manandhar.bibek01@gmail.com</p>
+				<p>Cell: +9779860906640</p>
+				<h6>Sudip Manandhar</h6>
+				<p>Email: manandharsudip8@gmail.com</p>
+				<p>Cell: +9779861287059</p>
+				<h6>Juhel Phanju</h6>
+				<p>Email: jpphanju54@gmail.com</p>
+				<p>Cell: +9779860906640</p>
+				<h6>Abhinandan Shrestha</h6>
+				<p>Email: shtabhi@gmail.com</p>
+				<p>Cell: +9779868205040</p>
 			</div>
 		</article>
 
