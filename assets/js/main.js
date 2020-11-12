@@ -1,5 +1,4 @@
 localStorage.setItem("noKeyword", 0);
-
 window.onscroll = function () { scrollFunction() };
 
 //function to change size of contents of Navbar when scrolled.
@@ -207,27 +206,40 @@ searchBar.addEventListener("keyup", function(event) {
 
 
 var replyBox = document.getElementById("replyBox");
-var replyLinks = document.getElementById("commentContainer").getElementsByClassName("replyButton");
-for(var i = 0; i < replyLinks.length; i++) {
-    replyLinks[i].addEventListener("click", function () {
+if(document.body.contains(document.getElementById("commentContainer"))) {
+    var replyLinks = document.getElementById("commentContainer").getElementsByClassName("replyButton");
+    for(var i = 0; i < replyLinks.length; i++) {
+        replyLinks[i].addEventListener("click", function () {
+            toggleReplyBox();
+        });
+    }
+    var ReplyLink = document.getElementById("commentContainer").getElementsByTagName("input")[0];
+    ReplyLink.addEventListener("click", function () {
         toggleReplyBox();
     });
 }
-var ReplyLink = document.getElementById("commentContainer").getElementsByTagName("input")[0];
-ReplyLink.addEventListener("click", function () {
-    toggleReplyBox();
-});
-var textarea = document.getElementById("replyBox").getElementsByTagName("textarea")[0];
-textarea.addEventListener("keyup", function (event) {
-    if(event.key == "Escape") {
-        toggleReplyBox();
-    }
-});
-var cancelButton = document.getElementById("replyBox").getElementsByClassName("cancelButton")[0];
-cancelButton.addEventListener("click", function () {
-    toggleReplyBox();
-});
 
+
+if(document.body.contains(document.getElementById("replyBox"))) {
+    var textarea = document.getElementById("replyBox").getElementsByTagName("textarea")[0];
+    textarea.addEventListener("keyup", function (event) {
+        if(event.key == "Escape") {
+            toggleReplyBox();
+        }
+    });
+
+    var cancelButton = document.getElementById("replyBox").getElementsByClassName("cancelButton")[0];
+    cancelButton.addEventListener("click", function () {
+        toggleReplyBox();
+    });
+
+    replyBox.addEventListener("mouseup", function (e) {
+        if(!replyBox.getElementsByClassName("replyForm")[0].contains(e.target)) {
+            toggleReplyBox();
+        }
+    });
+
+}
 
 function toggleReplyBox() {
     if(replyBox.style.display == "flex") {
@@ -239,11 +251,7 @@ function toggleReplyBox() {
     }
 }
 
-replyBox.addEventListener("mouseup", function (e) {
-    if(!replyBox.getElementsByClassName("replyForm")[0].contains(e.target)) {
-        toggleReplyBox();
-    }
-});
+
 
 
 var signInAlert = document.getElementById("signInAlert");
@@ -272,3 +280,21 @@ buttons[1].addEventListener("click", function () {
 buttons[2].addEventListener("click", function () {
     location.href = "register";
 });
+
+if(document.body.contains(document.getElementById("subscribePopup"))) {
+    var subscribePopup = document.getElementById("subscribePopup");
+    subscribePopup.addEventListener("mouseup", function (e) {
+        if(!subscribePopup.getElementsByClassName("subscribeMessageContainer")[0].contains(e.target)) {
+            hideSubscribeMessage();
+        }
+    });
+    var okayButton = document.getElementById("subscribePopup").getElementsByTagName("button")[0];
+    okayButton.addEventListener("click", function() {
+        hideSubscribeMessage();
+    });
+}
+
+
+function hideSubscribeMessage() {
+    document.getElementById("subscribePopup").style.display = "none";
+}

@@ -290,4 +290,13 @@
 			unset($_SESSION['commentMessage']);
 		}
 
+		function showSubscribeMessage() {
+			echo'
+						<script>
+							document.getElementById("subscribePopup").style.display = "flex";
+						</script>
+					';
+			unset($_SESSION['subscribeMessage']);
+		}
+
 ?>
