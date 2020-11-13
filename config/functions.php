@@ -14,7 +14,7 @@
 	}
 
 
-	function tokenize($length=150){
+	function tokenize($length=100){
 		$char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQESTUVWXYZ0123456789';
 		$len = strlen($char);
 		$token='';
@@ -240,7 +240,7 @@
 									else {
 										echo '<p>'.substr($searchIn, 0, $positions[0]);
 										for ($x = 0; $x < count($positions); $x++) {
-											echo '<font color="green" style="background-color: white;">'.substr($searchIn, $positions[$x], $keywordLength).'</font>';
+											echo '<font color="green" style="background-color: rgba(0, 0, 0, .2);">'.substr($searchIn, $positions[$x], $keywordLength).'</font>';
 											if($x < count($positions) - 1) {
 												echo substr($searchIn, $positions[$x] + $keywordLength, $positions[$x + 1] - $positions[$x] - $keywordLength);
 											}
