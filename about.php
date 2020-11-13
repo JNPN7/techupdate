@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
 	include 'includes/header.php';
+	$Blog = new blog();
 ?>
 
 <main role="main" class="col">
@@ -44,42 +45,42 @@
 				<div class="ad" style=" height: 250px; background: grey;"></div>
 
 				<!-- Featured news -->
-				<div>
-					<h2>Featured News</h2>
-					<div class="col">
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain2.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke no way haha</div>
+						<div>
+							<h2>Featured News</h2>
+							<div class="col">
+								<?php
+									$allftblogs = $Blog->getAllFeaturedBlogWithLimit(0,4);
+									// debugger($allftblogs);
+									if (isset($allftblogs) && !empty($allftblogs)) {
+										foreach ($allftblogs as $key => $blog) {
+								?>
+											<div class="post post-col">
+												<?php
+													if (isset($blog->image) && !empty($blog->image)) {
+														$imageArray = explode(" ", $blog->image);
+														// debugger($imageArray, true);
+														if(file_exists(UPLOAD_PATH.'blog/'.$imageArray[0])){	
+															$thumbnail = UPLOAD_URL.'blog/'.$imageArray[0];
+														}else{
+															$thumbnail = UPLOAD_URL.'noimg.png';
+														}	
+													}else{
+														$thumbnail = UPLOAD_URL.'noimg.png';
+													}
+												?>
+												<a class="post-img col-img" href="blog?id=<?php echo $blog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" style="width:100%; min-height: 15vh"></a>
+												<div class="meta-col">
+													<div class="post-date"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
+													<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>" ><?php echo $blog->title; ?></a></div>
+												</div>
+											</div>
+											<div style="height: 10px"></div>
+								<?php
+										}
+									}
+								?>
 							</div>
 						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain3.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain4.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the moster you think of Identity theft is not a joke go away you piece of shit</div>
-							</div>
-						</div>
-						<div style="height: 10px"></div>
-						<div class="post post-col">
-							<a class="post-img col-img" href="#"><img class="post-thumb" src="/assets/images/mountain1.jpeg" alt="Snow" style="width:100%;"></a>
-							<div class="meta-col">
-								<div class="post-date color-grey">May 13, 2020</div>
-								<div class="post-topic">I wish I was the monster you think of</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<!-- keep up with us -->
 				<div>
