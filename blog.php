@@ -102,6 +102,10 @@
 							<div><?php echo $blog_info->title; ?></div>
 						</div>
 					</div>
+					<div style="display: flex; justify-content: flex-end;">
+						<p>By  <span style="color: red;"><?=$blog_info->bloggername?></span> | <?=date('M d, Y',
+						strtotime($blog_info->created_date))?></p>
+					</div>
 					
 					<?php
 						$i = 1;
