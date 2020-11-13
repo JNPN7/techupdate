@@ -37,7 +37,7 @@
               <div class="emailbox">
                 <i class="fa fa-envelope"></i>
                 <input class="tbox" type="email" name="email" id="email" value="" placeholder="Enter your email...">
-                <button class="btn" type="button" name="button" onclick="emailForm()" style="padding: 0 5px;">Subscribe</button>
+                <button class="btn" type="button" name="button" onclick="emailForm()">Subscribe</button>
               </div>
             </form>
             </div>      
@@ -46,9 +46,9 @@
     <div class="f-space"></div>
 </section>
 <div class="end">
-  <div class="end-text">
-  Copyright<i class="fa fa-copyright" aria-hidden="true"></i>2020
-  </div>
+<div class="end-text">
+  Copyright <i class="fa fa-copyright" aria-hidden="true"></i> <?php echo date("Y"); ?>
+</div>
 </div>
 
 <div id="subscribePopup">
