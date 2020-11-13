@@ -217,5 +217,4 @@
             if(isset($_SESSION['alert']) && !empty($_SESSION['alert'])) {
                 alertSignIn();
             }
-
         ?>

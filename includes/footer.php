@@ -37,7 +37,7 @@
               <div class="emailbox">
                 <i class="fa fa-envelope"></i>
                 <input class="tbox" type="email" name="email" id="email" value="" placeholder="Enter your email...">
-                <button class="btn" type="button" name="button" onclick="emailForm()">Subscribe</button>
+                <button class="btn" type="button" name="button" onclick="emailForm()" style="padding: 0 5px;">Subscribe</button>
               </div>
             </form>
             </div>      
@@ -50,6 +50,26 @@
   Copyright<i class="fa fa-copyright" aria-hidden="true"></i>2020
   </div>
 </div>
+
+<div id="subscribePopup">
+    <div class="subscribeMessageContainer">
+        <div class="subscribeMessage">
+            <?php 
+                echo $_SESSION['subscribeMessage'];
+            ?>
+        </div>
+        <div">
+            <button>OK</button>
+        </div>
+    </div>
+</div>
+
+<?php
+    if(isset($_SESSION['subscribeMessage']) && !empty($_SESSION['subscribeMessage'])) {
+        showSubscribeMessage();
+    }
+?>
+
 <script src="assets/js/main.js"></script>
 <!-- MS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
