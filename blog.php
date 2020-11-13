@@ -16,6 +16,7 @@
 				$bread = $blog_info->title ;
 				$catname = $blog_info->category;
 				$contentarr = explode("#end#", html_entity_decode($blog_info->content));
+				// debugger($contentarr);
 				if (isset($blog_info->image) && !empty($blog_info->image)) {
 					$imageArray = explode(" ", $blog_info->image);
 					// debugger($imageArray, true);
@@ -111,12 +112,14 @@
 						$i = 1;
 						foreach ($contentarr as $key => $value) {
 							$val = explode("#start#", $value);
+							debugger($val[0]);
 							if (filter_var($val[0],FILTER_SANITIZE_STRING) == "paragraph"){
 					?>
 								<p style="margin: 20px 0 10px"><?=$val[1]?></p>
 					<?php
 							}elseif (filter_var($val[0],FILTER_SANITIZE_STRING) == "image"){
-					?>
+							// debugger($val,true);
+					?>			
 								<figure class="blog-figure">
 								<?php
 									if (isset($blog_info->image) && !empty($blog_info->image)) {

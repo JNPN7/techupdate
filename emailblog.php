@@ -12,7 +12,7 @@
 				// debugger($blog_info);
 				$bread = $blog_info->title ;
 				$catname = $blog_info->category;
-				$contentarr = explode("..break..", html_entity_decode($blog_info->content));
+				$contentarr = explode("#end#", html_entity_decode($blog_info->content));
 				if (isset($blog_info->image) && !empty($blog_info->image)) {
 					$imageArray = explode(" ", $blog_info->image);
 					// debugger($imageArray, true);

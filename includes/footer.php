@@ -54,8 +54,10 @@
 <div id="subscribePopup">
     <div class="subscribeMessageContainer">
         <div class="subscribeMessage">
-            <?php 
-                echo $_SESSION['subscribeMessage'];
+            <?php
+                if(isset($_SESSION['subscribeMessage']) && !empty($_SESSION['subscribeMessage'])) {
+                    echo $_SESSION['subscribeMessage'];
+                } 
             ?>
         </div>
         <div">
