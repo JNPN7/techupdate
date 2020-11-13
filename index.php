@@ -201,7 +201,7 @@
 												<div class="meta-col">
 													<div class="post-date color-grey"><?php echo date('M d, Y',strtotime($blog->created_date)); ?></div>
 													<div class="post-topic"><a href="blog?id=<?php echo $blog->id ?>"><?php echo $blog->title; ?></a></div>
-													<div class="post-des"><?php echo html_entity_decode(substr(explode('..break..', $blog->content)[0], 0, 300).'.......') ?><a href="blog?id=<?php echo $blog->id ?>">Show More</a></div>
+													<div class="post-des"><?php echo html_entity_decode(substr(explode('#end#', $blog->content)[0], 25, 300).'.......') ?><a href="blog?id=<?php echo $blog->id ?>">Show More</a></div>
 												</div>
 											</div>
 											<div style="height: 10px"></div>

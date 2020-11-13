@@ -661,6 +661,11 @@ h4{
 	text-align: center;
 }
 
+.tbox{
+	width: 0px;
+	transition: 0.8s ease;
+}
+
 .emailbox:hover > .tbox,.tbox:focus{
 	width: 100px;
 	padding: 0 10px;
@@ -672,10 +677,6 @@ h4{
 	border: none;
 	border-radius: 0;
 	margin: 0;
-}
-
-.tbox{
-	width: 0px;
 }
 
 .btn{
