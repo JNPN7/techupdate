@@ -14,7 +14,7 @@
 	}
 
 
-	function tokenize($length=100){
+	function tokenize($length=150){
 		$char = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQESTUVWXYZ0123456789';
 		$len = strlen($char);
 		$token='';
@@ -47,7 +47,7 @@
 	<script type="text/javascript">
 		setTimeout(function(){
 			$('.alert').slideUp('slow');
-		}, 2000);
+		}, 1500);
 	</script>
 
 <?php
@@ -193,10 +193,10 @@
 							if(isset($Data[$keys[count($keys) - 1]])) {
 								$imageArr = explode(' ', $Data[$keys[count($keys) - 1]]);
 								// debugger($imageArr,true);
-								echo '<div class="searchResults"><a href='.$link.'><div class="searchResultImage"><img src="'.UPLOAD_URL.'blog/'.$imageArr['0'].'"/></div><div>';
+								echo '<div class="searchResults"><a href='.$link.'><div class="searchResultImage"><img src="'.UPLOAD_URL.'blog/'.$imageArr['0'].'"/></div><div class="searchMainContent">';
 							}
 							else {
-								echo '<div class="searchResults"><a href='.$link.'><div>';
+								echo '<div class="searchResults"><a href='.$link.'><div class="searchMainContent">';
 							}
 							for($k = 1; $k < count($Data) - 1; $k++) {
 								$searchIn = html_entity_decode($Data[$keys[$k]]);
@@ -209,16 +209,16 @@
 										$positions[] = $lastPos;
 										$lastPos += $keywordLength;
 									}
-									if(strlen($searchInLower) > 300) {
-										if($positions[0] + $keywordLength < 300) {
-											$searchInPart = substr($searchIn, 0, 300)."...";
+									if(strlen($searchInLower) > 150) {
+										if($positions[0] + $keywordLength < 150) {
+											$searchInPart = substr($searchIn, 0, 150)."...";
 										}
 										else {
-											if($positions[0] + 300 < strlen($searchInLower)) {
-												$searchInPart = "...".substr($searchIn, $positions[0] - 300/2, 300)."...";
+											if($positions[0] + 150 < strlen($searchInLower)) {
+												$searchInPart = "...".substr($searchIn, $positions[0] - 150/2, 150)."...";
 											}
 											else {
-												$searchInPart = "...".substr($searchIn, strlen($searchInLower) - 300, 300);
+												$searchInPart = "...".substr($searchIn, strlen($searchInLower) - 150, 150);
 											}
 										}
 										$searchInPartLower = strtolower($searchInPart);
@@ -249,8 +249,8 @@
 									}
 								}
 								else {
-									if(strlen($searchIn) > 300) {
-										echo '<p>'.substr($searchIn, 0, 300).'</p>';
+									if(strlen($searchIn) > 150) {
+										echo '<p>'.substr($searchIn, 0, 150).'</p>';
 									}
 									else {
 										echo '<p>'.$searchIn.'</p>';

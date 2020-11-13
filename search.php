@@ -17,6 +17,9 @@
                         goBack();
                     }
                     else {
+                        echo '
+                                    <p>Search results for "'.$keyword.'"</p>
+                                ';
                         $Database = new database();
                         $sqlForBlogs = "SELECT id, title, created_date, content, quote, bloggername, image FROM blogs";
                         $count = 0;
