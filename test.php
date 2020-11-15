@@ -178,13 +178,13 @@
 					<div style="width: 100%; text-align: center;">
 						<div class="pagination" data-val="1">
 							<div id="<">&laquo;</div>
-			
-							<div id="1">1</div>
-							<div id="2">2</div>
-							<div id="3">3</div>
-							<div id="4">4</div>
-
-							
+							<?php
+								for ($i=1; $i < 5; $i++) { 
+							?>
+							<div id="<?=$i?>"><?=$i?></div>
+							<?php
+								 } 
+							?>
 						  	<div id=">">&raquo;</div>
 						</div>
 					</div>
@@ -304,7 +304,6 @@
 	var offset;	 
 	var categoryid;
 	var elmnt = document.getElementById("scrollhere");
-	var four = $('#4');
   	
 	$(document).ready(function(){
 		var pagination = $('.pagination').data('val');
@@ -340,13 +339,10 @@
 			$('.pagination').data('val', pagination);
 			$('#' + pagination).addClass('active').siblings().removeClass('active');
 		}else{
-			pagination = $(this).html();
+			pagination = inputId;
 			offset = (pagination - 1) * limit;
 			$(this).addClass('active').siblings().removeClass('active');
 			$('.pagination').data('val', inputId);
-		}
-		if ($("#4").hasClass("active")){
-			// $("#1").html()
 		}
 		$.post('ajax_fetch/fetch_data.php',{
 			limit: limit,
