@@ -178,13 +178,13 @@
 					<div style="width: 100%; text-align: center;">
 						<div class="pagination" data-val="1">
 							<div id="<">&laquo;</div>
-							<?php
-								for ($i=1; $i < 5; $i++) { 
-							?>
-							<div id="<?=$i?>"><?=$i?></div>
-							<?php
-								 } 
-							?>
+			
+							<div id="1">1</div>
+							<div id="2">2</div>
+							<div id="3">3</div>
+							<div id="4">4</div>
+
+							
 						  	<div id=">">&raquo;</div>
 						</div>
 					</div>
@@ -304,12 +304,12 @@
 	var offset;	 
 	var categoryid;
 	var elmnt = document.getElementById("scrollhere");
+	var four = $('#4');
   	
 	$(document).ready(function(){
 		var pagination = $('.pagination').data('val');
 		offset = (pagination - 1) * 7;
 		categoryid = $('#filter_data').data('categoryid');
-		console.log(offset);
 		$('#' + pagination).addClass('active').siblings().removeClass('active');
 		$.post('ajax_fetch/fetch_data.php',{
 			limit: limit,
@@ -324,26 +324,47 @@
 	$(document).delegate( ".pagination div", "click", function(e){
 		elmnt.scrollIntoView();
 		var inputId = this.id;
-		var pagination = parseInt($('.pagination').data('val'));
-		categoryid = $('#filter_data').data('categoryid');
+		var active_id = parseInt($('.active').attr('id')); 
+		var categoryid = $('#filter_data').data('categoryid');
 		if (inputId == "<"){
-			pagination -= 1;
-			if(pagination > 0){
-				offset = (pagination - 1) * limit;
-				$('.pagination').data('val', pagination);
-				$('#' + pagination).addClass('active').siblings().removeClass('active');
+			active_id -= 1;
+			if(active_id > 0){
+				$('#' + active_id).addClass('active').siblings().removeClass('active');
 			}
 		}else if (inputId == ">"){
-			pagination += 1;
-			offset = (pagination - 1) * limit;
-			$('.pagination').data('val', pagination);
-			$('#' + pagination).addClass('active').siblings().removeClass('active');
+			active_id += 1;
+			$('#' + active_id).addClass('active').siblings().removeClass('active');
 		}else{
-			pagination = inputId;
-			offset = (pagination - 1) * limit;
 			$(this).addClass('active').siblings().removeClass('active');
-			$('.pagination').data('val', inputId);
 		}
+		if ($('#4').hasClass("active")){
+			let html1 = parseInt($('#1').html());
+			let html2 = parseInt($('#2').html());
+			let html3 = parseInt($('#3').html());
+			let html4 = parseInt($('#4').html());
+			$('#1').html(html1 + 2);
+			$('#2').html(html2 + 2);
+			$('#3').html(html3 + 2);
+			$('#4').html(html4 + 2);
+			$('#2').addClass('active').siblings().removeClass('active');
+		}
+		if ($('#1').hasClass("active")){
+			let html1 = parseInt($('#1').html());
+			if (html1 != 1){
+				let html2 = parseInt($('#2').html());
+				let html3 = parseInt($('#3').html());
+				let html4 = parseInt($('#4').html());
+				$('#1').html(html1 - 2);
+				$('#2').html(html2 - 2);
+				$('#3').html(html3 - 2);
+				$('#4').html(html4 - 2);
+				$('#3').addClass('active').siblings().removeClass('active');
+			}
+		}
+		var active_html = parseInt($('.active').html());
+		offset = (active_html - 1) * limit;
+		$('.pagination').data('val', active_html);
+			
 		$.post('ajax_fetch/fetch_data.php',{
 			limit: limit,
 			offset: offset,
