@@ -111,14 +111,15 @@
 					<?php
 						$i = 1;
 						foreach ($contentarr as $key => $value) {
+							// debugger($value);
 							$val = explode("#start#", $value);
-							debugger($val[0]);
 							if (filter_var($val[0],FILTER_SANITIZE_STRING) == "paragraph"){
 					?>
 								<p style="margin: 20px 0 10px"><?=$val[1]?></p>
 					<?php
-							}elseif (filter_var($val[0],FILTER_SANITIZE_STRING) == "image"){
-							// debugger($val,true);
+							}
+							else if (filter_var($val[0],FILTER_SANITIZE_STRING) == "image"){
+							// debugger($val);
 					?>			
 								<figure class="blog-figure">
 								<?php
@@ -147,7 +148,8 @@
 									?>
 								</figure>
 					<?php
-							}elseif (filter_var($val[0],FILTER_SANITIZE_STRING) == 'ad') {
+							}
+							else if (filter_var($val[0],FILTER_SANITIZE_STRING) == 'ad') {
 					?>
 								<div class="ad" style="background-color: grey; height: <?=$val[1]?>">
 								</div>

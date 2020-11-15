@@ -35,26 +35,54 @@
 				<!-- <img src="assets\images\about.jpg" style="width:100%; height: auto;"> -->
 				<section id="testimonials">
 				<h4 class="ttxt1">Developer Team</h4>
-					<div class="container row">
+					<div class="container row" style="text-align: center;">
 							<div class="dev">
 								<img src="img\insta-1.jpg">
 								<br>
 								Juhel Phanju
+								<p style="margin-top: 0; font-size: 20px; color: blue;">
+									<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+						            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+					        	</p>
 							</div>
 							<div class="dev">
 								<img src="img\insta-2.jpg">
 								<br>
 								Bibek Manandhar
+									<p style="margin-top: 0; font-size: 20px; color: blue;">
+										<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+						        	</p>
 							</div>
 							<div class="dev">
 								<img src="img\insta-3.jpg">
 								<br>
 								Sudip Manandhar
+									<p style="margin-top: 0; font-size: 20px; color: blue;">
+										<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+						        	</p>
 							</div>
 							<div class="dev">
 								<img src="img\insta-5.jpg">
 								<br>
 								Abhinandan Shrestha
+									<p style="margin-top: 0; font-size: 20px; color: blue;">
+										<a href="#" style="color: #000000"><i class="fa fa-facebook-official"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-snapchat-ghost"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-instagram"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-twitter-square"></i></a>
+							            <a href="#" style="color: #000000"><i class="fa fa-github-square"></i></a>
+						        	</p>
 							</div>
 					</div>
 				</section>
