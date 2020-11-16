@@ -170,23 +170,23 @@ function toggleShowPassword(){
     }
 }
 
-var postThumb = document.getElementsByClassName("post-thumb");
-for(let i = 0; i < postThumb.length; i++) {
-    postThumb[i].addEventListener("mouseover", function () {
-        addTransformFunction(i);
-    });
-    postThumb[i].addEventListener("mouseout", function () {
-        removeTransformFunction(i);
-    });
-}
+// var postThumb = document.getElementsByClassName("post-thumb");
+// for(let i = 0; i < postThumb.length; i++) {
+//     postThumb[i].addEventListener("mouseover", function () {
+//         addTransformFunction(i);
+//     });
+//     postThumb[i].addEventListener("mouseout", function () {
+//         removeTransformFunction(i);
+//     });
+// }
 
-function addTransformFunction(t) {
-    postThumb[t].style.transform = "scale(1.2)";
-}
+// function addTransformFunction(t) {
+//     postThumb[t].style.transform = "scale(1.2)";
+// }
 
-function removeTransformFunction(t) {
-    postThumb[t].style.transform = "scale(1)";
-}
+// function removeTransformFunction(t) {
+//     postThumb[t].style.transform = "scale(1)";
+// }
 
 window.onload = function () {
     hideLoadingAnimation();

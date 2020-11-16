@@ -8,6 +8,7 @@
             $blogcategory_info = $BlogCategory->getBlogCategorybyId($blogcat_id);
             $Blog = new blog();
             $total_no_of_blog = $Blog->getNumberOfBlogsByCategory($blogcat_id);
+            $total_no_of_blog = $total_no_of_blog[0]->total;
             // debugger($blogcategory_info);
             if ($blogcategory_info) {
                 $blogcategory_info = $blogcategory_info[0];
@@ -103,7 +104,7 @@
 								<a class="post-img" href="blog?id=<?php echo $featuredBlogs[0]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail; ?>" alt="Snow" ></a>
 								<div class="post-meta">
 									<div class="post-date"><?php echo date('M d, Y',strtotime($featuredBlogs[0]->created_date)) ?></div>
-									<div class="post-topic"><a href="blog?id=<?php echo $featuredBlogs[0]->id ?>" style="color: white"><?php echo $featuredBlogs[0]->title; ?></a></div>
+									<div class="post-topic bg-color"><a href="blog?id=<?php echo $featuredBlogs[0]->id ?>"><?php echo $featuredBlogs[0]->title; ?></a></div>
 								</div>
 							</div>
 					<?php
@@ -176,8 +177,8 @@
 						<h3 style="padding: 0;">Load more</h3>
 					</div> -->
 					<div style="width: 100%; text-align: center;">
-						<div class="pagination" data-val="1">
-							<div id="<">&laquo;</div>
+						<div class="pagination" data-val="1" data-totalblog="<?=$total_no_of_blog?>">
+							<div id="laquo">&laquo;</div>
 			
 							<div id="1">1</div>
 							<div id="2">2</div>
@@ -185,7 +186,7 @@
 							<div id="4">4</div>
 
 							
-						  	<div id=">">&raquo;</div>
+						  	<div id="raquo">&raquo;</div>
 						</div>
 					</div>
 					
@@ -305,6 +306,9 @@
 	var categoryid;
 	var elmnt = document.getElementById("scrollhere");
 	var four = $('#4');
+	var totalblog = parseInt($('.pagination').data('totalblog'));
+	var no_of_page = Math.ceil(totalblog / limit);
+	var html1, html2, html3, html4;
   	
 	$(document).ready(function(){
 		var pagination = $('.pagination').data('val');
@@ -319,29 +323,30 @@
 			console.log(status);
 			$('#filter_data').html(data);
 		});
-		
+		console.log(no_of_page);
+		check();
 	});
 	$(document).delegate( ".pagination div", "click", function(e){
 		elmnt.scrollIntoView();
 		var inputId = this.id;
 		var active_id = parseInt($('.active').attr('id')); 
 		var categoryid = $('#filter_data').data('categoryid');
-		if (inputId == "<"){
+		if (inputId == "laquo"){
 			active_id -= 1;
 			if(active_id > 0){
 				$('#' + active_id).addClass('active').siblings().removeClass('active');
 			}
-		}else if (inputId == ">"){
+		}else if (inputId == "raquo"){
 			active_id += 1;
 			$('#' + active_id).addClass('active').siblings().removeClass('active');
 		}else{
 			$(this).addClass('active').siblings().removeClass('active');
 		}
 		if ($('#4').hasClass("active")){
-			let html1 = parseInt($('#1').html());
-			let html2 = parseInt($('#2').html());
-			let html3 = parseInt($('#3').html());
-			let html4 = parseInt($('#4').html());
+			html1 = parseInt($('#1').html());
+			html2 = parseInt($('#2').html());
+			html3 = parseInt($('#3').html());
+			html4 = parseInt($('#4').html());
 			$('#1').html(html1 + 2);
 			$('#2').html(html2 + 2);
 			$('#3').html(html3 + 2);
@@ -349,11 +354,11 @@
 			$('#2').addClass('active').siblings().removeClass('active');
 		}
 		if ($('#1').hasClass("active")){
-			let html1 = parseInt($('#1').html());
+			html1 = parseInt($('#1').html());
 			if (html1 != 1){
-				let html2 = parseInt($('#2').html());
-				let html3 = parseInt($('#3').html());
-				let html4 = parseInt($('#4').html());
+				html2 = parseInt($('#2').html());
+				html3 = parseInt($('#3').html());
+				html4 = parseInt($('#4').html());
 				$('#1').html(html1 - 2);
 				$('#2').html(html2 - 2);
 				$('#3').html(html3 - 2);
@@ -373,8 +378,28 @@
 			console.log(status);
 			$('#filter_data').html(data);
 		});
-
+		check();
     });
+
+    function check(){
+    	for (let i = 1; i <= 4; i++){
+    		$('#' + i).show();
+    	}
+    	$('#raquo').show();
+
+		for (let i = 1; i <= 4; i++){
+			let html = parseInt($('#' + i).html())
+			if (html ==  no_of_page){
+				for (let j = i + 1; j <= 4; j++){
+					$('#' + j).hide();
+				}
+				break;
+			}
+		}
+		if (parseInt($('.active').html()) == no_of_page){
+			$('#raquo').hide();
+		}
+    }
 
     
 </script>

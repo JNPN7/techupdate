@@ -1,4 +1,4 @@
-@import "colors.css";
+@import "colors.css?pwen";
 @import "fonts.css";
 *{
 	box-sizing: border-box;
@@ -382,16 +382,17 @@ h4{
 	width: 100%;
   	height: 100%;
 	object-fit:cover;
+	transform: scale(1);
 	transition-property: transform;
-	transition-duration: 1s; 
+	transition-duration: .6s;
   	/*margin: auto;*/
 }
 
-/* .post-thumb:hover {
-	transform: scale(1.2);
+.post-thumb:hover {
+	transform: scale(1.1);
 	transition-property: transform;
-	transition-duration: 1s;
-} */
+	transition-duration: .6s;
+} 
 
 .post-col{
 	display: flex;
@@ -424,9 +425,6 @@ h4{
 .post-date{
 	font-size: var(postDateFontSize);
 	color: var(--postDateColor);
-}
-.post .post-img:hover, .post .post-img:focus {
-     opacity: 0.8;
 }
 
 .grid-container{
@@ -665,12 +663,13 @@ h4{
 .tbox{
 	width: 0px;
 	transition: 0.8s ease;
+	transition-duration: 0.8s ease;
 }
 
 .emailbox:hover > .tbox,.tbox:focus{
 	width: 100px;
 	padding: 0 10px;
-	transition: 0.8s ease;
+	transition-duration: 0.8s ease;
 }
 
 .btn,.tbox{
@@ -1065,8 +1064,8 @@ h4{
 }
 
 .pagination div.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: var(--orange);
+  color: var(--white);
   border-radius: 5px;
 }
 .pagination div:hover{
@@ -1234,4 +1233,13 @@ h4{
 
 #subscribePopup .subscribeMessageContainer button:focus {
 	outline: none;
+}
+
+.bg-color{
+	padding: 5px;
+	margin-right: 5px;
+	background: rgba(255, 255, 255, .6);
+}
+.bg-color>a{
+	color: var(--black) !important;
 }

@@ -28,7 +28,7 @@
 							<a class="post-img" href="blog?id=<?php echo $featuredblog[0]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" ></a>
 							<div class="post-meta">
 								<div class="post-date"><?php echo date('M d, Y',strtotime($featuredblog[0]->created_date)) ?></div>
-								<div class="post-topic"><a href="blog?id=<?php echo $featuredblog[0]->id ?>" style="color: white"><?php echo $featuredblog[0]->title; ?></a></div>
+								<div class="post-topic bg-color"><a href="blog?id=<?php echo $featuredblog[0]->id ?>"><?php echo $featuredblog[0]->title; ?></a></div>
 							</div>
 						</div>
 					</div>
@@ -50,7 +50,7 @@
 							<a class="post-img" href="blog?id=<?php echo $featuredblog[1]->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%;"></a>
 							<div class="post-meta">
 								<div class="post-date"><?php echo date('M d, Y',strtotime($featuredblog[1]->created_date)) ?></div>
-								<div class="post-topic"><a href="blog?id=<?php echo $featuredblog[1]->id ?>" style="color: white"><?php echo $featuredblog[1]->title; ?></a></div>
+								<div class="post-topic bg-color"><a href="blog?id=<?php echo $featuredblog[1]->id ?>"><?php echo $featuredblog[1]->title; ?></a></div>
 							</div>
 						</div>
 					</div>
@@ -94,7 +94,7 @@
 										<a class="post-img" href="blog?id=<?php echo $tblog->id ?>"><img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" style="width:100%;"></a>
 										<div class="post-meta">
 											<div class="post-date"><?php echo date('M d,Y',strtotime($tblog->created_date)); ?></div>
-											<div class="post-topic"><a href="blog?id=<?php echo $tblog->id ?>" style="color: white"><?php echo $tblog->title; ?></a></div>
+											<div class="post-topic bg-color"><a href="blog?id=<?php echo $tblog->id ?>"><?php echo $tblog->title; ?></a></div>
 										</div>
 									</div>
 								</div>
