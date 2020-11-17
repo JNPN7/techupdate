@@ -34,8 +34,8 @@
 		<script src="https://kit.fontawesome.com/4b23978c25.js" crossorigin="anonymous"></script>
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwenn"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwenn"/>
+		<link type="text/css" rel="stylesheet" href="assets/css/style.css?pwen"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/responsive.css?pwen"/>
 
 
         <link type="text/css" rel="stylesheet" href="assets/css/easter.css?pwen"/>
@@ -47,6 +47,10 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+        
+        <!-- google ad -->
+        <!-- <script data-ad-client="ca-pub-3486491541125241" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
     </head>
 	<body onload="searchResults()">
@@ -62,7 +66,7 @@
 
             <div class="navChild">
                 <ul>
-                    <li>
+                    <!-- <li>
                         <div class="dropdown">
                             <a href="#">
                                 <button class="dropbtn">
@@ -75,7 +79,7 @@
                                 <a href="#">Option 3</a>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                     <?php
                         $BlogCategory = new blogcategory();
                         $blogcategories = $BlogCategory->getAllBlogCategory();

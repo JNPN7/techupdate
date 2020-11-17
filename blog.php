@@ -100,7 +100,7 @@
 						<img class="post-thumb" src="<?php echo $thumbnail ?>" alt="Snow" >
 						<div class="post-meta">
 							<div class="post-date"><?php echo date('M d, Y',strtotime($blog_info->created_date)) ?></div>
-							<div><?php echo $blog_info->title; ?></div>
+							<div class="bg-color"><?php echo $blog_info->title; ?></div>
 						</div>
 					</div>
 					<div style="display: flex; justify-content: flex-end;">

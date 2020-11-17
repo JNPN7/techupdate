@@ -1,4 +1,4 @@
-@import "colors.css?pwen";
+@import "colors.css";
 @import "fonts.css";
 *{
 	box-sizing: border-box;
@@ -423,7 +423,7 @@ h4{
 	font-weight: var(--postDesFontWeight);
 }
 .post-date{
-	font-size: var(postDateFontSize);
+	font-size: var(--postDateFontSize);
 	color: var(--postDateColor);
 }
 
@@ -1238,8 +1238,13 @@ h4{
 .bg-color{
 	padding: 5px;
 	margin-right: 5px;
+	color: var(--black) !important;
 	background: rgba(255, 255, 255, .6);
 }
 .bg-color>a{
 	color: var(--black) !important;
+}
+
+.ad{
+	display: none;
 }

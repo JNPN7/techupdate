@@ -301,7 +301,7 @@
 ?>
 
 <script type="text/javascript">
-	var limit = 4;
+	var limit = 7;
 	var offset;	 
 	var categoryid;
 	var elmnt = document.getElementById("scrollhere");

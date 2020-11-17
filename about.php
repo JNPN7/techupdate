@@ -33,7 +33,7 @@
 					
 				</section><br>
 				<!-- <img src="assets\images\about.jpg" style="width:100%; height: auto;"> -->
-				<section id="testimonials">
+				<!-- <section id="testimonials">
 				<h4 class="ttxt1">Developer Team</h4>
 					<div class="container row" style="text-align: center;">
 							<div class="dev">
@@ -85,7 +85,7 @@
 						        	</p>
 							</div>
 					</div>
-				</section>
+				</section> -->
 			</div>
 		</article>
 
