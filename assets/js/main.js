@@ -134,13 +134,17 @@ searchPage.addEventListener("mouseup", function (e) {
 });
 
 function toggleSearch() {
-    if(document.getElementById("searchPage").style.display == "block") {
-        document.getElementById("searchPage").style.display = "none";
-        document.getElementById("noKeywordMessage").style.display = "none";
-    }
-    else {
-        document.getElementById("searchPage").style.display = "block";
-        document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0].focus();
+    if(document.body.contains(document.getElementById("searchPage"))) {
+        if(document.getElementById("searchPage").style.display == "block") {
+            document.getElementById("searchPage").style.display = "none";
+            if(document.body.contains(document.getElementById("noKeywordMessage"))) {
+                document.getElementById("noKeywordMessage").style.display = "none";            
+            }
+        }
+        else {
+            document.getElementById("searchPage").style.display = "block";
+            document.getElementById("searchPage").getElementsByClassName("searchPageBox")[0].focus();
+        }
     }
 }
 
