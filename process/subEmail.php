@@ -8,10 +8,10 @@
 	// debugger($_POST, true);
 	 $act="Add";
 	if($_POST){
-		if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['message']) && !empty($_POST['username']) && !empty($_POST['email']) && !empty(($_POST['message']))){
+		if(isset($_POST['username']) && isset($_POST['message']) && !empty($_POST['username']) && !empty(($_POST['message']))){
 			$data = array(
-			'username' => sanitize($_POST['username']),
-			'email' => filter_var($_POST['email'],FILTER_VALIDATE_EMAIL),
+			'username' => $_POST['username'],
+			'email' => 'email@email.com',
 			'message' => sanitize(htmlentities($_POST['message'])),
 			'type' => 'message',
 			'status' =>	'Active',
@@ -26,6 +26,7 @@
 		);
 		}
 		if ($data) {
+				// debugger($data, true);
 				$success = $Contact->addContact($data);
 				// debugger($data, true);
 		}else{

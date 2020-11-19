@@ -34,6 +34,21 @@
 
 			return $this->getData($args,$is_die);
 		}
+
+		public function getAllSubsContact($is_die=false){
+			
+			$args = array(
+				'where'	=> array(
+					'and' => array(
+							'type' => 'subscription',
+							'status' => 'Active',
+						)
+					),
+				'order' => 'DESC'
+				);
+
+			return $this->getData($args,$is_die);
+		}
 		public function getAllWaitingContact($is_die=false){
 			$args = array(
 				'where'	=> array(

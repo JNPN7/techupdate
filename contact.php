@@ -33,14 +33,11 @@
 		<aside class="right-contact">
 			<div class="main-pad col" style="padding-top: 20px;">
 				<h2>Send A Message</h2>
-				<form>  
+				<form action="process/subEmail" method="post">  
 					<div class="col" style="padding-right: 50px;">
 
-						<h3 style="margin-bottom: 0;">Email</h3>
-						<input class="input" type="email" name="email" required=""/>
-	
-						<h3 style="margin-bottom: 0; margin-top: 15px">Subject</h3>
-						<input class="input" type="text" name="subject" required=""/>
+						<h3 style="margin-bottom: 0;">Username</h3>
+						<input class="input" type="text" name="username" required=""/>
 
 						<div style="height: 20px"></div>
 						<textarea class="input" style="height: 100px; padding-top: 5px" name="message" placeholder="Message" required=""/></textarea>
