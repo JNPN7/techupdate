@@ -150,18 +150,19 @@
 }
 
 #navbar #user #userButton {
-    display: block;
-    /* position: absolute;
-    top: 0;
-    right: 10px; */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
     border: none;
     font-size: var(--navbarUserUserButtonFontSize);
     background: transparent;
     cursor: pointer;
     color: var(--navbarIconsColor);
-    border-radius: 50px;
+    border-radius: 10px;
     outline: none;
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
 
 #navbar #user #userButton:hover {
@@ -170,27 +171,29 @@
     transition-duration: .3s;
 }
 
-#navbar #user #userButton img {
+/* #navbar #user #userButton img {
     height: 30px;
     width: 30px;
     margin-top: 5px;
     border: 2px solid green;
     border-radius: 25px;
-}
+} */
 
-.fa-user {
+/* .fa-user {
     margin: 10px;
-}
+} */
 
 #user {
+    /* margin-top: 5px; */
     float: left;
-    overflow: hidden;
+    margin: auto;
+    /* overflow: hidden; */
 }
 
 #navbar #user #userOptions {
     position: absolute;
     /* padding: 10px; */
-    right: 0;
+    right: 5%;
     /* margin-top: 50px; */
     min-width: 200px;
     z-index: 10;

@@ -157,11 +157,12 @@
                     <?php
                         $User = new user();
                         $userDetails = isset($_SESSION['token']) ? (array)$User->getUserbySessionToken($_SESSION['token'])[0] : array();
-                        $image = isset($userDetails['image']) ? $userDetails['image'] : 'assets/images/bg.jpeg';
+                        $username = isset($userDetails['username']) ? $userDetails['username'] : 'User';
+                        // $image = isset($userDetails['image']) ? $userDetails['image'] : 'assets/images/bg.jpeg';
                         if (isset($userDetails['session_token']) && $userDetails['session_token'] == $_SESSION['token']) {
                             echo '
                                         <button id="userButton">
-                                            <img src="'.$image.'" />
+                                            '.$username.'
                                         </button>
                                         <div id="userOptions">
                                             <a href="cms/logout">Sign Out</a>
