@@ -10,7 +10,7 @@
   $Blog = new blog();
   $Contacts = new contact();
   $contacts = $Contacts->getAllSubsContact();
-  debugger($contacts,true);
+//   debugger($contacts,true);
 if ($_GET) {    // SendMail
   if (isset($_GET['id']) && !empty($_GET['id'])) {
     $blog_id = (int)$_GET['id'];
