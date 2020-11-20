@@ -1,6 +1,18 @@
 @import "colors.css";
 @import "fonts.css";
 
+@media screen and (min-width: 0px) and (max-width: 600px)   {
+    #signInAlert .alertBox {
+        min-width: 80vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px)   {
+    #signInAlert .alertBox {
+        min-width: 60vw;
+    }
+}
+
 @media screen and (min-width: 0px) and (max-width: 768px)   {
     
     #navbar {
@@ -64,6 +76,14 @@
     .searchResults {
         font-size: 15px;
     }
+
+    #signInAlert .alertBox .message {
+        font-size: 20px;
+    }
+
+    #signInAlert .alertBox .options button {
+        font-size: 15px;
+    }
 }
 
 
@@ -75,7 +95,11 @@
 
     #navbar .navChild .social {
         display: none;
-    }    
+    }
+
+    #signInAlert .alertBox {
+        min-width: 50vw;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1366px) {

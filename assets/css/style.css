@@ -799,7 +799,7 @@ h4{
 }
 
 #commentContainer .commentNumber {
-	font-size: 30px;
+	font-size: 25px;
 	/* border: 2px solid black; */
 	font-weight: bold;
 	margin: 10px;
@@ -836,7 +836,7 @@ h4{
 }
 
 #commentContainer .comment .commentContent .commentDetails .commentator {
-	font-size: 25px;
+	font-size: 15px;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
@@ -854,7 +854,7 @@ h4{
 }
 
 #commentContainer .comment .commentContent .commentDetails .commentDescription {
-	font-size: larger;
+	/* font-size: larger; */
 	font-weight: bold;
 }
 
@@ -872,13 +872,13 @@ h4{
 }
 
 #commentContainer .leaveAReply .heading {
-	font-size: 30px;
+	font-size: 15px;
 	margin: 10px;
 	width: 100%;
 }
 
 #commentContainer .leaveAReply input {
-	font-size: 20px;
+	font-size: 15px;
 	padding: 10px;
 	width: 100%;
 	border: none;
@@ -919,7 +919,7 @@ h4{
 	color: var(--white);
 	width: 100%;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 15px;
 	border: none;
 	border-radius: 10px;
 	/* outline: none; */
@@ -946,7 +946,7 @@ h4{
 	padding: 20px;
 	background-color: var(--black);
 	color: var(--white);
-	font-size: 20px;
+	font-size: 15px;
 	border: 2px solid var(--secondary);
 	border-radius: 10px;
 	width: 150px;
@@ -963,7 +963,7 @@ h4{
 	color: var(--white);
 	border-radius: 10px;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 15px;
 	margin-top: 10px;
 	width: 150px;
 	border: 2px solid var(--green);
@@ -1001,10 +1001,10 @@ h4{
 	justify-content: center;
 	/* align-items: center; */
 	background-color: black;
-	padding: 20px;
+	/* padding: 20px; */
 	border-radius: 10px;
-	min-width: 500px;
-	height: 300px;
+	width: 40vw;
+	height: 30vh;
 	border: 2px solid var(--default);
 }
 
@@ -1012,7 +1012,7 @@ h4{
 	padding: 10px;
 	display: flex;
 	justify-content: center;
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: bold;
 	color: var(--white);
 	margin: auto;
